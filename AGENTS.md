@@ -15,6 +15,16 @@ design documents are the source of truth for the purpose and boundaries of a
 part. Code is an implementation of those boundaries, not the definition of
 the product.
 
+## Mission
+
+The implementation of a view may vary. A view must be easy to replace with a
+different visual design as long as the replacement consumes the same defined
+interface: the data it is provided with and the user actions it reports.
+
+The application is therefore built from pure, disposable views connected to
+external providers. Do not make a visual implementation the source of truth
+for subtitle acquisition, language data, or application state.
+
 ## Documentation rules
 
 Keep documentation focused on purpose, inputs, outputs, and boundaries rather
@@ -103,6 +113,53 @@ the same presentation contracts used by the browser companion.
 The browser fixture path and Android network-observation path are different
 providers. They must converge at the normalized subtitle data interface, not
 inside a renderer.
+
+## Deferred Android tests
+
+These tests are important, but are intentionally not part of the current web
+implementation pass:
+
+1. When the caption icon is turned on in Android, automatically detect the
+   subtitle request.
+2. Preserve the complete observed request details, not only its URL. Reuse
+   those details to issue a request with a different `tlang` language code and
+   verify that subtitles are successfully returned in that language.
+
+Android WebView interception and GitHub Actions emulator testing are later
+phases. Do not replace them with browser assumptions or add them to the web
+E2E gate.
+
+## Implementation sequence
+
+The current implementation phase is:
+
+1. implement the browser companion from the Markdown contracts;
+2. use fixture providers for SRT and JSON3;
+3. test the browser behavior with web E2E tests only.
+
+The later phase is Android emulator testing through GitHub Actions, including
+the request-preservation and language-switching tests above.
+
+## Fixture library
+
+The fixture library is organized by video ID:
+
+```text
+test/fixtures/<VIDEO_ID>/*.{json,srt}
+```
+
+`<VIDEO_ID>` is the YouTube video identifier. A directory may contain several
+language tracks for the same video, with the language represented by the file
+name, for example:
+
+```text
+test/fixtures/FcRzAdI8R9U/ru.srt
+test/fixtures/L2Ryrr6txwA/he.json
+```
+
+The fixture library is a provider for the browser companion. It is not a
+responsibility of a subtitle renderer. Fixture adapters must normalize both
+formats into the same cue interface before injecting data into a view.
 
 ## Subtitle format requirements
 
