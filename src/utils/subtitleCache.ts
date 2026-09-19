@@ -63,7 +63,17 @@ export function getCachedSubtitles(videoId: string): CaptionCue[] | null {
     }
   }
 
-  // 1b. For JSON3 demo video EILFkSGNkdA, load the English source track
+  // 1b. For JSON3 fixture video L2Ryrr6txwA, load the authentic English source JSON3 track
+  if (videoId === 'L2Ryrr6txwA') {
+    const jsonCues = getCachedSrtForVideoAndLanguage('L2Ryrr6txwA', 'en');
+    if (jsonCues && jsonCues.length > 0) {
+      const sanitized = sanitizeCues(jsonCues);
+      memoryCache.set(videoId, sanitized);
+      return sanitized;
+    }
+  }
+
+  // 1c. For JSON3 demo video EILFkSGNkdA, load the English source track
   if (videoId === 'EILFkSGNkdA') {
     const srtCues = getCachedSrtForVideoAndLanguage('EILFkSGNkdA', 'en');
     if (srtCues && srtCues.length > 0) {
@@ -182,6 +192,7 @@ export function getCachedSubtitles(videoId: string): CaptionCue[] | null {
 export function hasCachedSubtitles(videoId: string): boolean {
   if (!videoId) return false;
   if (videoId === 'FcRzAdI8R9U') return true;
+  if (videoId === 'L2Ryrr6txwA') return true;
   if (videoId === 'EILFkSGNkdA') return true;
   if (memoryCache.has(videoId)) {
     const mem = memoryCache.get(videoId);

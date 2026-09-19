@@ -61,7 +61,7 @@ import { checkApkUpdate } from './utils/apkUpdater';
 import { loadAppSettings, saveAppSettings, AppSettings, DEFAULT_APP_SETTINGS, loadVideoSettings, saveVideoSettings, VideoSpecificSettings, getVideoTargetLang, setVideoTargetLang, isAndroidAppEnvironment } from './utils/appSettings';
 import { logInfo, logWarn, logSubtitles, registerAppStateProvider } from './utils/logBuffer';
 import { checkAndPerformUrlCacheReset, getAppStateFromUrl, syncAppStateToUrl } from './utils/urlStateManager';
-import { getMockedSubtitlesForVideo, FCRZADI8R9U_LANGUAGE_SRT_TRACKS } from '../test/fixtures/defaultSubtitles';
+import { getMockedSubtitlesForVideo, FCRZADI8R9U_LANGUAGE_SRT_TRACKS, L2RYRR6TXWA_LANGUAGE_JSON3_TRACKS } from '../test/fixtures/defaultSubtitles';
 import { SelectTargetLanguageModal } from './components/SelectTargetLanguageModal';
 import { SubtitleArtifactsModal } from './components/SubtitleArtifactsModal';
 import { DemoQuickFloatingDock } from './components/DemoQuickFloatingDock';
@@ -554,6 +554,20 @@ export default function App() {
       }
     }
 
+    // For JSON3 demo video, immediately load authentic multi-lingual JSON3 fixtures
+    if (videoId === 'L2Ryrr6txwA') {
+      const jsonCues = L2RYRR6TXWA_LANGUAGE_JSON3_TRACKS.en;
+      if (jsonCues && jsonCues.length > 0) {
+        setCustomCues(jsonCues);
+        saveCachedSubtitles('L2Ryrr6txwA', jsonCues, {
+          title: 'Guitar Lesson · JSON3 TimedText (JustinGuitar)',
+          originalUrl: 'https://www.youtube.com/watch?v=L2Ryrr6txwA',
+        });
+        setFetchError(null);
+        return;
+      }
+    }
+
     // Check dedicated subtitle cache
     const cached = getCachedSubtitles(videoId);
     if (cached && cached.length > 0) {
@@ -1024,6 +1038,17 @@ export default function App() {
     }
   };
 
+  const handleSwitchDemoVideo = (targetVideoId: 'FcRzAdI8R9U' | 'L2Ryrr6txwA') => {
+    const rawUrl = `https://www.youtube.com/watch?v=${targetVideoId}`;
+    handleSelectVideo(targetVideoId, rawUrl);
+    setRestoredToast(
+      targetVideoId === 'FcRzAdI8R9U'
+        ? 'Switched to SRT Example (FcRzAdI8R9U · Sheinkin40 Russian, 5 SRT tracks)'
+        : 'Switched to JSON3 Example (L2Ryrr6txwA · JustinGuitar English, 5 JSON3 tracks)'
+    );
+    setTimeout(() => setRestoredToast(null), 3500);
+  };
+
   // Flow Step 1: User loads video from library
   const handleSelectLibraryItem = (item: LibraryVideoItem) => {
     const parsed = parseYouTubeUrl(item.originalUrl);
@@ -1374,6 +1399,8 @@ export default function App() {
             subtitlePosition={settings.subtitlePosition}
             showTranslatedOnTop={settings.showTranslatedOnTop}
             alwaysShowKeyControls={settings.alwaysShowKeyControls}
+            settings={settings}
+            onUpdateSettings={handleUpdateSettings}
             onChangeSubtitlePosition={(pos) => handleUpdateSettings({ ...settings, subtitlePosition: pos })}
             onOpenTargetLanguageModal={() => setIsTargetLangModalOpen(true)}
             onOpenLogs={() => setIsLogsModalOpen(true)}
@@ -1413,6 +1440,7 @@ export default function App() {
           videoId={videoId}
           activeTargetLang={selectedTargetLang}
           onSelectLanguage={handleUpdateTargetLang}
+          onSelectVideo={handleSelectVideo}
           onSeek={(seconds) => {
             try {
               playerRef.current?.seekTo?.(seconds);
@@ -1476,6 +1504,7 @@ export default function App() {
           onUpdateSettings={handleUpdateSettings}
           onSelectTargetLanguage={handleUpdateTargetLang}
           onOpenArtifacts={() => setIsArtifactsModalOpen(true)}
+          onSwitchDemoVideo={handleSwitchDemoVideo}
         />
       </div>
     );
@@ -1566,6 +1595,8 @@ export default function App() {
               subtitlePosition={settings.subtitlePosition}
               showTranslatedOnTop={settings.showTranslatedOnTop}
               alwaysShowKeyControls={settings.alwaysShowKeyControls}
+              settings={settings}
+              onUpdateSettings={handleUpdateSettings}
               onChangeSubtitlePosition={(pos) => handleUpdateSettings({ ...settings, subtitlePosition: pos })}
               onOpenTargetLanguageModal={() => setIsTargetLangModalOpen(true)}
               onOpenArtifacts={() => setIsArtifactsModalOpen(true)}
@@ -1632,6 +1663,7 @@ export default function App() {
         videoId={videoId}
         activeTargetLang={selectedTargetLang}
         onSelectLanguage={handleUpdateTargetLang}
+        onSelectVideo={handleSelectVideo}
         onSeek={(seconds) => { try { playerRef.current?.seekTo?.(seconds); } catch {} }}
       />
       <VideoLibraryModal
@@ -1671,6 +1703,7 @@ export default function App() {
         onUpdateSettings={handleUpdateSettings}
         onSelectTargetLanguage={handleUpdateTargetLang}
         onOpenArtifacts={() => setIsArtifactsModalOpen(true)}
+        onSwitchDemoVideo={handleSwitchDemoVideo}
       />
     </div>
   );

@@ -1,231 +1,163 @@
-# AGENTS.md — Modular Project Guidelines
+# AGENTS.md — Modular Project & Agent Guidelines
 
-## Purpose
+## 1. Project Purpose & Documentation Hierarchy
 
-This repository contains a subtitle-learning experience delivered through two
-different hosts:
+This repository implements a modular subtitle-learning platform designed to run across two hosts:
+- **Browser Companion**: A fixture-driven web environment for testing, UI validation, and demonstration without relying on live YouTube caption interception.
+- **Android Native Host**: A native container (`android-shell/`) capable of inspecting WebView network traffic to capture live YouTube caption requests and leverage hardware capabilities.
 
-- a browser companion used for presentation, fixtures, and automated web
-  verification;
-- an Android host that can observe YouTube caption traffic and provide native
-  capabilities that a browser cannot provide.
+The project is governed strictly by Markdown design specifications rather than specific code implementations. By following these documents, the entire application or any of its views can be completely re-created, replaced, or updated using different tools and frameworks while preserving identical behavior.
 
-The project is intentionally organized around replaceable parts. Markdown
-design documents are the source of truth for the purpose and boundaries of a
-part. Code is an implementation of those boundaries, not the definition of
-the product.
+### Required Documentation Ecosystem
+- **`AGENTS.md`**: Architectural foundation, modularity mandates, component contracts, platform boundaries, and testing roadmap.
+- **`PROMPT.md`**: Active user requirements and task tracker, rewritten in the agent's own words for every directive.
+- **`PROMPT_OLD.md`**: Historical archive of previous directives and completed task lists.
+- **`LIBRARY.md`**: Specification and structure of the subtitle fixture library (`test/fixtures/`).
+- **`DESIGN_SUBTITLE_VIEWS.md`**: Structural interface and behavior contract for all subtitle-rendering views.
+- **`DESIGN_VIEW_LANGS.md`**: Structural interface and behavior contract for all language-selection views.
+- **`DESIGN_CONTROLS_VIEW.md`**: Structural interface and behavior contract for playback control views.
+- **`DESIGN_PLAYER_PROVIDER.md`**: Vendor-agnostic media playback provider and time synchronization contract.
+- **`DESIGN_STATE_COORDINATOR.md`**: Finite state machine, transitions, active cue resolution, and state flow.
+- **`SCHEMA_TIMEDTEXT.md`**: Format definitions, segment timings, entity decoding, and RTL/BiDi normalization.
+- **`DEBUG.md`**: Diagnostic log viewer, network request interception, 15-char response preview, and AI troubleshooting prompt generator.
+- **`ACTIONS.md`**: Automated GitHub Actions CI/CD workflows and deployment pipelines.
 
-## Mission
+---
 
-The implementation of a view may vary. A view must be easy to replace with a
-different visual design as long as the replacement consumes the same defined
-interface: the data it is provided with and the user actions it reports.
+## 2. Modularity and Pure View Architecture
 
-The application is therefore built from pure, disposable views connected to
-external providers. Do not make a visual implementation the source of truth
-for subtitle acquisition, language data, or application state.
-
-## Documentation rules
-
-Keep documentation focused on purpose, inputs, outputs, and boundaries rather
-than on the current names or layout of implementation files.
-
-- `DESIGN_SUBTITLE_VIEWS.md` defines the data contract for subtitle renderers.
-- `DESIGN_VIEW_LANGS.md` defines the data contract for language-selection
-  views.
-- `README.md` is the user-facing guide and project entry point.
-- `replit.md` contains concise Replit run notes.
-- `CHANGELOG.md` records historical changes; it is not an active worklist.
-
-When a view is renamed or replaced, update its design contract only if the
-contract changes. Do not make a design document depend on a particular
-component name, framework, provider, or screen location.
-
-## Architectural principles
-
-### 1. Separate data acquisition from presentation
-
-Subtitle acquisition, parsing, translation, caching, timing, persistence, and
-platform integration belong outside subtitle and language views.
-
-Views should be pure components:
-
-- receive all display data through an explicit interface;
-- render the data they receive;
-- emit user intent through callbacks;
-- avoid network requests, storage access, parsing, translation, and hidden
-  global state;
-- avoid mutating injected objects or arrays.
-
-A view may be used in several situations with the same data: an overlay, a
-transcript, a compact control, a settings view, or a mobile dialog. Different
-layouts are replaceable when they consume the same contract.
-
-### 2. Prefer stable, small interfaces
-
-Each replaceable part must have a coherent interface that explains:
-
-- what the part is responsible for;
-- the data it requires;
-- the events or decisions it reports;
-- what it deliberately does not do.
-
-Do not expose provider-specific objects to a pure view when a small normalized
-data shape is sufficient. Keep provider-specific language aliases, transport
-details, and persistence decisions at the boundary that supplies the data.
-
-### 3. Keep platform responsibilities explicit
-
-The browser companion and Android host do not have the same capabilities.
-Neither platform should be forced to imitate the other.
-
-#### Browser companion
-
-The browser companion is a fixture-driven presentation and verification
-environment. Its subtitle content is supplied locally so the renderer can be
-tested and demonstrated without relying on live YouTube requests. Browser
-JavaScript cannot inspect caption requests made inside a cross-origin YouTube
-iframe.
-
-The supported local fixture formats are:
-
-- SRT files under `test/fixtures/FcRzAdI8R9U/*.srt`;
-- YouTube JSON3 files under `test/fixtures/L2Ryrr6txwA/*.json`.
-
-The `.json` files in the second directory contain JSON3 timed-text data; the
-extension does not mean that an arbitrary JSON schema is supported. Both
-formats must be parsed into the same normalized cue interface before they
-reach a renderer.
-
-#### Android host
-
-When the caption control is enabled, the Android host can observe network
-requests made by its WebView. It can therefore detect requests to:
-
-`https://www.youtube.com/api/timedtext`
-
-The native host may reuse the observed request context and issue another
-request with a different `tlang` value to obtain another language. Preserve
-the `fmt=json3` request format where possible because JSON3 carries richer
-timing information than SRT. The native host supplies parsed subtitle data to
-the same presentation contracts used by the browser companion.
-
-The browser fixture path and Android network-observation path are different
-providers. They must converge at the normalized subtitle data interface, not
-inside a renderer.
-
-## Deferred Android tests
-
-These tests are important, but are intentionally not part of the current web
-implementation pass:
-
-1. When the caption icon is turned on in Android, automatically detect the
-   subtitle request.
-2. Preserve the complete observed request details, not only its URL. Reuse
-   those details to issue a request with a different `tlang` language code and
-   verify that subtitles are successfully returned in that language.
-
-Android WebView interception and GitHub Actions emulator testing are later
-phases. Do not replace them with browser assumptions or add them to the web
-E2E gate.
-
-## Implementation sequence
-
-The current implementation phase is:
-
-1. implement the browser companion from the Markdown contracts;
-2. use fixture providers for SRT and JSON3;
-3. test the browser behavior with web E2E tests only.
-
-The later phase is Android emulator testing through GitHub Actions, including
-the request-preservation and language-switching tests above.
-
-## Fixture library
-
-The fixture library is organized by video ID:
+The primary architectural goal is **complete modularity through pure components**:
 
 ```text
-test/fixtures/<VIDEO_ID>/*.{json,srt}
+[External Provider / Network / Cache]
+                  │
+                  ▼ (Fetches & Normalizes)
+          [Normalized Data]
+                  │
+                  ▼ (Injected via Props)
+         [Pure View Component]
+                  │
+                  ├──► Renders UI Presentation
+                  └──► Emits User Intent Callbacks (e.g., onSelect)
 ```
 
-`<VIDEO_ID>` is the YouTube video identifier. A directory may contain several
-language tracks for the same video, with the language represented by the file
-name, for example:
+### Pure Component Mandates
+1. **Separation of Concerns**: Data acquisition, network traffic, cache persistence, and format parsing belong strictly outside presentation views.
+2. **Dependency Injection**: Views receive all necessary state and data via props or parameters.
+3. **No Hidden Logic**: A view must never initiate network requests, read the filesystem, access localStorage, parse raw SRT/JSON3 files, or perform translations on its own.
+4. **Interchangeability**: Any view implementation (e.g., overlay, transcript list, compact card, bottom sheet) must be completely swappable with another visual implementation as long as both consume the same defined interface.
+5. **Pure Event Dispatch**: Views report user interactions solely through callback functions (e.g., `onSelectCue`, `onSelectLanguage`). The view does not decide how playback or state responds to that event.
+
+---
+
+## 3. Subtitle Rendering Pipeline
+
+The application is fundamentally a subtitle-rendering and language-learning tool. Subtitle renderers must never fetch subtitles directly:
 
 ```text
-test/fixtures/FcRzAdI8R9U/ru.srt
-test/fixtures/L2Ryrr6txwA/he.json
+Subtitle Provider ──► Subtitle Data ──► Subtitle Renderer ──► UI Display
 ```
 
-The fixture library is a provider for the browser companion. It is not a
-responsibility of a subtitle renderer. Fixture adapters must normalize both
-formats into the same cue interface before injecting data into a view.
+- **Subtitle Provider**: Loads local fixtures (web) or intercepts network requests (Android), parses them, and yields normalized cues.
+- **Subtitle Renderer**: Defined in `DESIGN_SUBTITLE_VIEWS.md`. It accepts `SubtitleCue[]`, an active cue identifier, optional translations, and interaction callbacks.
+- **Independence**: This separation enables isolated unit and visual regression testing of any renderer using synthetic or fixture subtitle cues.
 
-## Subtitle format requirements
+---
 
-SRT and JSON3 are required supported input formats.
+## 4. Language Selection Pipeline
 
-- SRT uses numbered cues and `HH:MM:SS,mmm --> HH:MM:SS,mmm` timing lines.
-- JSON3 uses YouTube timed-text events with millisecond start and duration
-  fields and one or more text segments.
-- Both formats must produce cues with a stable id, start time in seconds,
-  duration in seconds, and display text.
-- Empty or malformed input must produce an explicit parse failure or an empty
-  result; it must not be silently presented as valid subtitles.
-- Format-specific details must stay in the acquisition/parsing layer.
+Language-selection controls must strictly decouple language data management from visual display:
 
-The canonical fixture verification command is:
-
-```bash
-npm run test:caption-formats
+```text
+Language Provider ──► Language Options Data ──► Language View ──► User Action
 ```
 
-It must inspect at least one `.srt` fixture from
-`test/fixtures/FcRzAdI8R9U/` and one `.json` JSON3 fixture from
-`test/fixtures/L2Ryrr6txwA/`, confirm the detected format, and confirm that
-the resulting cues have valid timing and non-empty text.
+- **Contract**: Defined in `DESIGN_VIEW_LANGS.md`.
+- **Injected Data**: A normalized array of language objects (`code`, `name`, optional `nativeName`, `direction`, `enabled`).
+- **View Responsibility**: Renders the options and triggers an `onSelect(code)` callback upon user selection.
+- **Agnostic**: Multiple views (drop-downs, floating pills, settings modals, sidebar lists) can consume the identical language list without requiring separate data stores.
 
-## Dependency injection and storyboard guidance
+---
 
-Design new UI as a storyboard of pure views connected by injected data:
+## 5. Supported Subtitle Formats
 
-1. a provider obtains or creates data;
-2. an adapter normalizes that data;
-3. a view renders the normalized data;
-4. callbacks report user intent to the provider or coordinator.
+The application supports two input formats:
+1. **SubRip Text (`.srt`)**: Classic timestamped cue lines (`HH:MM:SS,mmm --> HH:MM:SS,mmm`).
+2. **YouTube JSON3 (`.json`)**: YouTube's structured timed-text format containing event timestamps and word/segment arrays.
 
-The storyboard may place multiple views over the same data. Do not make a view
-responsible for discovering its provider based on its location. This allows a
-simple replacement design to be handed the relevant Markdown contract without
-requiring the rest of the application to be redesigned.
+**JSON3 is the preferred format** when fetching or querying subtitles because it contains fine-grained segment and word timings, enabling synchronized word-boundary highlights that are lost in basic SRT files.
 
-For subtitle views, use `DESIGN_SUBTITLE_VIEWS.md`. For language views, use
-`DESIGN_VIEW_LANGS.md`. Those documents may describe multiple views that share
-one data contract but appear in different locations or interaction contexts.
+---
 
-## Code and repository hygiene
+## 6. Platform Responsibilities: Web Companion vs. Android Host
 
-- Preserve the existing project structure and build tools unless a change is
-  required by the user.
-- Keep browser fixtures and Android-native behavior separate.
-- Do not put network, storage, translation, or parsing logic into a pure
-  renderer.
-- Do not add fallback data that hides a provider or parser failure.
-- Do not commit generated build output, test recordings, screenshots, logs, or
-  APKs.
-- Keep secrets and credentials out of source files and documentation.
+The browser companion and Android native host solve different constraints:
 
-## Verification
+### Web Companion
+- Operates inside standard web browsers and CI/CD pipelines.
+- Standard browsers cannot inspect cross-origin HTTPS requests inside a YouTube `<iframe>`.
+- Uses the fixture library (`test/fixtures/`) to supply offline subtitle tracks across multiple languages.
+- Serves as the primary presentation and automated verification driver.
 
-Verify the smallest complete behavior affected by a change. For subtitle
-changes, run the format verification command and the TypeScript check. For
-build-affecting changes, also run the production build.
+### Android Native Host
+- Operates inside an Android WebView (`android-shell/`).
+- Intercepts network operations when the user toggles captions, detecting requests to:
+  `https://www.youtube.com/api/timedtext`
+- Modifies the observed request parameters (e.g., swapping `tlang` to request another target language) and replays it.
+- **Critical Requirement**: Must preserve the complete original request context (headers, cookies, query parameters, formatting) rather than constructing an arbitrary URL.
+- Preserves `fmt=json3` to retain timing accuracy.
 
-```bash
-npm run test:caption-formats
-npm run lint
-npm run build
-```
+---
 
-If a check cannot run because an external service or platform is unavailable,
-report that limitation instead of replacing it with an unverified fallback.
+## 7. Subtitle Fixture Library Architecture
+
+The fixture library is a first-class feature of the project, documented in `LIBRARY.md`.
+
+- **Root Location**: `test/fixtures/`
+- **Schema**: `test/fixtures/<VIDEO_ID>/*.{json,srt}` where `<VIDEO_ID>` is the 11-character YouTube video ID.
+- **Reference Tracks**:
+  - `test/fixtures/FcRzAdI8R9U/*.srt` (SRT fixtures: `en`, `ru`, `he`, `it`, `ar`)
+  - `test/fixtures/L2Ryrr6txwA/*.json` (JSON3 fixtures: `en`, `ru`, `he`, `it`, `ar`)
+- **Format Verification**: Validated via `npm run test:caption-formats`.
+
+---
+
+## 8. Deferred Android E2E Tests
+
+These tests represent native Android capabilities and are intentionally documented for later implementation:
+
+- **Android E2E Test 2.1**:
+  - Enable the native caption icon in the Android WebView.
+  - Automatically detect the outgoing `timedtext` network operation in the native interceptor.
+- **Android E2E Test 2.2**:
+  - Detect the initial `timedtext` request.
+  - Modify the `tlang` parameter to a target language code while preserving all other request attributes (headers, credentials, format).
+  - Execute the modified request and assert a successful timed-text response in the target language.
+
+> **Implementation Phase Notice**: Do not implement these Android tests during the current web implementation phase. They are scheduled for a later stage utilizing GitHub Actions Android emulators.
+
+---
+
+## 9. Current Implementation & Testing Phase
+
+The active implementation phase mandates:
+1. Strict adherence to Markdown design contracts (`DESIGN_SUBTITLE_VIEWS.md`, `DESIGN_VIEW_LANGS.md`, `DESIGN_CONTROLS_VIEW.md`, `DESIGN_PLAYER_PROVIDER.md`, `DESIGN_STATE_COORDINATOR.md`, `SCHEMA_TIMEDTEXT.md`).
+2. Complete view reconstruction capability: If any or all presentation views are deleted, they can be reconstructed from scratch purely using these Markdown contracts.
+3. Web companion operation driven by local fixture providers from `LIBRARY.md`.
+4. Automated testing scoped to web E2E tests only (Playwright and Cypress).
+5. Code verification via standard scripts:
+   ```bash
+   npm run test:caption-formats   # Validates SRT and JSON3 fixture parsing
+   npm run lint                   # Validates TypeScript type safety
+   npm run build                  # Validates production bundles
+   ```
+
+---
+
+## 10. Summary of Architectural Mission
+
+- **Views are replaceable**: Any UI component can be rewritten or swapped without breaking data flow.
+- **Contracts are the truth**: Markdown specifications define component inputs, responsibilities, and outputs.
+- **Components are pure**: External providers inject data; views simply render and emit user callbacks.
+- **Fixtures are first-class**: The fixture library provides deterministic, verified offline datasets.
+- **Total Reconstruction Ready**: The `.md` contracts fully document data shapes, algorithms, and event flows so the complete frontend can be regenerated or migrated across different frameworks.

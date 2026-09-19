@@ -136,7 +136,7 @@ async function translateCuesToTargetLang(cues: any[], targetLang: string): Promi
 
 async function startServer() {
   const app = express();
-  const PORT = Number(process.env.PORT) || 5000;
+  const PORT = 3000;
 
   app.use(express.json({ limit: '50mb' }));
   app.use(express.urlencoded({ extended: true, limit: '50mb' }));

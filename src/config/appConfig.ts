@@ -1,5 +1,5 @@
 import { LibraryVideoItem } from '../types';
-import { FCRZADI8R9U_LANGUAGE_SRT_TRACKS } from '../../test/fixtures/defaultSubtitles';
+import { FCRZADI8R9U_LANGUAGE_SRT_TRACKS, L2RYRR6TXWA_LANGUAGE_JSON3_TRACKS } from '../../test/fixtures/defaultSubtitles';
 import { EILFKSGNKDA_LANGUAGE_TRACKS } from '../../test/fixtures/eilfksgnkda';
 
 /**
@@ -8,6 +8,12 @@ import { EILFKSGNKDA_LANGUAGE_TRACKS } from '../../test/fixtures/eilfksgnkda';
 
 export const DEFAULT_VIDEO_ID = 'FcRzAdI8R9U';
 export const DEFAULT_VIDEO_URL = `https://www.youtube.com/watch?v=${DEFAULT_VIDEO_ID}`;
+
+export const SRT_DEMO_VIDEO_ID = 'FcRzAdI8R9U';
+export const SRT_DEMO_VIDEO_URL = `https://www.youtube.com/watch?v=${SRT_DEMO_VIDEO_ID}`;
+
+export const JSON3_DEMO_VIDEO_ID = 'L2Ryrr6txwA';
+export const JSON3_DEMO_VIDEO_URL = `https://www.youtube.com/watch?v=${JSON3_DEMO_VIDEO_ID}`;
 
 export const ANDROID_TEST_VIDEO_ID = 'HGEyIt2bMiE';
 export const ANDROID_TEST_VIDEO_URL = `https://www.youtube.com/watch?v=${ANDROID_TEST_VIDEO_ID}`;
@@ -31,14 +37,21 @@ export const STORAGE_KEYS = {
   VIDEO_SETTINGS_PREFIX: 'yt_vsettings_',
 } as const;
 
-// Default Library Items (with Authentic Russian Sheinkin40 1,578 SRT cues)
+// Default Library Items (with Authentic Russian Sheinkin40 SRT and JustinGuitar JSON3)
 export const DEFAULT_LIBRARY_ITEMS: LibraryVideoItem[] = [
   {
     id: DEFAULT_VIDEO_ID,
     originalUrl: DEFAULT_VIDEO_URL,
-    title: 'Authentic Russian Interview (Sheinkin40)',
+    title: 'Authentic Russian Interview · SRT (Sheinkin40)',
     cues: FCRZADI8R9U_LANGUAGE_SRT_TRACKS.ru,
     timestamp: Date.now(),
+  },
+  {
+    id: JSON3_DEMO_VIDEO_ID,
+    originalUrl: JSON3_DEMO_VIDEO_URL,
+    title: 'Guitar Lesson · JSON3 TimedText (JustinGuitar)',
+    cues: L2RYRR6TXWA_LANGUAGE_JSON3_TRACKS.en,
+    timestamp: Date.now() + 1,
   },
   {
     id: ME_AT_THE_ZOO_ID,
@@ -51,14 +64,14 @@ export const DEFAULT_LIBRARY_ITEMS: LibraryVideoItem[] = [
       { id: 'cue-4', start: 11.2, duration: 2.8, text: 'And that is cool.' },
       { id: 'cue-5', start: 14.1, duration: 4.2, text: 'And that is pretty much all there is to say.' },
     ],
-    timestamp: Date.now(),
+    timestamp: Date.now() + 2,
   },
   {
     id: EILFKSGNKDA_VIDEO_ID,
     originalUrl: EILFKSGNKDA_VIDEO_URL,
     title: 'JSON3 Subtitle Demo (English + Hebrew)',
     cues: EILFKSGNKDA_LANGUAGE_TRACKS.en,
-    timestamp: Date.now(),
+    timestamp: Date.now() + 3,
   },
 ];
 

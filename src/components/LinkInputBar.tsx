@@ -210,7 +210,7 @@ export const LinkInputBar: React.FC<LinkInputBarProps> = ({
 
         {/* Quick controls row */}
         <div className="flex flex-wrap items-center justify-between gap-2 px-1 text-xs text-neutral-400">
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             {onOpenShare && (
               <button
                 type="button"
@@ -238,6 +238,46 @@ export const LinkInputBar: React.FC<LinkInputBarProps> = ({
                 <span>My Library {libraryCount !== undefined ? `(${libraryCount})` : ''}</span>
               </button>
             )}
+
+            {/* Quick Demo Switcher Chips */}
+            <div className="flex items-center gap-1.5 pl-1 border-l border-neutral-800">
+              <span className="text-[10px] uppercase font-bold text-neutral-500 tracking-wider">Demo:</span>
+              <button
+                type="button"
+                id="linkbar-demo-srt-chip"
+                data-testid="linkbar-demo-srt-chip"
+                onClick={() => onSelectVideo('FcRzAdI8R9U', 'https://www.youtube.com/watch?v=FcRzAdI8R9U')}
+                className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-[11px] font-medium border transition ${
+                  currentUrl.includes('FcRzAdI8R9U')
+                    ? 'bg-red-950/90 border-red-500/80 text-red-200 shadow-sm font-semibold'
+                    : 'bg-neutral-900/90 border-neutral-800 text-neutral-300 hover:bg-neutral-800 hover:text-white'
+                }`}
+                title="Quick switch to SRT demo example (FcRzAdI8R9U with 5 authentic .srt tracks)"
+              >
+                <span className="px-1 py-0.2 rounded text-[9px] font-mono font-bold uppercase bg-red-500/20 text-red-300 border border-red-500/30">
+                  SRT
+                </span>
+                <span>FcRzAdI8R9U</span>
+              </button>
+
+              <button
+                type="button"
+                id="linkbar-demo-json3-chip"
+                data-testid="linkbar-demo-json3-chip"
+                onClick={() => onSelectVideo('L2Ryrr6txwA', 'https://www.youtube.com/watch?v=L2Ryrr6txwA')}
+                className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-[11px] font-medium border transition ${
+                  currentUrl.includes('L2Ryrr6txwA')
+                    ? 'bg-amber-950/90 border-amber-500/80 text-amber-200 shadow-sm font-semibold'
+                    : 'bg-neutral-900/90 border-neutral-800 text-neutral-300 hover:bg-neutral-800 hover:text-white'
+                }`}
+                title="Quick switch to JSON3 demo example (L2Ryrr6txwA with 5 authentic .json tracks)"
+              >
+                <span className="px-1 py-0.2 rounded text-[9px] font-mono font-bold uppercase bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                  JSON3
+                </span>
+                <span>L2Ryrr6txwA</span>
+              </button>
+            </div>
           </div>
 
           <span className="text-[11px] text-neutral-500 hidden sm:inline">
