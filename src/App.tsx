@@ -63,7 +63,6 @@ import { logInfo, logWarn, logSubtitles, registerAppStateProvider } from './util
 import { checkAndPerformUrlCacheReset, getAppStateFromUrl, syncAppStateToUrl } from './utils/urlStateManager';
 import { getMockedSubtitlesForVideo, FCRZADI8R9U_LANGUAGE_SRT_TRACKS } from '../test/fixtures/defaultSubtitles';
 import { SelectTargetLanguageModal } from './components/SelectTargetLanguageModal';
-import { TTSInputTextsModal } from './components/TTSInputTextsModal';
 import { SubtitleArtifactsModal } from './components/SubtitleArtifactsModal';
 import { DemoQuickFloatingDock } from './components/DemoQuickFloatingDock';
 import { translateText } from './lib/translateService';
@@ -157,6 +156,7 @@ export default function App() {
 
   // Target Language Selection per video (Default to 'he' Hebrew subtitles or user learning target)
   const [isTargetLangModalOpen, setIsTargetLangModalOpen] = useState<boolean>(false);
+  const [activeTab, setActiveTab] = useState<'video' | 'subtitles'>('video');
   const [selectedTargetLang, setSelectedTargetLang] = useState<string>(() => {
     if (initialUrlState.targetLang) return initialUrlState.targetLang;
     return getVideoTargetLang(videoId) || 'he';
@@ -1491,374 +1491,183 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100 flex flex-col selection:bg-red-500/30 selection:text-red-200">
+    <div className="min-h-screen bg-neutral-950 text-neutral-100 flex flex-col">
       <Navbar
         onOpenLibrary={() => setIsLibraryOpen(true)}
         libraryCount={library.length}
         onOpenShare={() => setIsShareModalOpen(true)}
-        onOpenArtifacts={() => setIsArtifactsModalOpen(true)}
         onOpenSettings={() => {
-          try {
-            playerRef.current?.pauseVideo?.();
-          } catch {}
+          try { playerRef.current?.pauseVideo?.(); } catch {}
           setIsSettingsModalOpen(true);
         }}
-        onOpenLogs={() => setIsLogsModalOpen(true)}
-        onOpenTTSInputs={() => setIsTTSInputsModalOpen(true)}
-        onOpenApkUpdate={() => setIsApkUpdateModalOpen(true)}
-        hasApkUpdate={hasApkUpdate && isAndroidApp}
-        latestApkVersion={latestApkTag}
-        settings={settings}
       />
 
-      <main className="flex-1 w-full flex flex-col items-center py-6 px-4 sm:px-6">
-        <div
-          className={`w-full flex flex-col gap-6 transition-all duration-300 ${
-            theaterMode ? 'max-w-7xl' : 'max-w-5xl'
-          }`}
-        >
-          {/* Newer APK Available Banner in Expanded View (Only on Android) */}
-          {hasApkUpdate && isAndroidApp && (
-            <div
-              id="expanded-apk-update-banner"
-              data-testid="expanded-apk-update-banner"
-              className="p-4 rounded-2xl bg-gradient-to-r from-emerald-950/80 to-teal-950/80 border border-emerald-500/70 text-emerald-100 shadow-xl flex items-center justify-between gap-4 animate-fadeIn"
-            >
-              <div className="flex items-center gap-3">
-                <div className="p-2.5 rounded-xl bg-emerald-500/20 text-emerald-400 shrink-0">
-                  <Sparkles className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-sm text-emerald-300">
-                    Newer Version Available ({latestApkTag})
-                  </h3>
-                  <p className="text-xs text-emerald-200/80 mt-0.5">
-                    A newer release of YouTube Subtitle &amp; Speech Flow Viewer is ready for installation.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2 shrink-0">
-                <button
-                  type="button"
-                  id="expanded-apk-update-btn"
-                  onClick={() => setIsApkUpdateModalOpen(true)}
-                  className="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs shadow-lg shadow-emerald-950 transition active:scale-95"
-                >
-                  Download &amp; Install
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setHasApkUpdate(false)}
-                  className="p-1.5 text-emerald-400 hover:text-emerald-200"
-                  title="Dismiss banner"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-          )}
+      {/* Toasts */}
+      {sharedLinkComplaint && (
+        <div className="mx-auto w-full max-w-3xl px-4 mt-3">
+          <div className="p-3 rounded-lg bg-red-950 border border-red-800 text-red-200 text-xs flex items-center justify-between gap-2">
+            <span>{sharedLinkComplaint}</span>
+            <button onClick={() => setSharedLinkComplaint(null)} className="text-red-400 hover:text-red-200"><X className="w-4 h-4" /></button>
+          </div>
+        </div>
+      )}
+      {sharedLinkSuccess && (
+        <div className="mx-auto w-full max-w-3xl px-4 mt-3">
+          <div className="p-3 rounded-lg bg-emerald-950 border border-emerald-800 text-emerald-200 text-xs flex items-center justify-between gap-2">
+            <span>{sharedLinkSuccess}</span>
+            <button onClick={() => setSharedLinkSuccess(null)} className="text-emerald-400 hover:text-emerald-200"><X className="w-4 h-4" /></button>
+          </div>
+        </div>
+      )}
+      {restoredToast && (
+        <div className="mx-auto w-full max-w-3xl px-4 mt-3">
+          <div className="p-3 rounded-lg bg-indigo-950 border border-indigo-800 text-indigo-200 text-xs flex items-center justify-between gap-2">
+            <span>{restoredToast}</span>
+            <button onClick={() => setRestoredToast(null)} className="text-indigo-400 hover:text-indigo-200"><X className="w-4 h-4" /></button>
+          </div>
+        </div>
+      )}
 
-          {/* URL Cache Reset Indicator Toast */}
-          {cacheResetToast && (
-            <div
-              id="cache-reset-indicator"
-              data-testid="cache-reset-indicator"
-              className="p-3.5 rounded-xl bg-amber-950/80 border border-amber-600/80 text-amber-200 text-xs flex items-center justify-between gap-3 animate-fadeIn shadow-lg"
-            >
-              <div className="flex items-center gap-2.5">
-                <RefreshCw className="w-4 h-4 text-amber-400 shrink-0" />
-                <span className="font-medium">{cacheResetToast}</span>
-              </div>
-              <button
-                type="button"
-                id="dismiss-cache-reset-indicator"
-                onClick={() => setCacheResetToast(null)}
-                className="p-1 text-amber-400 hover:text-amber-200 transition"
-                title="Dismiss banner"
-              >
-                <X className="w-3.5 h-3.5" />
-              </button>
-            </div>
-          )}
+      {/* Link Input */}
+      <div className="mx-auto w-full max-w-3xl px-4 mt-4">
+        <LinkInputBar
+          currentUrl={currentUrl}
+          onSelectVideo={handleSelectVideo}
+          onOpenLibrary={() => setIsLibraryOpen(true)}
+          onOpenShare={() => setIsShareModalOpen(true)}
+          libraryCount={library.length}
+        />
+      </div>
 
-          {/* Shared Link Complaint Banner: The app will complain if it's not a YouTube link */}
-          {sharedLinkComplaint && (
-            <div
-              id="shared-link-complaint-banner"
-              data-testid="shared-link-complaint-banner"
-              className="p-4 rounded-2xl bg-red-950/80 border border-red-700/80 text-red-200 shadow-xl flex items-start justify-between gap-3 animate-fadeIn"
-            >
-              <div className="flex items-start gap-3">
-                <div className="p-2 rounded-xl bg-red-900/60 text-red-400 shrink-0 mt-0.5">
-                  <ShieldAlert className="w-5 h-5" />
-                </div>
-                <div className="space-y-1">
-                  <h3 className="font-semibold text-sm text-red-300 flex items-center gap-2">
-                    <span>Invalid Video Link (Not a YouTube Link)</span>
-                  </h3>
-                  <p className="text-xs text-red-200/90 leading-relaxed">
-                    {sharedLinkComplaint}
-                  </p>
-                  <p className="text-[11px] text-red-400 mt-1">
-                    Please share a valid YouTube link (such as <code className="font-mono bg-red-950 px-1 py-0.5 rounded">youtube.com/watch?v=...</code>, <code className="font-mono bg-red-950 px-1 py-0.5 rounded">youtu.be/...</code>, or Shorts).
-                  </p>
-                </div>
-              </div>
+      {/* Tab Bar */}
+      <div className="mx-auto w-full max-w-3xl px-4 mt-4">
+        <div className="flex gap-1 border-b border-neutral-800">
+          <button
+            onClick={() => setActiveTab('video')}
+            className={`px-4 py-2 text-sm font-medium border-b-2 transition ${
+              activeTab === 'video'
+                ? 'border-red-500 text-neutral-100'
+                : 'border-transparent text-neutral-500 hover:text-neutral-300'
+            }`}
+          >
+            Video
+          </button>
+          <button
+            onClick={() => setActiveTab('subtitles')}
+            className={`px-4 py-2 text-sm font-medium border-b-2 transition ${
+              activeTab === 'subtitles'
+                ? 'border-red-500 text-neutral-100'
+                : 'border-transparent text-neutral-500 hover:text-neutral-300'
+            }`}
+          >
+            Subtitles
+          </button>
+        </div>
+      </div>
 
-              <button
-                type="button"
-                id="dismiss-complaint-button"
-                onClick={() => setSharedLinkComplaint(null)}
-                className="p-1.5 rounded-lg text-red-400 hover:text-red-200 hover:bg-red-900/40 transition shrink-0"
-                title="Dismiss complaint"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-          )}
-
-          {/* Shared Link Success Banner */}
-          {sharedLinkSuccess && (
-            <div
-              id="shared-link-success-banner"
-              data-testid="shared-link-success-banner"
-              className="p-3.5 rounded-xl bg-emerald-950/70 border border-emerald-700/80 text-emerald-200 text-xs flex items-center justify-between gap-3 animate-fadeIn shadow-lg"
-            >
-              <div className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span className="font-medium">{sharedLinkSuccess}</span>
-              </div>
-              <button
-                type="button"
-                onClick={() => setSharedLinkSuccess(null)}
-                className="p-1 text-emerald-400 hover:text-emerald-200"
-              >
-                <X className="w-3.5 h-3.5" />
-              </button>
-            </div>
-          )}
-
-          {/* Restored Subtitles Notification Toast */}
-          {restoredToast && (
-            <div
-              id="restored-subtitles-toast"
-              data-testid="restored-subtitles-toast"
-              className="px-4 py-2.5 rounded-xl bg-indigo-950/80 border border-indigo-700/80 text-indigo-200 text-xs flex items-center justify-between gap-3 animate-fadeIn shadow-lg"
-            >
-              <div className="flex items-center gap-2">
-                <Subtitles className="w-4 h-4 text-indigo-400 shrink-0" />
-                <span>{restoredToast}</span>
-              </div>
-              <button
-                type="button"
-                onClick={() => setRestoredToast(null)}
-                className="p-1 text-indigo-400 hover:text-indigo-200"
-              >
-                <X className="w-3 h-3" />
-              </button>
-            </div>
-          )}
-
-          {/* Step 1: Link paste, Sharing & Library Access */}
-          <LinkInputBar
-            currentUrl={currentUrl}
-            onSelectVideo={handleSelectVideo}
-            onOpenLibrary={() => setIsLibraryOpen(true)}
-            onOpenShare={() => setIsShareModalOpen(true)}
-            libraryCount={library.length}
-          />
-
-          {/* Web Companion Demo Showcase & Fixed Multi-lingual Artifacts Bar */}
-          {!isAndroidApp && (
-            <div
-              id="web-demo-showcase-bar"
-              data-testid="web-demo-showcase-bar"
-              className="p-4 rounded-2xl glass-panel border border-indigo-500/30 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-indigo-600/30 border border-indigo-400/40 flex items-center justify-center shrink-0 shadow-sm">
-                  <Sparkles className="w-5 h-5 text-indigo-300" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-2">
-                    <span className="font-bold text-sm text-neutral-100">Web Companion Demo</span>
-                    <span className="px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 font-mono text-[10px] font-bold">
-                      Live Showcase &amp; CI/CD Test Driver
-                    </span>
-                  </div>
-                  <p className="text-neutral-400 text-xs mt-0.5">
-                    Demonstrating authentic dual-language subtitle learning with 1,578 bundled cues for video <strong className="text-neutral-200">FcRzAdI8R9U</strong> (Russian source, Hebrew, Italian, English, Arabic). Pure SRT synchronization with zero queues.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2 flex-wrap shrink-0">
-                <button
-                  type="button"
-                  id="demo-load-default-video-btn"
-                  onClick={() => handleSelectVideo(DEFAULT_VIDEO_ID, DEFAULT_VIDEO_URL)}
-                  className="px-3 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-200 border border-neutral-700 font-medium text-xs transition active:scale-95"
-                >
-                  Reset Demo Video
-                </button>
-                <button
-                  type="button"
-                  id="demo-open-artifacts-btn"
-                  onClick={() => setIsArtifactsModalOpen(true)}
-                  className="px-3 py-1.5 rounded-lg bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-200 border border-indigo-500/40 font-semibold text-xs transition active:scale-95 flex items-center gap-1.5"
-                >
-                  <Subtitles className="w-3.5 h-3.5 text-indigo-400" />
-                  <span>Cached .SRT Tracks</span>
-                </button>
-              </div>
-            </div>
-          )}
-
-          {/* Main Video Player */}
-          <VideoPlayer
-            ref={playerRef}
-            videoId={videoId}
-            originalUrl={currentUrl}
-            theaterMode={theaterMode}
-            onToggleTheater={() => setTheaterMode(!theaterMode)}
-            startTime={startTime}
-            detectedFormat={detectedFormat}
-            onFetchSubtitles={() => handleFetchSubtitles(videoId, false)}
-            isFetchingSubtitles={isFetchingSubtitles}
-            hasSubtitles={activeCues.length > 0}
-            captionsEnabled={captionsEnabled}
-            compactView={false}
-            isSyncActive={syncEngine.isSyncActive}
-            onToggleSync={syncEngine.togglePlayPause}
-            onStateChange={syncEngine.handleYTStateChange}
-            isLoopingCue={syncEngine.isLoopingCue}
-            onToggleLoopCue={syncEngine.toggleLoopCue}
-            onNextCue={syncEngine.nextCue}
-            onPrevCue={syncEngine.prevCue}
-            syncTTSText={syncEngine.currentTTSText}
-            syncTTSLang={syncEngine.currentTTSLang}
-            isSyncSpeaking={syncEngine.isSpeaking}
-            syncTTSCharIndex={syncEngine.activeCharIndex}
-            onTimeUpdate={handlePlayerTimeUpdate}
-            activeCue={effectiveActiveCue}
-            translatedCueText={effectiveTranslatedCueText}
-            targetLanguage={selectedTargetLang}
-            onSelectTargetLanguage={handleUpdateTargetLang}
-            subtitlePosition={settings.subtitlePosition}
-            showTranslatedOnTop={settings.showTranslatedOnTop}
-            alwaysShowKeyControls={settings.alwaysShowKeyControls}
-            onChangeSubtitlePosition={(pos) => handleUpdateSettings({ ...settings, subtitlePosition: pos })}
-            onOpenTargetLanguageModal={() => setIsTargetLangModalOpen(true)}
-            onOpenArtifacts={() => setIsArtifactsModalOpen(true)}
-            onOpenLogs={() => setIsLogsModalOpen(true)}
-            onOpenSettings={() => {
-              try {
-                playerRef.current?.pauseVideo?.();
-              } catch {}
-              setIsSettingsModalOpen(true);
-            }}
-            onBackOrClose={() => setIsLibraryOpen(true)}
-            onToggleCaptions={(enabled) => {
-              setCaptionsEnabled(enabled);
-              const isAndroidApp = isAndroidAppEnvironment();
-              if (enabled) {
-                dispatch(
-                  transition({
-                    to: 'fetching_captions',
-                    actionName: 'CAPTION_ICON_TOGGLED_ON',
-                    payload: { videoId },
-                  })
-                );
-                // Subtitle auto-detection when enabling captions is scoped to Android app
-                if (activeCues.length === 0 && isAndroidApp) {
-                  handleFetchSubtitles(videoId, false);
+      {/* Tab Content */}
+      <main className="flex-1 w-full">
+        <div className="mx-auto w-full max-w-3xl px-4 py-4">
+          {activeTab === 'video' && (
+            <VideoPlayer
+              ref={playerRef}
+              videoId={videoId}
+              originalUrl={currentUrl}
+              theaterMode={false}
+              onToggleTheater={() => {}}
+              startTime={startTime}
+              detectedFormat={detectedFormat}
+              onFetchSubtitles={() => handleFetchSubtitles(videoId, false)}
+              isFetchingSubtitles={isFetchingSubtitles}
+              hasSubtitles={activeCues.length > 0}
+              captionsEnabled={captionsEnabled}
+              compactView={false}
+              isSyncActive={syncEngine.isSyncActive}
+              onToggleSync={syncEngine.togglePlayPause}
+              onStateChange={syncEngine.handleYTStateChange}
+              isLoopingCue={syncEngine.isLoopingCue}
+              onToggleLoopCue={syncEngine.toggleLoopCue}
+              onNextCue={syncEngine.nextCue}
+              onPrevCue={syncEngine.prevCue}
+              syncTTSText={syncEngine.currentTTSText}
+              syncTTSLang={syncEngine.currentTTSLang}
+              isSyncSpeaking={syncEngine.isSpeaking}
+              syncTTSCharIndex={syncEngine.activeCharIndex}
+              onTimeUpdate={handlePlayerTimeUpdate}
+              activeCue={effectiveActiveCue}
+              translatedCueText={effectiveTranslatedCueText}
+              targetLanguage={selectedTargetLang}
+              onSelectTargetLanguage={handleUpdateTargetLang}
+              subtitlePosition={settings.subtitlePosition}
+              showTranslatedOnTop={settings.showTranslatedOnTop}
+              alwaysShowKeyControls={settings.alwaysShowKeyControls}
+              onChangeSubtitlePosition={(pos) => handleUpdateSettings({ ...settings, subtitlePosition: pos })}
+              onOpenTargetLanguageModal={() => setIsTargetLangModalOpen(true)}
+              onOpenArtifacts={() => setIsArtifactsModalOpen(true)}
+              onOpenLogs={() => setIsLogsModalOpen(true)}
+              onOpenSettings={() => { try { playerRef.current?.pauseVideo?.(); } catch {} setIsSettingsModalOpen(true); }}
+              onBackOrClose={() => setIsLibraryOpen(true)}
+              onToggleCaptions={(enabled) => {
+                setCaptionsEnabled(enabled);
+                if (enabled) {
+                  dispatch(transition({ to: 'fetching_captions', actionName: 'CAPTION_ICON_TOGGLED_ON', payload: { videoId } }));
+                  if (activeCues.length === 0 && isAndroidApp) handleFetchSubtitles(videoId, false);
+                } else {
+                  dispatch(transition({ to: 'video_ready', actionName: 'CAPTION_ICON_TOGGLED_OFF', payload: { videoId } }));
                 }
-              } else {
-                dispatch(
-                  transition({
-                    to: 'video_ready',
-                    actionName: 'CAPTION_ICON_TOGGLED_OFF',
-                    payload: { videoId },
-                  })
-                );
-              }
-            }}
-          />
-
-          {/* Steps 2-6: Subtitles Teacher & Multi-Column Translation Workspace */}
-          <SubtitlesTeacherPanel
-            cues={activeCues}
-            playerRef={playerRef}
-            observedTimedTextUrl={observedTimedTextUrl}
-            videoId={videoId}
-            selectedTargetLang={selectedTargetLang}
-            onSelectTargetLang={handleUpdateTargetLang}
-            onUpdateVideoSettings={handleUpdateVideoSettings}
-            onUpdateObservedTimedTextUrl={(newUrl) => {
-              saveObservedTimedTextUrl(videoId, newUrl);
-              setObservedTimedTextUrl(newUrl);
-            }}
-            onLoadCues={(newCues) => {
-              setCustomCues(newCues);
-              saveCachedSubtitles(videoId, newCues, {
-                title: `Video ${videoId}`,
-                originalUrl: currentUrl,
-              });
-            }}
-            onOpenLibrary={() => setIsLibraryOpen(true)}
-            onOpenArtifacts={() => setIsArtifactsModalOpen(true)}
-            onFetchSubtitles={() => handleFetchSubtitles(videoId, false)}
-            isFetchingSubtitles={isFetchingSubtitles}
-            fetchError={fetchError}
-            activeCue={effectiveActiveCue}
-            onJumpToCue={(cue, idx) => {
-              setActiveCue(cue);
-              if (syncEngine.isSyncActive) {
-                syncEngine.jumpToCue(idx);
-              }
-            }}
-            syncEngine={syncEngine}
-          />
+              }}
+            />
+          )}
+          {activeTab === 'subtitles' && (
+            <SubtitlesTeacherPanel
+              cues={activeCues}
+              playerRef={playerRef}
+              observedTimedTextUrl={observedTimedTextUrl}
+              videoId={videoId}
+              selectedTargetLang={selectedTargetLang}
+              onSelectTargetLang={handleUpdateTargetLang}
+              onUpdateVideoSettings={handleUpdateVideoSettings}
+              onUpdateObservedTimedTextUrl={(newUrl) => {
+                saveObservedTimedTextUrl(videoId, newUrl);
+                setObservedTimedTextUrl(newUrl);
+              }}
+              onLoadCues={(newCues) => {
+                setCustomCues(newCues);
+                saveCachedSubtitles(videoId, newCues, { title: `Video ${videoId}`, originalUrl: currentUrl });
+              }}
+              onOpenLibrary={() => setIsLibraryOpen(true)}
+              onOpenArtifacts={() => setIsArtifactsModalOpen(true)}
+              onFetchSubtitles={() => handleFetchSubtitles(videoId, false)}
+              isFetchingSubtitles={isFetchingSubtitles}
+              fetchError={fetchError}
+              activeCue={effectiveActiveCue}
+              onJumpToCue={(cue, idx) => {
+                setActiveCue(cue);
+                if (syncEngine.isSyncActive) syncEngine.jumpToCue(idx);
+              }}
+              syncEngine={syncEngine}
+            />
+          )}
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="w-full border-t border-neutral-900 py-4 px-6 text-center text-xs text-neutral-500 flex flex-wrap items-center justify-center gap-2">
-        <span>YouTube Language Learning</span>
-        <span>•</span>
-        <span>Synchronized Subtitles &amp; Multi-Language Translation</span>
-        <span>•</span>
-        <span>Link Sharing &amp; Persistent Subtitle Caching</span>
-      </footer>
-
-      {/* Target Language Selection Modal for each video */}
+      {/* Modals */}
       <SelectTargetLanguageModal
         isOpen={isTargetLangModalOpen}
         videoId={videoId}
         onClose={() => setIsTargetLangModalOpen(false)}
         currentSelectedLang={selectedTargetLang}
         onSelectLanguage={handleUpdateTargetLang}
-        onUpdateTtsRate={(langCode, rate) => {
-          handleUpdateVideoSettings(videoId, {
-            ttsRates: { [langCode]: rate },
-          });
-        }}
+        onUpdateTtsRate={(langCode, rate) => handleUpdateVideoSettings(videoId, { ttsRates: { [langCode]: rate } })}
       />
-
-      {/* Subtitle Artifacts Browser Modal */}
       <SubtitleArtifactsModal
         isOpen={isArtifactsModalOpen}
         onClose={() => setIsArtifactsModalOpen(false)}
         videoId={videoId}
         activeTargetLang={selectedTargetLang}
         onSelectLanguage={handleUpdateTargetLang}
-        onSeek={(seconds) => {
-          try {
-            playerRef.current?.seekTo?.(seconds);
-          } catch {}
-        }}
+        onSeek={(seconds) => { try { playerRef.current?.seekTo?.(seconds); } catch {} }}
       />
-
-      {/* Video & Subtitle Library Modal */}
       <VideoLibraryModal
         isOpen={isLibraryOpen}
         onClose={() => setIsLibraryOpen(false)}
@@ -1870,31 +1679,12 @@ export default function App() {
         onRemoveFromLibrary={handleRemoveFromLibrary}
         onUpdateVideoSettings={handleUpdateVideoSettings}
       />
-
-      {/* Share Link with App Modal */}
       <ShareLinkModal
         isOpen={isShareModalOpen}
         onClose={() => setIsShareModalOpen(false)}
         currentUrl={currentUrl}
         onLoadSharedVideo={handleProcessSharedLink}
       />
-
-      {/* Network offline warning */}
-      <OfflineIndicator />
-
-      {/* Activity Log Modal with Copy All option */}
-      <ActivityLogModal
-        isOpen={isLogsModalOpen}
-        onClose={() => setIsLogsModalOpen(false)}
-      />
-
-      {/* Dedicated TTS Input Texts View Modal (Newer on Top) */}
-      <TTSInputTextsModal
-        isOpen={isTTSInputsModalOpen}
-        onClose={() => setIsTTSInputsModalOpen(false)}
-      />
-
-      {/* Settings Modal (Advanced features OFF by default) */}
       <SettingsModal
         isOpen={isSettingsModalOpen}
         onClose={() => setIsSettingsModalOpen(false)}
@@ -1903,35 +1693,11 @@ export default function App() {
         onResetSettings={handleResetSettings}
         onOpenApkUpdate={() => setIsApkUpdateModalOpen(true)}
       />
-
-      {/* APK Update & In-App Installation Modal */}
-      <ApkUpdateModal
-        isOpen={isApkUpdateModalOpen}
-        onClose={() => setIsApkUpdateModalOpen(false)}
-      />
-
-      {/* Real-time Web Network Traffic Inspector */}
+      <ApkUpdateModal isOpen={isApkUpdateModalOpen} onClose={() => setIsApkUpdateModalOpen(false)} />
+      <ActivityLogModal isOpen={isLogsModalOpen} onClose={() => setIsLogsModalOpen(false)} />
+      <OfflineIndicator />
       <NetworkInspectorModal />
-
-      {/* App Errors & Redux State Machine Actions Inspector */}
       <ErrorInspectorModal />
-
-      {/* Persistent Floating Diagnostic Dock (if enabled in settings) */}
-      {settings.enableDiagnosticDock && (
-        <FloatingDiagnosticDock
-          onOpenTTSInputs={() => setIsTTSInputsModalOpen(true)}
-        />
-      )}
-
-      {/* Quick Floating Dock on Landing Page for Demo Video */}
-      <DemoQuickFloatingDock
-        videoId={videoId}
-        settings={settings}
-        selectedTargetLang={selectedTargetLang}
-        onUpdateSettings={handleUpdateSettings}
-        onSelectTargetLanguage={handleUpdateTargetLang}
-        onOpenArtifacts={() => setIsArtifactsModalOpen(true)}
-      />
     </div>
   );
 }

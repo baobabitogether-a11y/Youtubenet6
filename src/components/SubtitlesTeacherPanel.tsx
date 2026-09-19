@@ -475,15 +475,7 @@ export const SubtitlesTeacherPanel: React.FC<SubtitlesTeacherPanelProps> = ({
     return -1;
   }, [isSyncActive, activeCueIndex, activeCue, effectiveCues]);
 
-  // Bidirectional sync: Auto-scroll active cue row into view as playback progresses
-  useEffect(() => {
-    if (effectiveActiveIndex >= 0) {
-      const row = document.getElementById(`subtitle-cue-row-${effectiveActiveIndex}`);
-      if (row) {
-        row.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
-    }
-  }, [effectiveActiveIndex]);
+  // No auto-scroll: user controls their own scroll position
 
   // Default to YouTube native translation (repeating observed request with tlang & fmt=srt)
   // and use current translation service as fallback.
@@ -972,15 +964,7 @@ export const SubtitlesTeacherPanel: React.FC<SubtitlesTeacherPanelProps> = ({
     }
   }, [effectiveActiveIndex, pageSize, filteredCues, effectiveCues, totalPages]);
 
-  // Auto-scroll active row into view
-  useEffect(() => {
-    if (effectiveActiveIndex >= 0) {
-      const row = document.getElementById(`subtitle-cue-row-${effectiveActiveIndex}`);
-      if (row) {
-        row.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
-    }
-  }, [effectiveActiveIndex, currentPage]);
+  // No auto-scroll: user controls their own scroll position
 
   // Available cached authentic .SRT fixture tracks for quick browsing
   const cachedSrtTracks = useMemo(() => {
