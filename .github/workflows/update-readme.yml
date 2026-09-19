@@ -1,0 +1,56 @@
+name: Ensure README Fork & Owner Sync
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'README.md'
+      - 'scripts/update-readme.mjs'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+concurrency:
+  group: update-readme-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  sync-readme:
+    name: Synchronize README.md with Repository Identity
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run README.md Synchronization
+        run: |
+          node scripts/update-readme.mjs
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+
+      - name: Commit and Push if README Changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --exit-code README.md; then
+            echo "README.md has been updated to match repository '${{ github.repository }}'. Committing changes..."
+            git add README.md
+            git commit -m "chore(docs): synchronize README.md repository identity for ${{ github.repository }}"
+            git push origin ${{ github.ref_name }}
+          else
+            echo "README.md is already up to date with repository '${{ github.repository }}'."
+          fi

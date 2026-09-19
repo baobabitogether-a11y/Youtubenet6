@@ -1,0 +1,31 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Test & Automation Artifacts
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
+cypress/reports/
+cypress/videos/
+cypress/screenshots/
+android-emulator-report.html
+android-emulator-screenshot.png
+android-emulator-logcat.txt
+release-artifacts/
+
+# Android Build Outputs & Local Configs
+*.apk
+*.aab
+android-shell/.gradle/
+android-shell/build/
+android-shell/app/build/
+android-shell/local.properties
+android-shell/.idea/
+

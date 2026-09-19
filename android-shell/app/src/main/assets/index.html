@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      // Filter benign Vite websocket / HMR notifications in container preview environments
+      (function() {
+        if (typeof window !== 'undefined' && window.console && window.console.error) {
+          var origError = window.console.error;
+          window.console.error = function() {
+            var first = arguments[0];
+            var firstStr = typeof first === 'string' ? first : '';
+            var allStr = Array.prototype.slice.call(arguments).map(function(a) {
+              return String(a && a.message ? a.message : a || '');
+            }).join(' ');
+            if (
+              firstStr === '[vite]' ||
+              firstStr.indexOf('[vite]') !== -1 ||
+              allStr.indexOf('failed to connect to websocket') !== -1 ||
+              allStr.indexOf('vite-plugin-pwa:dev-ready') !== -1
+            ) {
+              if (window.console.debug) {
+                window.console.debug.apply(window.console, arguments);
+              }
+              return;
+            }
+            return origError.apply(window.console, arguments);
+          };
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Video Viewer</title>
+    <meta name="description" content="YouTube video player and language learning teacher with synchronized subtitles, multilingual translations (Italian, Arabic), TTS voice controls, and APK export." />
+    <meta property="og:title" content="YouTube Video Viewer" />
+    <meta property="og:description" content="YouTube video player and language learning teacher with synchronized subtitles, multilingual translations (Italian, Arabic), TTS voice controls, and APK export." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0f0f12" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="YT Viewer" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #0f0f12;
+        color: #f5f5f5;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-C5EfI_rn.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CLtw4CLx.css">
+  <link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
+  <body class="bg-neutral-950 text-neutral-100 antialiased min-h-screen">
+    <div id="root"></div>
+  </body>
+</html>
+

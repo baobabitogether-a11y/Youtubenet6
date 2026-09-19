@@ -1,0 +1,8 @@
+{
+  "name": "YouTube Video Viewer",
+  "description": "YouTube video player and language learning teacher with synchronized subtitles, multilingual translations (Italian, Arabic), TTS voice controls, and APK export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

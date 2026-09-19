@@ -1,0 +1,92 @@
+name: Publish Web Demo to GitHub Pages
+
+on:
+  workflow_run:
+    workflows: ["Build & Release Android APK"]
+    types:
+      - completed
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-demo-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  actions: read
+
+jobs:
+  publish-web-demo:
+    name: Publish Web Demo & Subtitle Artifacts to gh-pages
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Web Dependencies
+        timeout-minutes: 3
+        run: npm install
+
+      - name: Download Web Build Artifact from Upstream Workflow
+        if: github.event_name == 'workflow_run'
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: web-dist
+          path: dist
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Web Application & Prepare Subtitle Artifacts
+        timeout-minutes: 3
+        run: |
+          if [ ! -f "dist/index.html" ]; then
+            echo "⚙️ Pre-built web artifacts not found. Building web application..."
+            npm run build
+          fi
+          echo "✅ Preparing reports and web demo artifact structure..."
+          node scripts/prepare-report.mjs
+
+      - name: Deploy Web Demo to GitHub Pages (gh-pages branch)
+        if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' || github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.head_branch == 'main')) && !cancelled()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./cypress/reports
+          publish_branch: gh-pages
+          force_orphan: true
+
+      - name: Setup GitHub Pages (Native Actions Mode)
+        if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' || github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.head_branch == 'main')) && !cancelled()
+        uses: actions/configure-pages@v5
+        continue-on-error: true
+
+      - name: Upload GitHub Pages Artifact (Native Actions Mode)
+        if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' || github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.head_branch == 'main')) && !cancelled()
+        uses: actions/upload-pages-artifact@v3
+        continue-on-error: true
+        with:
+          path: ./cypress/reports
+
+      - name: Deploy to GitHub Pages (Native Actions Mode)
+        id: deployment
+        if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' || github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.head_branch == 'main')) && !cancelled()
+        uses: actions/deploy-pages@v4
+        continue-on-error: true

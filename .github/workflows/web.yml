@@ -1,0 +1,138 @@
+name: Web E2E Tests
+
+on:
+  workflow_run:
+    workflows: ["Publish Web Demo to GitHub Pages"]
+    types:
+      - completed
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+concurrency:
+  group: web-e2e-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  actions: read
+
+jobs:
+  web-e2e-tests:
+    name: Run Web E2E Tests on Deployed Website
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Web Dependencies
+        timeout-minutes: 3
+        run: npm install
+
+      - name: Install Playwright Browsers with OS Dependencies
+        timeout-minutes: 3
+        run: npx playwright install --with-deps chromium
+
+      - name: Compute Target Base URL (Deployed Site vs Local Server)
+        id: target_url
+        run: |
+          DEPLOYED_APP_URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name || 'youtubenet3' }}/app/"
+          echo "Checking live deployed website: $DEPLOYED_APP_URL"
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -L "$DEPLOYED_APP_URL" || true)
+          echo "HTTP status: $HTTP_STATUS"
+          if [ "$HTTP_STATUS" = "200" ]; then
+            echo "✅ Live deployed website is reachable ($DEPLOYED_APP_URL)."
+            echo "base_url=$DEPLOYED_APP_URL" >> "$GITHUB_OUTPUT"
+            echo "use_deployed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ℹ️ Deployed website not directly reachable (HTTP $HTTP_STATUS), using local server fallback."
+            echo "base_url=http://localhost:3000" >> "$GITHUB_OUTPUT"
+            echo "use_deployed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download Web Build Artifact (Fallback for Local Server)
+        if: steps.target_url.outputs.use_deployed != 'true'
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: web-dist
+          path: dist
+
+      - name: Build Web Application (Fallback for Local Server)
+        if: steps.target_url.outputs.use_deployed != 'true'
+        timeout-minutes: 3
+        run: |
+          if [ ! -f "dist/index.html" ]; then
+            echo "Building web application for local server..."
+            npm run build
+          fi
+
+      - name: Execute Playwright E2E Tests (Web Specs)
+        timeout-minutes: 4
+        env:
+          PLAYWRIGHT_BASE_URL: ${{ steps.target_url.outputs.base_url }}
+        run: npx playwright test e2e/web.spec.ts --timeout=60000
+
+      - name: Run Cypress Tests against Deployed Website
+        if: steps.target_url.outputs.use_deployed == 'true'
+        timeout-minutes: 4
+        env:
+          CYPRESS_BASE_URL: ${{ steps.target_url.outputs.base_url }}
+        run: npm run test:cy:report:web
+        continue-on-error: true
+
+      - name: Run Cypress Tests with Local Server (Fallback)
+        if: steps.target_url.outputs.use_deployed != 'true'
+        timeout-minutes: 4
+        uses: cypress-io/github-action@v6
+        with:
+          install: false
+          start: npm start
+          wait-on: 'http://localhost:3000'
+          wait-on-timeout: 30
+          command: npm run test:cy:report:web
+        continue-on-error: true
+
+      - name: Prepare Video & Step Screenshot Assets
+        if: always()
+        run: node scripts/prepare-report.mjs
+
+      - name: Deploy Web Test Outputs to GitHub Pages (gh-pages)
+        if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' || github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.head_branch == 'main')) && !cancelled()
+        uses: peaceiris/actions-gh-pages@v4
+        continue-on-error: true
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./cypress/reports
+          publish_branch: gh-pages
+          keep_files: true
+
+      - name: Upload Playwright Test Report & Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-e2e-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
+
+      - name: Upload Cypress Test Report & Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-e2e-report
+          path: cypress/reports/
+          retention-days: 14

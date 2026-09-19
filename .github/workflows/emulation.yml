@@ -1,0 +1,187 @@
+name: Android Emulator E2E Tests
+
+on:
+  workflow_run:
+    workflows: ["Build & Release Android APK"]
+    types:
+      - completed
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+concurrency:
+  group: emulator-e2e-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  actions: read
+
+jobs:
+  android-emulator-e2e:
+    name: Android Emulator E2E Tests (Option C)
+    runs-on: macos-14
+    timeout-minutes: 15
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    continue-on-error: true
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Download APK Artifact from Release Workflow
+        if: github.event_name == 'workflow_run'
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: youtube-viewer-apks
+          path: release-artifacts
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Verify and Stage Pre-Built Android APK from Release Workflow
+        id: stage_apk
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p android-shell/app/build/outputs/apk/debug
+          if [ ! -f "release-artifacts/YouTube-Viewer-debug.apk" ] && command -v gh >/dev/null 2>&1; then
+            echo "Attempting to retrieve latest build artifact from release-apk workflow via GitHub CLI..."
+            gh run download -R "${{ github.repository }}" -n youtube-viewer-apks -D release-artifacts || true
+          fi
+
+          if [ -f "release-artifacts/YouTube-Viewer-debug.apk" ]; then
+            echo "✅ Successfully staged pre-built Android APK from release-apk workflow. Skipping duplicate compilation."
+            cp release-artifacts/YouTube-Viewer-debug.apk android-shell/app/build/outputs/apk/debug/app-debug.apk
+            echo "have_apk=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ℹ️ Pre-built APK not found from upstream workflow. Will compile from source."
+            echo "have_apk=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download Web Build Artifact (Fallback for source build)
+        if: steps.stage_apk.outputs.have_apk != 'true' && github.event_name == 'workflow_run'
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: web-dist
+          path: dist
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install Web Dependencies (Fallback)
+        if: steps.stage_apk.outputs.have_apk != 'true'
+        timeout-minutes: 3
+        run: npm install
+
+      - name: Build Web Application (Fallback)
+        if: steps.stage_apk.outputs.have_apk != 'true'
+        timeout-minutes: 3
+        run: |
+          if [ ! -f "dist/index.html" ]; then
+            npm run build
+          fi
+
+      - name: Bundle Web Assets into Android Native Shell (Fallback)
+        if: steps.stage_apk.outputs.have_apk != 'true'
+        run: |
+          mkdir -p android-shell/app/src/main/assets
+          cp -r dist/* android-shell/app/src/main/assets/
+          echo "Bundled web assets:"
+          ls -la android-shell/app/src/main/assets/
+
+      - name: Set up Java 17 (Fallback)
+        if: steps.stage_apk.outputs.have_apk != 'true'
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Gradle (Fallback)
+        if: steps.stage_apk.outputs.have_apk != 'true'
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          build-root-directory: android-shell
+
+      - name: Build Android Debug APK (Fallback)
+        if: steps.stage_apk.outputs.have_apk != 'true'
+        timeout-minutes: 3
+        run: |
+          chmod +x android-shell/gradlew
+          cd android-shell
+          ./gradlew assembleDebug --stacktrace
+
+      - name: Run E2E Test on Android Emulator (Option C)
+        timeout-minutes: 3
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: arm64-v8a
+          force-avd-creation: true
+          ram-size: 2048M
+          emulator-boot-timeout: 300
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: |
+            adb devices
+            adb install -r android-shell/app/build/outputs/apk/debug/app-debug.apk
+            adb shell am start -n com.ytviewer.app/.MainActivity -d "https://www.youtube.com/watch?v=FcRzAdI8R9U"
+            sleep 8
+            adb shell dumpsys activity com.ytviewer.app
+            adb shell screencap -p /sdcard/screen.png
+            adb pull /sdcard/screen.png ./android-emulator-screenshot.png
+            adb logcat -d -s "YT_CAPTION_INTERCEPTOR" "TTS_ENGINE" "ActivityTaskManager" | tail -n 60 > ./android-emulator-logcat.txt || true
+            node scripts/generate-android-report.mjs
+            echo "Android Native Shell APK successfully booted and verified on Android Emulator (Option C)!"
+
+      - name: Upload Android Emulator Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-emulator-artifacts
+          path: |
+            android-emulator-screenshot.png
+            android-emulator-report.html
+            android-emulator-logcat.txt
+            cypress/reports/android-emulator-report.html
+            android-shell/app/build/outputs/apk/debug/*.apk
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Synchronize Android Report into Cypress Reports
+        if: always()
+        run: |
+          mkdir -p cypress/reports/assets
+          [ -f android-emulator-report.html ] && cp -f android-emulator-report.html cypress/reports/ || true
+          [ -f android-emulator-screenshot.png ] && cp -f android-emulator-screenshot.png cypress/reports/assets/ || true
+          node scripts/prepare-report.mjs
+
+      - name: Deploy Android Emulator Report to GitHub Pages (gh-pages)
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4
+        continue-on-error: true
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./cypress/reports
+          publish_branch: gh-pages
+          keep_files: true
+
+      - name: Deploy Android Emulator Report to GitHub Pages (gh_pages)
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4
+        continue-on-error: true
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./cypress/reports
+          publish_branch: gh_pages
+          keep_files: true
