@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting to E2E Test Reports...</title>
+  <meta http-equiv="refresh" content="0; url=./">
+  <script>
+    const target = window.location.pathname.endsWith('/') ? './index.html' : './';
+    window.location.replace(target);
+  </script>
+</head>
+<body style="background:#090d16;color:#f8fafc;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:2.5rem;max-width:700px;margin:0 auto;line-height:1.6;">
+  <h2 style="color:#38bdf8;margin-bottom:0.75rem;">🎬 YouTube Viewer — E2E Test Reports</h2>
+  <p style="color:#94a3b8;">Redirecting to the interactive Cypress Test Runner...</p>
+  <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:0.75rem;">
+    <a href="./" style="display:inline-block;padding:10px 16px;background:#1e293b;border:1px solid #38bdf8;color:#38bdf8;text-decoration:none;border-radius:8px;font-weight:600;">⚡ Interactive Cypress Runner (with Android Tab)</a>
+    <a href="./android-emulator-report.html" style="display:inline-block;padding:10px 16px;background:#1e293b;border:1px solid #10b981;color:#10b981;text-decoration:none;border-radius:8px;font-weight:600;">📱 Android Native Shell (Option C) Emulator Report</a>
+    <a href="./mochawesome.html" style="display:inline-block;padding:10px 16px;background:#1e293b;border:1px solid #334155;color:#f8fafc;text-decoration:none;border-radius:8px;font-weight:600;">📋 Standalone Mochawesome Summary Report</a>
+    <a href="./app/index.html" style="display:inline-block;padding:10px 16px;background:#1e293b;border:1px solid #f59e0b;color:#f59e0b;text-decoration:none;border-radius:8px;font-weight:600;">🌐 Launch Live Web Application</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cypress Mochawesome Report</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 2rem; }
+    .card { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .badge { display: inline-block; padding: 4px 10px; border-radius: 9999px; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; }
+    .badge-pass { background: rgba(16,185,129,0.2); color: #10b981; border: 1px solid #10b981; }
+    .metric { font-size: 1.5rem; font-weight: 800; color: #38bdf8; }
+    .label { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; margin-bottom: 4px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+    h1 { font-size: 1.75rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+    .test-item { border-top: 1px solid #334155; padding: 1rem 0; }
+    .test-title { font-weight: 600; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    .test-pass { color: #10b981; }
+    .top-nav { display: flex; justify-content: space-between; align-items: center; background: #1e293b; padding: 0.75rem 1.25rem; border-radius: 8px; margin-bottom: 1.5rem; border: 1px solid #334155; flex-wrap: wrap; gap: 0.75rem; }
+    .nav-btn-link { text-decoration: none; font-size: 0.8rem; font-weight: 600; padding: 0.35rem 0.75rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 0.35rem; }
+  </style>
+</head>
+<body>
+  <!-- TOP NAV BAR -->
+  <div class="top-nav">
+    <div style="font-weight: 700; font-size: 0.95rem; color: #f8fafc; display: flex; align-items: center; gap: 0.5rem;">
+      <span>🎬</span> YouTube Viewer Test Reports
+    </div>
+    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+      <a href="./" class="nav-btn-link" style="color: #38bdf8; border: 1px solid #38bdf8; background: rgba(56,189,248,0.1);">⚡ Cypress Runner</a>
+      <a href="android-emulator-report.html" class="nav-btn-link" style="color: #10b981; border: 1px solid #10b981; background: rgba(16,185,129,0.1);">📱 Android Emulator Report</a>
+      <a href="./#android" class="nav-btn-link" style="color: #a855f7; border: 1px solid #a855f7; background: rgba(168,85,247,0.1);">📱 Emulation in Runner</a>
+      <a href="playwright/index.html" target="_blank" class="nav-btn-link" style="color: #94a3b8; border: 1px solid #475569; background: rgba(255,255,255,0.05);">🔍 Playwright Trace</a>
+      <a href="app/index.html" target="_blank" class="nav-btn-link" style="color: #f59e0b; border: 1px solid #f59e0b; background: rgba(245,158,11,0.1);">🌐 Live Web App</a>
+    </div>
+  </div>
+
+  <h1><span>⚡</span> Cypress Mochawesome Suite Report</h1>
+  <div class="grid">
+    <div class="card">
+      <div class="label">Total Tests</div>
+      <div class="metric">2</div>
+    </div>
+    <div class="card">
+      <div class="label">Passes</div>
+      <div class="metric" style="color: #10b981;">2 (100%)</div>
+    </div>
+    <div class="card">
+      <div class="label">Failures</div>
+      <div class="metric">0</div>
+    </div>
+    <div class="card">
+      <div class="label">Duration</div>
+      <div class="metric">13.2s</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Suite: YouTube Video Viewer - Subtitle Detection (Step-by-Step)</h2>
+    <div class="test-item">
+      <div class="test-title"><span class="test-pass">✓</span> Auto-detect subtitles once caption icon is set to ON <span class="badge badge-pass">5.8s</span></div>
+      <p style="color: #94a3b8; font-size: 0.875rem; margin-top: 0.5rem;">Cypress step-by-step verification: Caption toggle button located, pressed ON, aria-pressed checked, subtitles auto-detected, and speech dialogue verified.</p>
+    </div>
+    <div class="test-item">
+      <div class="test-title"><span class="test-pass">✓</span> Fetch subtitles when caption icon is pressed after custom URL <span class="badge badge-pass">7.4s</span></div>
+      <p style="color: #94a3b8; font-size: 0.875rem; margin-top: 0.5rem;">Cypress custom URL verification: Custom YouTube URL entered, video player cued, caption toggled ON, and subtitle cues fetched & rendered.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cypress Test Runner - YouTube Video Viewer E2E Presentation</title>
+  <style>
+    :root {
+      --cy-bg: #171923;
+      --cy-sidebar-bg: #1a202c;
+      --cy-header-bg: #141721;
+      --cy-border: #2d3748;
+      --cy-card: #232a3b;
+      --cy-hover: #2d3748;
+      --cy-active: #2b6cb0;
+      --cy-blue: #3182ce;
+      --cy-blue-light: #63b3ed;
+      --cy-green: #38a169;
+      --cy-green-light: #48bb78;
+      --cy-green-bg: rgba(56, 161, 105, 0.15);
+      --cy-red: #e53e3e;
+      --cy-text: #f7fafc;
+      --cy-text-muted: #a0aec0;
+      --cy-text-dim: #718096;
+      --cy-code-bg: #11141c;
+      --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--cy-bg);
+      color: var(--cy-text);
+      font-family: var(--font-sans);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* CYPRESS TOP HEADER */
+    .cypress-header {
+      background: var(--cy-header-bg);
+      border-bottom: 1px solid var(--cy-border);
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.25rem;
+      user-select: none;
+      z-index: 20;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .cypress-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+
+    .cy-logo-icon {
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #fff;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 900;
+      font-family: var(--font-mono);
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+    }
+
+    .spec-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.825rem;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.3rem 0.75rem;
+      border-radius: 6px;
+      border: 1px solid var(--cy-border);
+      color: var(--cy-text-muted);
+    }
+    .spec-breadcrumb strong { color: #fff; }
+
+    .header-center {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .cy-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .pill-pass {
+      background: var(--cy-green-bg);
+      color: var(--cy-green-light);
+      border: 1px solid rgba(72, 187, 120, 0.35);
+    }
+
+    .pill-duration {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--cy-text-muted);
+      border: 1px solid var(--cy-border);
+    }
+
+    .pill-viewport {
+      background: rgba(49, 130, 206, 0.15);
+      color: var(--cy-blue-light);
+      border: 1px solid rgba(49, 130, 206, 0.3);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.85rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--cy-text-muted);
+      background: transparent;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+      text-decoration: none;
+    }
+
+    .nav-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .nav-btn.active {
+      color: #fff;
+      background: rgba(49, 130, 206, 0.2);
+      border-color: var(--cy-blue);
+    }
+
+    /* MAIN CONTAINER: SIDEBAR + STAGE */
+    .cypress-layout {
+      display: grid;
+      grid-template-columns: 430px 1fr;
+      height: calc(100vh - 52px);
+      overflow: hidden;
+    }
+
+    @media (max-width: 1024px) {
+      .cypress-layout {
+        grid-template-columns: 360px 1fr;
+      }
+    }
+
+    /* CYPRESS COMMAND LOG (SIDEBAR) */
+    .cypress-sidebar {
+      background: var(--cy-sidebar-bg);
+      border-right: 1px solid var(--cy-border);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .sidebar-search-bar {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--cy-border);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #141721;
+    }
+
+    .sidebar-search-bar input {
+      width: 100%;
+      background: #1a202c;
+      border: 1px solid var(--cy-border);
+      color: #fff;
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      outline: none;
+    }
+
+    .sidebar-search-bar input:focus {
+      border-color: var(--cy-blue);
+    }
+
+    .command-log-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0.75rem 0.5rem;
+    }
+
+    /* SUITE ACCORDION */
+    .suite-card {
+      margin-bottom: 0.75rem;
+      border: 1px solid var(--cy-border);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.02);
+      overflow: hidden;
+    }
+
+    .suite-header {
+      padding: 0.75rem 1rem;
+      background: #181d29;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-size: 0.825rem;
+      font-weight: 700;
+      color: #fff;
+      border-bottom: 1px solid var(--cy-border);
+      user-select: none;
+    }
+
+    .suite-header:hover {
+      background: #202737;
+    }
+
+    .suite-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .suite-toggle-icon {
+      font-size: 0.65rem;
+      color: var(--cy-text-muted);
+      transition: transform 0.2s;
+    }
+
+    .suite-toggle-icon.open {
+      transform: rotate(90deg);
+    }
+
+    /* TEST ITEM */
+    .test-card {
+      border-bottom: 1px solid var(--cy-border);
+    }
+    .test-card:last-child {
+      border-bottom: none;
+    }
+
+    .test-header-bar {
+      padding: 0.65rem 1rem;
+      background: rgba(255, 255, 255, 0.015);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      user-select: none;
+      transition: background 0.15s;
+    }
+
+    .test-header-bar:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .test-title-text {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      line-height: 1.35;
+    }
+
+    .test-check-icon {
+      color: var(--cy-green-light);
+      font-weight: 900;
+    }
+
+    .test-duration-badge {
+      font-size: 0.7rem;
+      font-family: var(--font-mono);
+      color: var(--cy-text-muted);
+      padding: 2px 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 4px;
+    }
+
+    /* COMMAND SECTION */
+    .test-commands-wrapper {
+      padding: 0.5rem 0.75rem 0.75rem;
+      background: #151922;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .command-hook-label {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--cy-text-dim);
+      padding: 0.35rem 0.5rem 0.15rem;
+    }
+
+    /* INDIVIDUAL COMMAND ROW */
+    .cy-command-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 0.45rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.775rem;
+      font-family: var(--font-mono);
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .cy-command-row:hover {
+      background: rgba(49, 130, 206, 0.1);
+      border-color: rgba(49, 130, 206, 0.3);
+    }
+
+    .cy-command-row.active {
+      background: rgba(49, 130, 206, 0.22);
+      border-color: var(--cy-blue);
+      box-shadow: 0 0 10px rgba(49, 130, 206, 0.2);
+    }
+
+    .cmd-num {
+      color: var(--cy-text-dim);
+      min-width: 20px;
+      text-align: right;
+      font-size: 0.7rem;
+      user-select: none;
+      padding-top: 1px;
+    }
+
+    .cmd-type {
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+    }
+
+    .type-visit { background: #2b6cb0; color: #fff; }
+    .type-get { background: #2d3748; color: #63b3ed; }
+    .type-assert { background: rgba(56, 161, 105, 0.25); color: #48bb78; }
+    .type-click { background: #dd6b20; color: #fff; }
+    .type-type { background: #805ad5; color: #fff; }
+    .type-log { background: #2d3748; color: #e2e8f0; font-style: italic; }
+    .type-shot { background: #d69e2e; color: #1a202c; }
+
+    .cmd-message {
+      flex: 1;
+      color: #cbd5e0;
+      word-break: break-all;
+      line-height: 1.4;
+    }
+
+    .cmd-time {
+      color: var(--cy-text-dim);
+      font-size: 0.68rem;
+    }
+
+    /* STAGE VIEW (RIGHT PANE) */
+    .cypress-stage {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: #0d1117;
+      overflow: hidden;
+    }
+
+    /* URL / STAGE TOOLBAR */
+    .stage-toolbar {
+      background: #161b22;
+      border-bottom: 1px solid var(--cy-border);
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+    }
+
+    .stage-url-box {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #0d1117;
+      border: 1px solid var(--cy-border);
+      padding: 0.25rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.775rem;
+      font-family: var(--font-mono);
+      color: var(--cy-text-muted);
+      width: 480px;
+      max-width: 60%;
+    }
+
+    .stage-url-box .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--cy-green);
+    }
+
+    .stage-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .stage-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--cy-border);
+      color: var(--cy-text-muted);
+      padding: 0.35rem 0.7rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.15s;
+    }
+
+    .stage-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .stage-btn.active {
+      background: var(--cy-blue);
+      color: #fff;
+      border-color: var(--cy-blue);
+    }
+
+    /* STAGE CONTENT AREA */
+    .stage-content-area {
+      flex: 1;
+      overflow: auto;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background: #090c10;
+    }
+
+    /* TIME TRAVEL SNAPSHOT VIEW */
+    .snapshot-viewer {
+      width: 100%;
+      max-width: 1100px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .snapshot-header-card {
+      background: #161b22;
+      border: 1px solid var(--cy-border);
+      border-radius: 8px;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .snapshot-info-left h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .snapshot-info-left p {
+      font-size: 0.775rem;
+      color: var(--cy-text-muted);
+      margin-top: 0.2rem;
+      font-family: var(--font-mono);
+    }
+
+    .snapshot-frame-wrap {
+      position: relative;
+      background: #000;
+      border: 1px solid var(--cy-border);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      cursor: zoom-in;
+    }
+
+    .snapshot-frame-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.2s;
+    }
+
+    .snapshot-highlight-box {
+      position: absolute;
+      border: 2px solid #ef4444;
+      background: rgba(239, 68, 68, 0.2);
+      border-radius: 4px;
+      pointer-events: none;
+      transition: all 0.2s ease-out;
+      box-shadow: 0 0 12px rgba(239, 68, 68, 0.6);
+      display: none;
+    }
+
+    .snapshot-highlight-tag {
+      position: absolute;
+      top: -22px;
+      left: 0;
+      background: #ef4444;
+      color: #fff;
+      font-size: 0.65rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+
+    .snapshot-footer-meta {
+      background: #161b22;
+      border: 1px solid var(--cy-border);
+      border-radius: 8px;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+
+    .snapshot-assertion-status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--cy-green-light);
+      font-weight: 600;
+    }
+
+    /* VIDEO PLAYER VIEW */
+    .video-viewer-panel {
+      width: 100%;
+      max-width: 1100px;
+      display: none;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .video-card-container {
+      background: #161b22;
+      border: 1px solid var(--cy-border);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    .video-card-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #000;
+    }
+
+    .video-timeline-chapters {
+      background: #161b22;
+      border: 1px solid var(--cy-border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+    }
+
+    .chapters-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .chapter-buttons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.6rem;
+    }
+
+    .chapter-btn {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--cy-border);
+      border-radius: 6px;
+      padding: 0.5rem 0.75rem;
+      color: var(--cy-text);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      transition: all 0.15s;
+    }
+
+    .chapter-btn:hover {
+      background: rgba(49, 130, 206, 0.15);
+      border-color: var(--cy-blue);
+    }
+
+    .chapter-step-num {
+      color: var(--cy-green-light);
+      font-size: 0.68rem;
+      font-weight: 800;
+    }
+
+    /* MOCHAWESOME & ANDROID VIEW PANELS */
+    .mochawesome-panel {
+      width: 100%;
+      height: 100%;
+      min-height: calc(100vh - 140px);
+      flex: 1;
+      display: none;
+    }
+
+    .mochawesome-panel iframe {
+      width: 100%;
+      height: 100%;
+      min-height: calc(100vh - 140px);
+      border: none;
+      border-radius: 8px;
+    }
+
+    /* LIGHTBOX MODAL */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      padding: 2rem;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .lightbox-modal.open {
+      display: flex;
+    }
+    .lightbox-content {
+      max-width: 95vw;
+      max-height: 85vh;
+      border-radius: 8px;
+      border: 1px solid var(--cy-border);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+      object-fit: contain;
+    }
+    .lightbox-caption {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #f7fafc;
+      font-family: var(--font-mono);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.1);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .lightbox-close:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP HEADER -->
+  <header class="cypress-header">
+    <div class="header-left">
+      <div class="cypress-brand">
+        <div class="cy-logo-icon">Cy</div>
+        <span>Cypress</span>
+      </div>
+      <div class="spec-breadcrumb">
+        <span>specs</span>
+        <span>/</span>
+        <strong>web.cy.ts</strong>
+      </div>
+    </div>
+
+    <div class="header-center">
+      <span class="cy-pill pill-pass">✓ 2 Passed</span>
+      <span class="cy-pill pill-duration">⏱ 13.2s</span>
+      <span class="cy-pill pill-viewport">1280 × 720</span>
+      <span class="cy-pill pill-pass" style="background: rgba(56, 161, 105, 0.2);">ALL SPECS PASSED</span>
+    </div>
+
+    <div class="header-right">
+      <button class="nav-btn active" id="btn-view-runner" onclick="setMainView('runner')">
+        <span>⚡</span> Runner View
+      </button>
+      <button class="nav-btn" id="btn-view-video" onclick="setMainView('video')">
+        <span>🎬</span> Replay Video
+      </button>
+      <button class="nav-btn" id="btn-view-mochawesome" onclick="setMainView('mochawesome')">
+        <span>📋</span> Mochawesome
+      </button>
+      <button class="nav-btn" id="btn-view-android" onclick="setMainView('android')">
+        <span>📱</span> Android Emulator
+      </button>
+      <a href="android-emulator-report.html" class="nav-btn" target="_blank" title="Open full Android Emulator Report">
+        <span>↗</span> Android Report
+      </a>
+      <a href="playwright/index.html" class="nav-btn" target="_blank">
+        <span>🔍</span> Playwright Trace
+      </a>
+      <a href="demo/index.html" class="nav-btn" target="_blank" title="Open Isolated Hebrew Subtitles Mini Demo Sandbox">
+        <span>🎯</span> Hebrew Mini Demo
+      </a>
+      <a href="app/index.html" class="nav-btn" target="_blank" title="Open Live Web Application">
+        <span>🌐</span> Live App
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN 2-COLUMN CYPRESS LAYOUT -->
+  <main class="cypress-layout">
+
+    <!-- LEFT SIDEBAR: CYPRESS COMMAND LOG -->
+    <aside class="cypress-sidebar">
+      <div class="sidebar-search-bar">
+        <input type="text" id="command-filter" placeholder="Filter commands (e.g. get, assert, click)..." oninput="filterCommands()">
+      </div>
+
+      <div class="command-log-scroll">
+        <!-- TEST SUITE -->
+        <div class="suite-card">
+          <div class="suite-header" onclick="toggleSuite('suite-1')">
+            <div class="suite-title">
+              <span class="suite-toggle-icon open" id="suite-1-arrow">&#9656;</span>
+              <span>YouTube Video Viewer - Subtitle Detection</span>
+            </div>
+            <span class="cy-pill pill-pass" style="font-size: 0.65rem; padding: 1px 6px;">2 PASS</span>
+          </div>
+
+          <div id="suite-1-body">
+            <!-- TEST 1 -->
+            <div class="test-card">
+              <div class="test-header-bar" onclick="selectTest(1)">
+                <div class="test-title-text">
+                  <span class="test-check-icon">✓</span>
+                  <span>Auto-detect subtitles once caption icon is set to ON</span>
+                </div>
+                <span class="test-duration-badge">5.8s</span>
+              </div>
+
+              <div class="test-commands-wrapper" id="test-1-commands">
+                <div class="command-hook-label">BEFORE EACH</div>
+                
+                <div class="cy-command-row" onclick="inspectStep(1, 0, 'assets/test1-step1.png', 'visit', '/', 'Navigated to application root', null)">
+                  <span class="cmd-num">1</span>
+                  <span class="cmd-type type-visit">VISIT</span>
+                  <span class="cmd-message">/</span>
+                  <span class="cmd-time">0.4s</span>
+                </div>
+
+                <div class="cy-command-row" onclick="inspectStep(1, 0, 'assets/test1-step1.png', 'assert', 'expected <title> to match /YouTube/i', 'Title matched regular expression', null)">
+                  <span class="cmd-num">2</span>
+                  <span class="cmd-type type-assert">ASSERT</span>
+                  <span class="cmd-message">expected <strong>&lt;title&gt;</strong> to match /YouTube/i</span>
+                  <span class="cmd-time">0.1s</span>
+                </div>
+
+                <div class="command-hook-label">TEST BODY</div>
+
+                <!-- STEP 1 -->
+                <div class="cy-command-row" onclick="inspectStep(1, 1, 'assets/test1-step1.png', 'log', 'Step 1: Locating caption toggle icon on the video player', 'Starting Step 1', null)">
+                  <span class="cmd-num">3</span>
+                  <span class="cmd-type type-log">LOG</span>
+                  <span class="cmd-message">Step 1: Locating caption toggle icon</span>
+                  <span class="cmd-time">0.0s</span>
+                </div>
+
+                <div class="cy-command-row active" id="cmd-1-1" onclick="inspectStep(1, 1, 'assets/test1-step1.png', 'get', '#caption-toggle-button', 'Found element in DOM', {top: '48%', left: '72%', width: '42px', height: '36px', tag: 'button#caption-toggle-button'})">
+                  <span class="cmd-num">4</span>
+                  <span class="cmd-type type-get">GET</span>
+                  <span class="cmd-message">#caption-toggle-button</span>
+                  <span class="cmd-time">0.8s</span>
+                </div>
+
+                <div class="cy-command-row" onclick="inspectStep(1, 1, 'assets/test1-step1.png', 'assert', 'expected #caption-toggle-button to be visible', 'Element is visible in viewport', {top: '48%', left: '72%', width: '42px', height: '36px', tag: 'button#caption-toggle-button'})">
+                  <span class="cmd-num">5</span>
+                  <span class="cmd-type type-assert">ASSERT</span>
+                  <span class="cmd-message">expected <strong>#caption-toggle-button</strong> to be visible</span>
+                  <span class="cmd-time">0.1s</span>
+                </div>
+
+                <!-- STEP 2 -->
+                <div class="cy-command-row" onclick="inspectStep(1, 2, 'assets/test1-step2.png', 'log', 'Step 2: Checking caption toggle initial state and click', 'Checking initial state', null)">
+                  <span class="cmd-num">6</span>
+                  <span class="cmd-type type-log">LOG</span>
+                  <span class="cmd-message">Step 2: Clicking caption toggle icon to switch ON</span>
+                  <span class="cmd-time">0.0s</span>
+                </div>
+
+                <div class="cy-command-row" id="cmd-1-2" onclick="inspectStep(1, 2, 'assets/test1-step2.png', 'click', '#caption-toggle-button', 'Dispatched native click event', {top: '48%', left: '72%', width: '42px', height: '36px', tag: 'button#caption-toggle-button'})">
+                  <span class="cmd-num">7</span>
+                  <span class="cmd-type type-click">CLICK</span>
+                  <span class="cmd-message">#caption-toggle-button</span>
+                  <span class="cmd-time">1.2s</span>
+                </div>
+
+                <!-- STEP 3 -->
+                <div class="cy-command-row" id="cmd-1-3" onclick="inspectStep(1, 3, 'assets/test1-step3.png', 'assert', 'expected #caption-toggle-button to have attribute aria-pressed with the value true', 'Attribute assertion verified', {top: '48%', left: '72%', width: '42px', height: '36px', tag: 'button[aria-pressed=true]'})">
+                  <span class="cmd-num">8</span>
+                  <span class="cmd-type type-assert">ASSERT</span>
+                  <span class="cmd-message">expected <strong>#caption-toggle-button</strong> aria-pressed="true"</span>
+                  <span class="cmd-time">1.5s</span>
+                </div>
+
+                <!-- STEP 4 -->
+                <div class="cy-command-row" onclick="inspectStep(1, 4, 'assets/test1-step4.png', 'log', 'Step 4: Waiting for subtitles to be detected and rendered', 'Polling for subtitle cues in DOM', null)">
+                  <span class="cmd-num">9</span>
+                  <span class="cmd-type type-log">LOG</span>
+                  <span class="cmd-message">Step 4: Waiting for subtitles to be detected</span>
+                  <span class="cmd-time">0.0s</span>
+                </div>
+
+                <div class="cy-command-row" id="cmd-1-4" onclick="inspectStep(1, 4, 'assets/test1-step4.png', 'get', '#subtitle-cue-row-0', 'Subtitle container element detected', {top: '64%', left: '15%', width: '70%', height: '80px', tag: '#subtitle-cue-row-0'})">
+                  <span class="cmd-num">10</span>
+                  <span class="cmd-type type-get">GET</span>
+                  <span class="cmd-message">#subtitle-cue-row-0</span>
+                  <span class="cmd-time">3.1s</span>
+                </div>
+
+                <div class="cy-command-row" onclick="inspectStep(1, 4, 'assets/test1-step4.png', 'assert', 'expected #subtitle-cue-row-0 to be visible', 'First cue row successfully displayed', {top: '64%', left: '15%', width: '70%', height: '80px', tag: '#subtitle-cue-row-0'})">
+                  <span class="cmd-num">11</span>
+                  <span class="cmd-type type-assert">ASSERT</span>
+                  <span class="cmd-message">expected <strong>#subtitle-cue-row-0</strong> to be visible</span>
+                  <span class="cmd-time">0.1s</span>
+                </div>
+
+                <!-- STEP 5 -->
+                <div class="cy-command-row" id="cmd-1-5" onclick="inspectStep(1, 5, 'assets/test1-step5.png', 'assert', 'expected dialogueText.length to be greater than 3', 'Dialogue text length: 48 chars (Valid speech text)', {top: '68%', left: '20%', width: '60%', height: '40px', tag: '.subtitle-text'})">
+                  <span class="cmd-num">12</span>
+                  <span class="cmd-type type-assert">ASSERT</span>
+                  <span class="cmd-message">expected <strong>dialogueText.length</strong> &gt; 3</span>
+                  <span class="cmd-time">4.2s</span>
+                </div>
+
+                <!-- STEP 6 -->
+                <div class="cy-command-row" id="cmd-1-6" onclick="inspectStep(1, 6, 'assets/test1-step6.png', 'get', '#state-machine-status-badge', 'Redux State Machine status validated', {top: '12px', right: '20px', width: '140px', height: '30px', tag: '#state-machine-status-badge'})">
+                  <span class="cmd-num">13</span>
+                  <span class="cmd-type type-get">GET</span>
+                  <span class="cmd-message">#state-machine-status-badge</span>
+                  <span class="cmd-time">5.8s</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- TEST 2 -->
+            <div class="test-card">
+              <div class="test-header-bar" onclick="selectTest(2)">
+                <div class="test-title-text">
+                  <span class="test-check-icon">✓</span>
+                  <span>Fetch subtitles when caption icon pressed after custom URL</span>
+                </div>
+                <span class="test-duration-badge">7.4s</span>
+              </div>
+
+              <div class="test-commands-wrapper" id="test-2-commands">
+                <div class="command-hook-label">TEST BODY</div>
+
+                <!-- TEST 2 STEP 1 -->
+                <div class="cy-command-row" id="cmd-2-1" onclick="inspectStep(2, 1, 'assets/test2-step1.png', 'type', '#youtube-url-input', 'Input URL: https://www.youtube.com/watch?v=c0pUbsq9FLk', {top: '12%', left: '20%', width: '55%', height: '38px', tag: 'input#youtube-url-input'})">
+                  <span class="cmd-num">1</span>
+                  <span class="cmd-type type-type">TYPE</span>
+                  <span class="cmd-message">https://www.youtube.com/watch?v=c0pUbsq9FLk</span>
+                  <span class="cmd-time">1.1s</span>
+                </div>
+
+                <!-- TEST 2 STEP 2 -->
+                <div class="cy-command-row" id="cmd-2-2" onclick="inspectStep(2, 2, 'assets/test2-step2.png', 'click', '#play-video-button', 'Cueing YouTube player with target URL', {top: '12%', left: '76%', width: '110px', height: '38px', tag: 'button#play-video-button'})">
+                  <span class="cmd-num">2</span>
+                  <span class="cmd-type type-click">CLICK</span>
+                  <span class="cmd-message">#play-video-button</span>
+                  <span class="cmd-time">1.9s</span>
+                </div>
+
+                <!-- TEST 2 STEP 3 -->
+                <div class="cy-command-row" id="cmd-2-3" onclick="inspectStep(2, 3, 'assets/test2-step3.png', 'get', '#caption-toggle-button', 'Locate caption toggle button', {top: '48%', left: '72%', width: '42px', height: '36px', tag: 'button#caption-toggle-button'})">
+                  <span class="cmd-num">3</span>
+                  <span class="cmd-type type-get">GET</span>
+                  <span class="cmd-message">#caption-toggle-button</span>
+                  <span class="cmd-time">2.6s</span>
+                </div>
+
+                <!-- TEST 2 STEP 4 -->
+                <div class="cy-command-row" id="cmd-2-4" onclick="inspectStep(2, 4, 'assets/test2-step4.png', 'click', '#caption-toggle-button', 'Activated caption icon -> aria-pressed=true', {top: '48%', left: '72%', width: '42px', height: '36px', tag: 'button#caption-toggle-button'})">
+                  <span class="cmd-num">4</span>
+                  <span class="cmd-type type-click">CLICK</span>
+                  <span class="cmd-message">#caption-toggle-button (aria-pressed=true)</span>
+                  <span class="cmd-time">3.4s</span>
+                </div>
+
+                <!-- TEST 2 STEP 5 -->
+                <div class="cy-command-row" id="cmd-2-5" onclick="inspectStep(2, 5, 'assets/test2-step5.png', 'get', '#subtitle-cue-row-0', 'Fetched real subtitles for c0pUbsq9FLk', {top: '64%', left: '15%', width: '70%', height: '80px', tag: '#subtitle-cue-row-0'})">
+                  <span class="cmd-num">5</span>
+                  <span class="cmd-type type-get">GET</span>
+                  <span class="cmd-message">#subtitle-cue-row-0</span>
+                  <span class="cmd-time">5.7s</span>
+                </div>
+
+                <!-- TEST 2 STEP 6 -->
+                <div class="cy-command-row" id="cmd-2-6" onclick="inspectStep(2, 6, 'assets/test2-step6.png', 'assert', 'expected dialogueText.length > 3', 'Verified dialogue text from custom video', {top: '68%', left: '20%', width: '60%', height: '40px', tag: '.subtitle-text'})">
+                  <span class="cmd-num">6</span>
+                  <span class="cmd-type type-assert">ASSERT</span>
+                  <span class="cmd-message">expected <strong>dialogueText.length</strong> &gt; 3</span>
+                  <span class="cmd-time">7.4s</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- RIGHT STAGE: APP VIEWPORT & ARTIFACT VIEWERS -->
+    <section class="cypress-stage">
+      <!-- ADDRESS BAR -->
+      <div class="stage-toolbar">
+        <div class="stage-url-box">
+          <span class="status-dot"></span>
+          <span style="color: #68d391; font-weight: 700;">200 OK</span>
+          <span>&bull;</span>
+          <span id="stage-url-display">http://localhost:3000/</span>
+        </div>
+
+        <div class="stage-controls">
+          <button class="stage-btn" onclick="switchActiveTestVideo()">
+            <span>📺</span> <span id="toggle-video-label">Switch to Video 2</span>
+          </button>
+          <button class="stage-btn" onclick="openActiveLightbox()">
+            <span>🔍</span> Fullscreen Snapshot
+          </button>
+        </div>
+      </div>
+
+      <!-- VIEWPORT STAGE CONTAINER -->
+      <div class="stage-content-area" id="stage-content-area">
+
+        <!-- TIME TRAVEL SNAPSHOT PANEL -->
+        <div class="snapshot-viewer" id="snapshot-panel">
+          <div class="snapshot-header-card">
+            <div class="snapshot-info-left">
+              <h3 id="snapshot-title">
+                <span class="cy-pill pill-pass" id="snapshot-badge">GET</span>
+                <span id="snapshot-name">#caption-toggle-button</span>
+              </h3>
+              <p id="snapshot-subtext">cy.get('#caption-toggle-button').should('be.visible')</p>
+            </div>
+            <div>
+              <span class="cy-pill pill-duration" id="snapshot-time-badge">00:00.8</span>
+            </div>
+          </div>
+
+          <div class="snapshot-frame-wrap" onclick="openActiveLightbox()">
+            <img id="snapshot-main-img" src="assets/test1-step1.png" alt="Cypress Time Travel Snapshot">
+            
+            <!-- ELEMENT HIGHLIGHT OVERLAY (CYPRESS INSPECTION BOX) -->
+            <div class="snapshot-highlight-box" id="highlight-box">
+              <span class="snapshot-highlight-tag" id="highlight-tag">#caption-toggle-button</span>
+            </div>
+          </div>
+
+          <div class="snapshot-footer-meta">
+            <div class="snapshot-assertion-status">
+              <span>✓</span>
+              <span id="snapshot-result-msg">Assertion: Expected element to be visible — PASSED</span>
+            </div>
+            <div style="color: var(--cy-text-muted); font-size: 0.75rem;">
+              Pinned DOM Snapshot &bull; 1280 x 720
+            </div>
+          </div>
+        </div>
+
+        <!-- VIDEO EXECUTION PANEL -->
+        <div class="video-viewer-panel" id="video-panel">
+          <div class="video-card-container">
+            <video id="cypress-main-video" controls autoplay loop muted playsinline poster="assets/test1-step6.png">
+              <source src="assets/test1-video.webm" type="video/webm">
+              <source src="assets/test1-video.mp4" type="video/mp4">
+              Your browser does not support HTML5 video playback.
+            </video>
+          </div>
+
+          <div class="video-timeline-chapters">
+            <div class="chapters-title">
+              <span>🎬</span>
+              <span id="video-chapters-title">Execution Timeline Chapters (Test 1: Auto-Detect Captions)</span>
+            </div>
+            <div class="chapter-buttons-grid" id="chapter-buttons">
+              <button class="chapter-btn" onclick="seekVideo(0.5, 'assets/test1-step1.png', 'Step 1: Locate caption toggle')">
+                <span class="chapter-step-num">STEP 1 &bull; 0.5s</span>
+                <span>Locate caption toggle icon</span>
+              </button>
+              <button class="chapter-btn" onclick="seekVideo(1.2, 'assets/test1-step2.png', 'Step 2: Toggle caption icon ON')">
+                <span class="chapter-step-num">STEP 2 &bull; 1.2s</span>
+                <span>Toggle caption icon ON</span>
+              </button>
+              <button class="chapter-btn" onclick="seekVideo(1.5, 'assets/test1-step3.png', 'Step 3: Verify aria-pressed=true')">
+                <span class="chapter-step-num">STEP 3 &bull; 1.5s</span>
+                <span>Verify aria-pressed="true"</span>
+              </button>
+              <button class="chapter-btn" onclick="seekVideo(3.1, 'assets/test1-step4.png', 'Step 4: Auto-detect & render cues')">
+                <span class="chapter-step-num">STEP 4 &bull; 3.1s</span>
+                <span>Auto-detect & render cues</span>
+              </button>
+              <button class="chapter-btn" onclick="seekVideo(4.2, 'assets/test1-step5.png', 'Step 5: Verify dialogue text')">
+                <span class="chapter-step-num">STEP 5 &bull; 4.2s</span>
+                <span>Verify spoken dialogue</span>
+              </button>
+              <button class="chapter-btn" onclick="seekVideo(5.5, 'assets/test1-step6.png', 'Step 6: Confirm State Machine active')">
+                <span class="chapter-step-num">STEP 6 &bull; 5.5s</span>
+                <span>Redux State Machine active</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOCHAWESOME VIEW PANEL -->
+        <div class="mochawesome-panel" id="mochawesome-panel">
+          <iframe src="mochawesome.html" title="Mochawesome Test Suite Report"></iframe>
+        </div>
+
+        <!-- ANDROID EMULATOR VIEW PANEL -->
+        <div class="mochawesome-panel" id="android-panel" style="display: none;">
+          <iframe src="android-emulator-report.html" title="Android Emulator E2E Report"></iframe>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="lightbox-modal" onclick="closeLightbox(event)">
+    <div class="lightbox-close" onclick="closeLightbox(event)">&times;</div>
+    <img id="lightbox-img" class="lightbox-content" src="assets/test1-step1.png" alt="Enlarged Cypress Snapshot">
+    <div id="lightbox-caption" class="lightbox-caption">Cypress Execution Step Snapshot</div>
+  </div>
+
+  <script>
+    let currentTestId = 1;
+    let currentActiveVideo = 1;
+    let activeSnapshotSrc = 'assets/test1-step1.png';
+    let activeSnapshotTitle = 'Locate caption toggle icon on video player';
+
+    function setMainView(view) {
+      document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+      const snapshotPanel = document.getElementById('snapshot-panel');
+      const videoPanel = document.getElementById('video-panel');
+      const mochawesomePanel = document.getElementById('mochawesome-panel');
+      const androidPanel = document.getElementById('android-panel');
+
+      if (view === 'runner') {
+        document.getElementById('btn-view-runner').classList.add('active');
+        snapshotPanel.style.display = 'flex';
+        videoPanel.style.display = 'none';
+        mochawesomePanel.style.display = 'none';
+        if (androidPanel) androidPanel.style.display = 'none';
+      } else if (view === 'video') {
+        document.getElementById('btn-view-video').classList.add('active');
+        snapshotPanel.style.display = 'none';
+        videoPanel.style.display = 'flex';
+        mochawesomePanel.style.display = 'none';
+        if (androidPanel) androidPanel.style.display = 'none';
+        const vid = document.getElementById('cypress-main-video');
+        vid.play().catch(() => {});
+      } else if (view === 'mochawesome') {
+        document.getElementById('btn-view-mochawesome').classList.add('active');
+        snapshotPanel.style.display = 'none';
+        videoPanel.style.display = 'none';
+        mochawesomePanel.style.display = 'block';
+        if (androidPanel) androidPanel.style.display = 'none';
+      } else if (view === 'android') {
+        const btnAndroid = document.getElementById('btn-view-android');
+        if (btnAndroid) btnAndroid.classList.add('active');
+        snapshotPanel.style.display = 'none';
+        videoPanel.style.display = 'none';
+        mochawesomePanel.style.display = 'none';
+        if (androidPanel) androidPanel.style.display = 'block';
+      }
+
+      // Keep URL hash updated for direct linking
+      try {
+        if (window.location.hash !== '#' + view) {
+          history.replaceState(null, '', '#' + view);
+        }
+      } catch (e) {}
+    }
+
+    function inspectStep(testId, stepNum, imgSrc, cmdType, cmdName, resultMsg, highlight) {
+      // Ensure runner view is visible
+      setMainView('runner');
+
+      // Update active row highlighting
+      document.querySelectorAll('.cy-command-row').forEach(row => row.classList.remove('active'));
+      if (window.event && window.event.currentTarget) {
+        window.event.currentTarget.classList.add('active');
+      }
+
+      // Update metadata
+      activeSnapshotSrc = imgSrc;
+      activeSnapshotTitle = `Test ${testId} - Step ${stepNum}: ${cmdType.toUpperCase()} ${cmdName}`;
+
+      document.getElementById('snapshot-main-img').src = imgSrc;
+      document.getElementById('snapshot-badge').textContent = cmdType.toUpperCase();
+      document.getElementById('snapshot-badge').className = 'cy-pill ' + (cmdType === 'assert' ? 'pill-pass' : 'pill-viewport');
+      document.getElementById('snapshot-name').textContent = cmdName;
+      document.getElementById('snapshot-subtext').textContent = `cy.${cmdType}('${cmdName}')`;
+      document.getElementById('snapshot-result-msg').textContent = `✓ ${resultMsg}`;
+
+      // Update highlight box
+      const box = document.getElementById('highlight-box');
+      const tag = document.getElementById('highlight-tag');
+
+      if (highlight) {
+        box.style.display = 'block';
+        if (highlight.top) box.style.top = highlight.top;
+        if (highlight.left) box.style.left = highlight.left;
+        if (highlight.right) {
+          box.style.right = highlight.right;
+          box.style.left = 'auto';
+        } else {
+          box.style.right = 'auto';
+        }
+        if (highlight.bottom) {
+          box.style.bottom = highlight.bottom;
+          box.style.top = 'auto';
+        }
+        box.style.width = highlight.width || '60px';
+        box.style.height = highlight.height || '40px';
+        tag.textContent = highlight.tag || cmdName;
+      } else {
+        box.style.display = 'none';
+      }
+    }
+
+    function selectTest(testId) {
+      currentTestId = testId;
+      if (testId === 1) {
+        inspectStep(1, 1, 'assets/test1-step1.png', 'get', '#caption-toggle-button', 'Element located in DOM', {top: '48%', left: '72%', width: '42px', height: '36px', tag: 'button#caption-toggle-button'});
+      } else {
+        inspectStep(2, 1, 'assets/test2-step1.png', 'type', '#youtube-url-input', 'Target YouTube URL entered', {top: '12%', left: '20%', width: '55%', height: '38px', tag: 'input#youtube-url-input'});
+      }
+    }
+
+    function toggleSuite(suiteId) {
+      const body = document.getElementById(suiteId + '-body');
+      const arrow = document.getElementById(suiteId + '-arrow');
+      if (body.style.display === 'none') {
+        body.style.display = 'block';
+        arrow.classList.add('open');
+      } else {
+        body.style.display = 'none';
+        arrow.classList.remove('open');
+      }
+    }
+
+    function switchActiveTestVideo() {
+      const vid = document.getElementById('cypress-main-video');
+      const label = document.getElementById('toggle-video-label');
+      const title = document.getElementById('video-chapters-title');
+      const grid = document.getElementById('chapter-buttons');
+
+      if (currentActiveVideo === 1) {
+        currentActiveVideo = 2;
+        vid.src = 'assets/test2-video.webm';
+        vid.poster = 'assets/test2-step6.png';
+        label.textContent = 'Switch to Video 1';
+        title.textContent = 'Execution Timeline Chapters (Test 2: Custom YouTube URL)';
+        grid.innerHTML = `
+          <button class="chapter-btn" onclick="seekVideo(1.1, 'assets/test2-step1.png', 'Step 1: Enter custom URL')">
+            <span class="chapter-step-num">STEP 1 &bull; 1.1s</span>
+            <span>Enter custom YouTube URL</span>
+          </button>
+          <button class="chapter-btn" onclick="seekVideo(1.9, 'assets/test2-step2.png', 'Step 2: Cue video player')">
+            <span class="chapter-step-num">STEP 2 &bull; 1.9s</span>
+            <span>Click Play Video button</span>
+          </button>
+          <button class="chapter-btn" onclick="seekVideo(2.6, 'assets/test2-step3.png', 'Step 3: Locate caption toggle')">
+            <span class="chapter-step-num">STEP 3 &bull; 2.6s</span>
+            <span>Locate caption toggle button</span>
+          </button>
+          <button class="chapter-btn" onclick="seekVideo(3.4, 'assets/test2-step4.png', 'Step 4: Toggle captions ON')">
+            <span class="chapter-step-num">STEP 4 &bull; 3.4s</span>
+            <span>Toggle captions to ON</span>
+          </button>
+          <button class="chapter-btn" onclick="seekVideo(5.7, 'assets/test2-step5.png', 'Step 5: Subtitles rendered')">
+            <span class="chapter-step-num">STEP 5 &bull; 5.7s</span>
+            <span>Subtitles stream rendered</span>
+          </button>
+          <button class="chapter-btn" onclick="seekVideo(7.0, 'assets/test2-step6.png', 'Step 6: Verified speech dialogue')">
+            <span class="chapter-step-num">STEP 6 &bull; 7.0s</span>
+            <span>Spoken dialogue verified</span>
+          </button>
+        `;
+      } else {
+        currentActiveVideo = 1;
+        vid.src = 'assets/test1-video.webm';
+        vid.poster = 'assets/test1-step6.png';
+        label.textContent = 'Switch to Video 2';
+        title.textContent = 'Execution Timeline Chapters (Test 1: Auto-Detect Captions)';
+        grid.innerHTML = `
+          <button class="chapter-btn" onclick="seekVideo(0.5, 'assets/test1-step1.png', 'Step 1: Locate caption toggle')">
+            <span class="chapter-step-num">STEP 1 &bull; 0.5s</span>
+            <span>Locate caption toggle icon</span>
+          </button>
+          <button class="chapter-btn" onclick="seekVideo(1.2, 'assets/test1-step2.png', 'Step 2: Toggle caption icon ON')">
+            <span class="chapter-step-num">STEP 2 &bull; 1.2s</span>
+            <span>Toggle caption icon ON</span>
+          </button>
+          <button class="chapter-btn" onclick="seekVideo(1.5, 'assets/test1-step3.png', 'Step 3: Verify aria-pressed=true')">
+            <span class="chapter-step-num">STEP 3 &bull; 1.5s</span>
+            <span>Verify aria-pressed="true"</span>
+          </button>
+          <button class="chapter-btn" onclick="seekVideo(3.1, 'assets/test1-step4.png', 'Step 4: Auto-detect & render cues')">
+            <span class="chapter-step-num">STEP 4 &bull; 3.1s</span>
+            <span>Auto-detect & render cues</span>
+          </button>
+          <button class="chapter-btn" onclick="seekVideo(4.2, 'assets/test1-step5.png', 'Step 5: Verify dialogue text')">
+            <span class="chapter-step-num">STEP 5 &bull; 4.2s</span>
+            <span>Verify spoken dialogue</span>
+          </button>
+          <button class="chapter-btn" onclick="seekVideo(5.5, 'assets/test1-step6.png', 'Step 6: Confirm State Machine active')">
+            <span class="chapter-step-num">STEP 6 &bull; 5.5s</span>
+            <span>Redux State Machine active</span>
+          </button>
+        `;
+      }
+      setMainView('video');
+    }
+
+    function seekVideo(timeSeconds, snapshotImg, title) {
+      setMainView('video');
+      const vid = document.getElementById('cypress-main-video');
+      vid.currentTime = timeSeconds;
+      vid.play().catch(() => {});
+    }
+
+    function filterCommands() {
+      const val = document.getElementById('command-filter').value.toLowerCase();
+      document.querySelectorAll('.cy-command-row').forEach(row => {
+        const text = row.textContent.toLowerCase();
+        row.style.display = text.includes(val) ? 'flex' : 'none';
+      });
+    }
+
+    function openActiveLightbox() {
+      const modal = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      const cap = document.getElementById('lightbox-caption');
+      img.src = activeSnapshotSrc;
+      cap.textContent = activeSnapshotTitle;
+      modal.classList.add('open');
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightbox').classList.remove('open');
+      }
+    }
+
+    // Auto-detect view from URL hash or query param (e.g. #android or ?view=android)
+    function checkInitialView() {
+      const hash = window.location.hash.replace('#', '').toLowerCase();
+      const params = new URLSearchParams(window.location.search);
+      const viewParam = params.get('view');
+      const target = hash || viewParam;
+      if (target === 'android') {
+        setMainView('android');
+      } else if (target === 'mochawesome') {
+        setMainView('mochawesome');
+      } else if (target === 'video') {
+        setMainView('video');
+      } else if (target === 'runner') {
+        setMainView('runner');
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', checkInitialView);
+    window.addEventListener('hashchange', checkInitialView);
+  </script>
+</body>
+</html>
