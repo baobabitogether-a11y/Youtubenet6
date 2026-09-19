@@ -156,7 +156,6 @@ export default function App() {
 
   // Target Language Selection per video (Default to 'he' Hebrew subtitles or user learning target)
   const [isTargetLangModalOpen, setIsTargetLangModalOpen] = useState<boolean>(false);
-  const [activeTab, setActiveTab] = useState<'video' | 'subtitles'>('video');
   const [selectedTargetLang, setSelectedTargetLang] = useState<string>(() => {
     if (initialUrlState.targetLang) return initialUrlState.targetLang;
     return getVideoTargetLang(videoId) || 'he';
@@ -455,16 +454,12 @@ export default function App() {
   const handlePlayerTimeUpdate = useCallback((t: number) => {
     if (!activeCues || activeCues.length === 0) return;
     syncEngine.handleTimeUpdate(t);
-    const match = activeCues.find((c) => t >= c.start - 0.1 && t <= (c.start + (c.duration || 2.5)) + 0.15);
+    const match = activeCues.find((c) => t >= c.start && t <= c.start + (c.duration || 2.5));
     setActiveCue((prev) => {
       if (match) {
         return prev?.id === match.id ? prev : match;
       }
-      if (prev && t >= prev.start && t <= (prev.start + (prev.duration || 2.5)) + 1.0) {
-        return prev;
-      }
-      if (t < 0.5) return activeCues[0];
-      return null;
+      return t < 0.5 ? activeCues[0] : null;
     });
 
     // Throttled time update to URL
@@ -496,16 +491,12 @@ export default function App() {
       try {
         const t = playerRef.current?.getCurrentTime?.();
         if (typeof t === 'number' && !isNaN(t) && t >= 0) {
-          const match = activeCues.find((c) => t >= c.start - 0.1 && t <= (c.start + (c.duration || 2.5)) + 0.15);
+          const match = activeCues.find((c) => t >= c.start && t <= c.start + (c.duration || 2.5));
           setActiveCue((prev) => {
             if (match) {
               return prev?.id === match.id ? prev : match;
             }
-            if (prev && t >= prev.start && t <= (prev.start + (prev.duration || 2.5)) + 1.0) {
-              return prev;
-            }
-            if (t < 0.5) return activeCues[0];
-            return null;
+            return t < 0.5 ? activeCues[0] : null;
           });
         }
       } catch {}
@@ -1539,36 +1530,10 @@ export default function App() {
         />
       </div>
 
-      {/* Tab Bar */}
-      <div className="mx-auto w-full max-w-3xl px-4 mt-4">
-        <div className="flex gap-1 border-b border-neutral-800">
-          <button
-            onClick={() => setActiveTab('video')}
-            className={`px-4 py-2 text-sm font-medium border-b-2 transition ${
-              activeTab === 'video'
-                ? 'border-red-500 text-neutral-100'
-                : 'border-transparent text-neutral-500 hover:text-neutral-300'
-            }`}
-          >
-            Video
-          </button>
-          <button
-            onClick={() => setActiveTab('subtitles')}
-            className={`px-4 py-2 text-sm font-medium border-b-2 transition ${
-              activeTab === 'subtitles'
-                ? 'border-red-500 text-neutral-100'
-                : 'border-transparent text-neutral-500 hover:text-neutral-300'
-            }`}
-          >
-            Subtitles
-          </button>
-        </div>
-      </div>
-
-      {/* Tab Content */}
+      {/* Web Companion dual-view workstation */}
       <main className="flex-1 w-full">
-        <div className="mx-auto w-full max-w-3xl px-4 py-4">
-          {activeTab === 'video' && (
+        <div className="mx-auto w-full max-w-[1600px] px-4 py-4 grid gap-4 lg:grid-cols-[minmax(0,1.35fr)_minmax(360px,0.9fr)]">
+          <section className="min-w-0">
             <VideoPlayer
               ref={playerRef}
               videoId={videoId}
@@ -1617,8 +1582,8 @@ export default function App() {
                 }
               }}
             />
-          )}
-          {activeTab === 'subtitles' && (
+          </section>
+          <section className="min-w-0">
             <SubtitlesTeacherPanel
               cues={activeCues}
               playerRef={playerRef}
@@ -1643,11 +1608,12 @@ export default function App() {
               activeCue={effectiveActiveCue}
               onJumpToCue={(cue, idx) => {
                 setActiveCue(cue);
+                playerRef.current?.seekTo(cue.start);
                 if (syncEngine.isSyncActive) syncEngine.jumpToCue(idx);
               }}
               syncEngine={syncEngine}
             />
-          )}
+          </section>
         </div>
       </main>
 
@@ -1698,6 +1664,14 @@ export default function App() {
       <OfflineIndicator />
       <NetworkInspectorModal />
       <ErrorInspectorModal />
+      <DemoQuickFloatingDock
+        videoId={videoId}
+        settings={settings}
+        selectedTargetLang={selectedTargetLang}
+        onUpdateSettings={handleUpdateSettings}
+        onSelectTargetLanguage={handleUpdateTargetLang}
+        onOpenArtifacts={() => setIsArtifactsModalOpen(true)}
+      />
     </div>
   );
 }

@@ -1,0 +1,111 @@
+# Architecture & Synchronization Overhaul: Web Companion Demo vs. Android Native Shell
+
+This implementation plan addresses the core app goals outlined in [AGENTS.md](file:///c:/Users/User/Desktop/WORK3/youtubenet3/AGENTS.md) and the user's requirements:
+1. **Platform Differentiation**: Clearly distinguish the Android Native App from the Web Companion Demo (landing page) with fixed multi-lingual artifacts and zero-overhead local testing using the default demonstration video (`FcRzAdI8R9U`).
+2. **Design Re-thinking**: Elevate the UI to a premium, glassmorphic dark-mode language learning workstation, presenting an integrated dual-view (Video Player + Subtitles Teacher Panel) on the web landing page.
+3. **Robust Video Play & TTS-Play Synchronization**: Fix the broken playback sync by unifying state coordination in `useSyncEngine`, eliminating the conflicting naive pause loop in `VideoPlayer.tsx`, and guaranteeing strict mutual exclusion between video dialogue and TTS narration.
+4. **Accurate Subtitle Selection & Word-Boundary Highlighting**: Ensure exact cue tracking during playback and seeking, and deliver real-time word-boundary visual highlighting (`data-testid="active-tts-word-highlight"`) in `HighlightableText.tsx` during speech synthesis.
+
+---
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Default Landing Page View**: Currently, `compactView: true` causes the application to render as a full-screen video player without the Subtitles Teacher Panel. We propose that on the **Web Companion / Demo Landing Page**, the application defaults to an **Expanded Dual-View Workstation** showcasing both the video player and the teacher panel with fixed artifacts, while preserving the toggle to switch into compact mode anytime.
+
+> [!NOTE]
+> **Protected Files Compliance**: In accordance with [AGENTS.md Section 7](file:///c:/Users/User/Desktop/WORK3/youtubenet3/AGENTS.md#7-file-protection-matrix--repository-artifact-hygiene), all modifications remain strictly within permitted presentation, UI, hooks, and styles directories (`src/App.tsx`, `src/components/**`, `src/hooks/**`, `src/index.css`), leaving `android-shell/**`, `src/types.ts`, `src/utils/captionParser.ts`, and `src/utils/subtitleCache.ts` intact.
+
+---
+
+## Proposed Changes
+
+### 1. Platform Separation & Web Demo Landing Page Bar
+
+#### [MODIFY] [App.tsx](file:///c:/Users/User/Desktop/WORK3/youtubenet3/src/App.tsx)
+- Add a prominent **Web Demo Showcase & Fixed Artifacts Bar** at the top when running in web companion mode:
+  - Visual badge: `✨ Web Companion & Interactive Demo` (distinct from Android Native App).
+  - Quick-action buttons to test authentic 1,578-cue language tracks for the default video (`FcRzAdI8R9U`):
+    - 🇷🇺 ➔ 🇮🇱 Hebrew (1,578 cues)
+    - 🇷🇺 ➔ 🇮🇹 Italian (1,578 cues)
+    - 🇷🇺 ➔ 🇺🇸 English (1,578 cues)
+    - 🇷🇺 ➔ 🇸🇦 Arabic (1,578 cues)
+  - "Reset to Demo Video & Artifacts" button for instantaneous testing.
+  - Suppress intrusive native APK update/installer prompts on web, cleanly directing interested Android users to the installation instructions.
+- Ensure the default view on the web landing page mounts both the `VideoPlayer` and `SubtitlesTeacherPanel`, allowing users to experience the interactive learning workstation immediately.
+
+---
+
+### 2. Video Play & TTS-Play Sync Engine Architecture
+
+#### [MODIFY] [VideoPlayer.tsx](file:///c:/Users/User/Desktop/WORK3/youtubenet3/src/components/VideoPlayer.tsx)
+- **Remove Conflicting Cue-Start Pause Loop**: Remove the ad-hoc `useEffect` (lines 613–730) that prematurely pauses YouTube playback at the beginning of each cue before the native speaker's dialogue is heard.
+- **Speech Flow Sync Bar**: Add an interactive, docked speech-flow control bar:
+  - Dual Speech Flow button: `Start Sentence Sync` / `Pause Sync`.
+  - Status indicator with animated glow: `🎬 Video Playing (Russian Audio)` vs `🗣️ TTS Speaking (Target Lang)`.
+  - Play Order selector: `Video Dialogue First ➔ TTS Speech` vs `TTS Speech ➔ Video Dialogue`.
+  - Sentence Looping toggle: Repeats the active sentence and translation loop.
+- Coordinate YouTube player pause/resume events with the sync engine using the imperative handle.
+
+#### [MODIFY] [useSyncEngine.ts](file:///c:/Users/User/Desktop/WORK3/youtubenet3/src/hooks/useSyncEngine.ts)
+- **Sentence-by-Sentence Synchronization Cycle**:
+  1. **Video Segment**: Play the YouTube video for the exact cue duration (`cue.start` to `cue.start + cue.duration`). The learner listens to the native authentic speaker.
+  2. **Video Pause**: Automatically pause the YouTube player as soon as the cue duration completes.
+  3. **TTS Speech Narration**: Synthesize the translation in the selected target language with real-time word-boundary highlighting.
+  4. **Cadence Pause & Advance**: Wait 200ms after TTS speech finishes, then resume YouTube playback for the next cue.
+  5. **Looping**: If loop mode is active, seek back to `cue.start` and repeat the cycle for the current cue.
+- Distinguish between automatic pauses (for TTS speech) and user pauses (spacebar/pause button), avoiding race conditions and playback freezing.
+
+---
+
+### 3. Accurate Subtitle Selection & Word-Boundary Highlighting
+
+#### [MODIFY] [App.tsx](file:///c:/Users/User/Desktop/WORK3/youtubenet3/src/App.tsx)
+- Refine `handlePlayerTimeUpdate`:
+  - Calculate `activeCue` accurately based on current playback time:
+    ```ts
+    const match = activeCues.find(c => t >= c.start && t <= c.start + (c.duration || 2.5));
+    ```
+  - Clear or transition `activeCue` cleanly when playback enters long silence/interstitial gaps, preventing subtitles from remaining permanently stuck on past dialogue.
+  - When seeking or clicking any subtitle in the table, immediately seek the player to `cue.start` and select that cue.
+
+#### [MODIFY] [HighlightableText.tsx](file:///c:/Users/User/Desktop/WORK3/youtubenet3/src/components/HighlightableText.tsx)
+- Enhance visual styling of the active word highlight:
+  - Use high-contrast, glowing amber gradient: `bg-gradient-to-r from-amber-400 to-yellow-300 text-neutral-950 font-bold px-2 py-0.5 rounded shadow-lg ring-2 ring-amber-400/80 scale-105 inline-block mx-0.5 transition-transform duration-100`.
+  - Ensure `data-testid="active-tts-word-highlight"` is attached to the active word token for reliable testing and visual confirmation.
+
+#### [MODIFY] [ttsEngine.ts](file:///c:/Users/User/Desktop/WORK3/youtubenet3/src/lib/ttsEngine.ts)
+- Ensure `startSimulatedBoundaryProgression` seamlessly triggers boundary callbacks with accurate natural speech cadence whenever the browser's Web Speech API does not fire native `onboundary` events, ensuring continuous word-by-word highlighting across all environments.
+
+---
+
+### 4. Design Aesthetics & Visual Polish
+
+#### [MODIFY] [index.css](file:///c:/Users/User/Desktop/WORK3/youtubenet3/src/index.css)
+- Implement modern glassmorphism utility classes (`.glass-panel`, `.glow-amber`, `.glow-indigo`).
+- Refine subtitle typography with high-legibility font rendering and drop-shadow styling.
+- Add smooth micro-animations for active cue transitions, speech flow badges, and language pill toggles.
+
+---
+
+## Verification Plan
+
+### Automated Tests
+1. **TypeScript Build & Lint**:
+   - `npm run lint` (`tsc --noEmit`) to guarantee zero type errors.
+   - `npm run build` to verify clean Vite client bundling.
+2. **E2E Test Compatibility**:
+   - Verify critical element IDs (`#caption-toggle-button`, `#subtitle-cue-row-0`, `#active-subtitle-cue-text`) remain in place.
+
+### Manual Verification
+1. **Demo Video & Fixed Artifacts**:
+   - Verify default video `FcRzAdI8R9U` loads instantly with authentic Russian cues.
+   - Click Hebrew, Italian, English, and Arabic preset buttons to confirm instant subtitle track switching without network overhead.
+2. **Dual Speech Flow Synchronization**:
+   - Start sync loop: verify video plays the sentence in Russian first.
+   - Verify video pauses at cue completion.
+   - Verify TTS narrates the target translation with synchronized word-boundary highlights.
+   - Verify video resumes for the next cue.
+3. **Seek & Interruption Handling**:
+   - Click a cue in the table: verify video seeks to `cue.start` and highlights that row.
+   - Press Pause: verify both video and TTS immediately halt cleanly.

@@ -87,7 +87,7 @@ export const DemoQuickFloatingDock: React.FC<DemoQuickFloatingDockProps> = ({
           <div className="flex items-center gap-1.5">
             <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
             <span className="text-[11px] font-semibold tracking-wider text-emerald-400 uppercase">
-              Demo Quick Controls
+              Web Companion · Demo
             </span>
           </div>
 
@@ -195,6 +195,30 @@ export const DemoQuickFloatingDock: React.FC<DemoQuickFloatingDockProps> = ({
                 </div>
               </button>
             )}
+          </div>
+        )}
+
+        {!isCollapsed && (
+          <div className="flex flex-wrap gap-1.5">
+            {[
+              ['he', '🇮🇱 HE'],
+              ['it', '🇮🇹 IT'],
+              ['en', '🇺🇸 EN'],
+              ['ar', '🇸🇦 AR'],
+            ].map(([code, label]) => (
+              <button
+                key={code}
+                type="button"
+                onClick={() => onSelectTargetLanguage(code)}
+                className={`rounded-lg border px-2 py-1 text-[11px] font-semibold transition ${
+                  selectedTargetLang === code
+                    ? 'border-amber-400 bg-amber-400/20 text-amber-200'
+                    : 'border-neutral-700 bg-neutral-800/80 text-neutral-300 hover:border-amber-500/70'
+                }`}
+              >
+                {label}
+              </button>
+            ))}
           </div>
         )}
       </div>

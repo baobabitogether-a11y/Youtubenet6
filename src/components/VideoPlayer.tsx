@@ -332,7 +332,6 @@ export const VideoPlayer = forwardRef<YouTubePlayerHandle, VideoPlayerProps>(
       const targetCue = cue || activeCue || cachedCues[0];
       if (!targetCue?.text) return;
 
-      lastSpokenCueIdRef.current = targetCue.id;
       setIsTTSSpeakingState(true);
       isAutoTTSSpeakingRef.current = true;
 
@@ -610,14 +609,10 @@ export const VideoPlayer = forwardRef<YouTubePlayerHandle, VideoPlayerProps>(
     const playStartTimeRef = useRef<number>(Date.now());
     const currentTimeRef = useRef<number>(startTime || 0);
 
-    // Track spoken cues to prevent repeated speech within the same cue window
-    const lastSpokenCueIdRef = useRef<string | number | null>(null);
     const isAutoTTSSpeakingRef = useRef<boolean>(false);
     const isAutoTTSPausingRef = useRef<boolean>(false);
 
-    // Reset spoken cue tracking on video change
     useEffect(() => {
-      lastSpokenCueIdRef.current = null;
       isAutoTTSPausingRef.current = false;
       isAutoTTSSpeakingRef.current = false;
     }, [videoId]);
@@ -761,32 +756,7 @@ export const VideoPlayer = forwardRef<YouTubePlayerHandle, VideoPlayerProps>(
       onTimeUpdateRef.current = onTimeUpdate;
     });
 
-    const activeCueRef = useRef(activeCue);
-    useEffect(() => {
-      activeCueRef.current = activeCue;
-    }, [activeCue]);
-
-    const autoTTSEnabledRef = useRef(autoTTSEnabled);
-    useEffect(() => {
-      autoTTSEnabledRef.current = autoTTSEnabled;
-    }, [autoTTSEnabled]);
-
-    const isLoopingCueRef = useRef(isLoopingCue);
-    useEffect(() => {
-      isLoopingCueRef.current = isLoopingCue;
-    }, [isLoopingCue]);
-
-    const isSyncActiveRef = useRef(isSyncActive);
-    useEffect(() => {
-      isSyncActiveRef.current = isSyncActive;
-    }, [isSyncActive]);
-
-    const isSyncSpeakingRef = useRef(isSyncSpeaking);
-    useEffect(() => {
-      isSyncSpeakingRef.current = isSyncSpeaking;
-    }, [isSyncSpeaking]);
-
-    // Time ticker for progress bar, active cue synchronization, and Auto-TTS playback
+    // Time ticker for progress and active cue synchronization
     useEffect(() => {
       const interval = setInterval(() => {
         try {
@@ -813,44 +783,6 @@ export const VideoPlayer = forwardRef<YouTubePlayerHandle, VideoPlayerProps>(
             }
           }
 
-          // Coordinated pause-and-resume Auto-TTS loop during video playback
-          const currentCue = activeCueRef.current;
-          if (
-            cur >= 0 &&
-            autoTTSEnabledRef.current &&
-            isPlayingRef.current &&
-            !isSyncActiveRef.current &&
-            !isSyncSpeakingRef.current &&
-            !isAutoTTSSpeakingRef.current &&
-            !isAutoTTSPausingRef.current &&
-            currentCue?.text
-          ) {
-            const cueDur = currentCue.duration && currentCue.duration > 0 ? currentCue.duration : 2.5;
-            const cueEnd = currentCue.start + cueDur;
-            if (cur >= cueEnd - 0.25 && cur < cueEnd + 2.0 && lastSpokenCueIdRef.current !== currentCue.id) {
-              lastSpokenCueIdRef.current = currentCue.id;
-              isAutoTTSPausingRef.current = true;
-              isAutoTTSSpeakingRef.current = true;
-              try {
-                ytPlayerRef.current?.pauseVideo?.();
-              } catch {}
-              postIframeCommand('pauseVideo');
-
-              playCurrentCueTTS().then(() => {
-                if (isAutoTTSPausingRef.current) {
-                  isAutoTTSPausingRef.current = false;
-                  isAutoTTSSpeakingRef.current = false;
-                  if (isLoopingCueRef.current) {
-                    seekTo(currentCue.start);
-                  }
-                  try {
-                    ytPlayerRef.current?.playVideo?.();
-                  } catch {}
-                  postIframeCommand('playVideo');
-                }
-              });
-            }
-          }
         } catch {}
       }, 250);
 

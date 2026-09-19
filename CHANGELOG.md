@@ -6,6 +6,11 @@ All notable changes and completed historical tasks for the YouTube Video Viewer 
 
 ---
 
+### Web Companion Dual-View and Sync Simplification
+
+- Web preview now runs on Replit's `PORT` with a dual video/teacher workspace, local demo language controls, exact cue clearing, and cue-row seeking.
+- Removed the duplicate player-side auto-TTS timer so sentence synchronization stays in `useSyncEngine`.
+
 ## Historical Completed Tasks Archive
 
 ### Resolution of Inactive TTS Speech Synthesis and Coordinated Speech Flow Execution
