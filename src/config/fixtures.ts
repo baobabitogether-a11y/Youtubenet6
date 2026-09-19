@@ -4,7 +4,7 @@ import { CaptionCue } from '../types';
  * Sample fixture data for subtitle translation and timedtext URL emulation.
  * Used as fallback data by server.ts, translateService.ts, and subtitleCache.ts.
  * The primary source of truth for demo video FcRzAdI8R9U is the authentic
- * .srt tracks in test/fixtures/languages/*.srt (1,578 cues each).
+ * .srt tracks in test/fixtures/FcRzAdI8R9U/*.srt (1,578 cues each).
  */
 
 export const SAMPLE_AUTHENTIC_RUSSIAN_URL =

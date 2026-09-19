@@ -21,6 +21,7 @@
     "test:cy:report:web": "cypress run --spec 'cypress/e2e/web.cy.ts' --reporter cypress-mochawesome-reporter",
     "test:cy:report:emulation": "cypress run --spec 'cypress/e2e/emulation.cy.ts' --reporter cypress-mochawesome-reporter",
     "test:cy:report:all": "cypress run --reporter cypress-mochawesome-reporter",
+    "test:caption-formats": "tsx scripts/verify-caption-formats.ts",
     "test:android": "bash scripts/run-android-e2e.sh",
     "test:android:report": "node scripts/generate-android-report.mjs",
     "clean": "rm -rf dist server.js",

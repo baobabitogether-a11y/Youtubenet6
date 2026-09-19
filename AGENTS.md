@@ -263,6 +263,24 @@ To ensure a pristine repository and prevent accumulation of heavy test captures,
 > [!CAUTION]
 > **Zero Checked-In Artifacts Rule**: Coding agents must NEVER commit or persist test run outputs, video captures, or temporary `.html`/`.png` report files to the git repository. All live browsable presentations are published exclusively to the `gh-pages` branch by GitHub Actions workflows.
 
+## 7A. Injectable Views and Disposable UI
+
+Subtitle and language-selection views are pure presentation components. Their
+data comes from a parent/provider so they can be tested without YouTube,
+Android, storage, translation services, or network access.
+
+- Subtitle renderers receive normalized cues, active-cue state, optional
+  translations, display flags, direction, and interaction callbacks. See
+  `DESIGN_SUBTITLE_VIEWS.md`.
+- Language views receive a list of language names/codes, selected state, and
+  selection callbacks. They do not fetch catalogs, translate labels, persist
+  settings, or rewrite language codes. See `DESIGN_VIEW_LANGS.md`.
+- The same injected data may feed several views at different locations:
+  video overlay, teacher panel, compact transcript, settings, or a mobile
+  dialog. Do not create a new provider for each presentation.
+- Fetching, parsing, caching, timing, translation, and persistence remain
+  outside these views.
+
 ---
 
 ## 8. Verification & Zero-Error Workflow
@@ -315,7 +333,7 @@ Over the course of rapid feature expansion, several interconnected subsystems ha
 
 #### Why It Is Complex:
 - **Multiple Divergent Fetch Pathways**: Subtitles can originate from:
-  1. Authentic bundled `.srt` language fixtures (`test/fixtures/languages/*.srt`) for demo video `FcRzAdI8R9U`.
+  1. Authentic bundled `.srt` language fixtures (`test/fixtures/FcRzAdI8R9U/*.srt`) for demo video `FcRzAdI8R9U`.
   2. Memory cache (`memoryCache`).
   3. Browser `localStorage` (`yt_subtitles_*`).
   4. Video library storage (`yt_video_library_v2`).
@@ -494,7 +512,7 @@ Following user directive (**"Don't use queue, you have SRT subtitles"**), the ap
 
 ### A. Core Architecture: Direct SRT Cue Binding
 1. **Authentic Multi-Lingual SRT Source of Truth**:
-   - The platform binds directly to complete, authentic 1,578-cue `.srt` tracks in `test/fixtures/languages/*.srt` for source (`ru`) and target languages (`he`, `it`, `en`, `ar`).
+   - The platform binds directly to complete, authentic `.srt` tracks in `test/fixtures/FcRzAdI8R9U/*.srt` and JSON3 `.json` tracks in `test/fixtures/L2Ryrr6txwA/*.json`.
    - Every cue is deterministically defined by `{ id, start, duration, text }`.
    - Matching between source dialogue and target translation is direct and instant based on timestamp proximity:
      `srtTargetCues.find(tc => Math.abs(tc.start - sourceCue.start) < 0.75) || srtTargetCues[sourceIndex]`.

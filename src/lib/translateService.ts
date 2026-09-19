@@ -628,7 +628,7 @@ export async function translateTrackWithNativeFirst({
   const vId = videoId || 'FcRzAdI8R9U';
   const cacheKey = `${vId}:${cleanLang}`;
 
-  // Priority 0: Check authentic SRT fixtures (e.g. test/fixtures/languages/*.srt)
+  // Priority 0: Check authentic SRT fixtures (e.g. test/fixtures/FcRzAdI8R9U/*.srt)
   if (hasCachedTargetSubtitles(vId, cleanLang)) {
     const srtCues = getCachedTargetSubtitles(vId, cleanLang);
     if (srtCues && srtCues.length > 0) {

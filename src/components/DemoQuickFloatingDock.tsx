@@ -187,7 +187,7 @@ export const DemoQuickFloatingDock: React.FC<DemoQuickFloatingDockProps> = ({
                 type="button"
                 onClick={onOpenArtifacts}
                 className="flex items-center justify-between sm:justify-start gap-2 px-3 py-2 rounded-xl text-xs font-medium border bg-indigo-950/50 border-indigo-700/60 text-indigo-200 hover:bg-indigo-900/60 transition-all duration-150"
-                title="Browse authentic multi-lingual .SRT fixtures in test/fixtures/languages"
+                title="Browse authentic multi-lingual .SRT fixtures in test/fixtures/FcRzAdI8R9U"
               >
                 <div className="flex items-center gap-2">
                   <FileText className="w-3.5 h-3.5 text-indigo-400 shrink-0" />

@@ -19,7 +19,7 @@ import {
   FCRZADI8R9U_LANGUAGE_SRT_TRACKS,
   getCachedSrtForVideoAndLanguage,
 } from '../../test/fixtures/defaultSubtitles';
-import { getRawSrtForLanguage, normalizeLanguageCode } from '../../test/fixtures/languages/srtStrings';
+import { getRawSrtForLanguage, normalizeLanguageCode } from '../../test/fixtures/FcRzAdI8R9U/srtStrings';
 import { CaptionCue } from '../types';
 import { speakText } from '../lib/ttsEngine';
 

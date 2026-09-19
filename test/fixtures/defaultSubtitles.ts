@@ -1,11 +1,11 @@
 import { CaptionCue } from '../../src/types';
 import { parseRawCaptionData } from '../../src/utils/captionParser';
-import { ruSrtRaw, enSrtRaw, heSrtRaw, itSrtRaw, arSrtRaw } from './languages/srtStrings';
+import { ruSrtRaw, enSrtRaw, heSrtRaw, itSrtRaw, arSrtRaw } from './FcRzAdI8R9U/srtStrings';
 import { EILFKSGNKDA_LANGUAGE_TRACKS } from './eilfksgnkda';
 
 /**
  * @deprecated test/fixtures/subtitles.json is deprecated.
- * The application uses real authentic .srt fixtures from test/fixtures/languages/
+ * The application uses real authentic .srt fixtures from test/fixtures/FcRzAdI8R9U/
  * with language tracks for: it, ru, he, en, ar.
  */
 

@@ -1,0 +1,6479 @@
+{
+  "wireMagic": "pb3",
+  "pens": [{}],
+  "wsWinStyles": [
+    {},
+    {
+      "mhModeHint": 2,
+      "juJustifCode": 1,
+      "sdScrollDir": 3
+    }
+  ],
+  "wpWinPositions": [
+    {},
+    {
+      "apPoint": 6,
+      "ahHorPos": 20,
+      "avVerPos": 100,
+      "rcRows": 2,
+      "ccCols": 40
+    }
+  ],
+  "events": [
+    {
+      "tStartMs": 0,
+      "dDurationMs": 819920,
+      "id": 1,
+      "wpWinPosId": 1,
+      "wsWinStyleId": 1
+    },
+    {
+      "tStartMs": 80,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "היי, מה שלומך ג'סטין, ברוכים הבאים ליחידה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 1829,
+      "dDurationMs": 2251,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 1839,
+      "dDurationMs": 3520,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שבע של מאסטרו בסולמות מז'ור.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 4070,
+      "dDurationMs": 1289,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 4080,
+      "dDurationMs": 4479,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "בשיעור הזה היום",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 5349,
+      "dDurationMs": 3210,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 5359,
+      "dDurationMs": 6561,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "נבדוק רצפים מלודיים.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 8549,
+      "dDurationMs": 3371,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 8559,
+      "dDurationMs": 5040,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "זיכרון מוקדם מאוד ברור שיש לי",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 11910,
+      "dDurationMs": 1689,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 11920,
+      "dDurationMs": 3839,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "מהמסע שלי בגיטרה רוק היה צפייה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 13589,
+      "dDurationMs": 2170,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 15749,
+      "dDurationMs": 2011,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 15759,
+      "dDurationMs": 4481,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "בסרטון הדרכה של מרכיבים והוא ניגן את",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 17750,
+      "dDurationMs": 2490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 17760,
+      "dDurationMs": 5120,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "השורה הזאת. זה היה קו סולם ממש ממש מהיר,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 20230,
+      "dDurationMs": 2650,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 20240,
+      "dDurationMs": 3920,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אבל זה נראה כאילו נמשך לנצח.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 22870,
+      "dDurationMs": 1290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 22880,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "לא הצלחתי להבין מה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 24150,
+      "dDurationMs": 2090,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 24160,
+      "dDurationMs": 4080,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "קורה, כי כמו בסולמות, אני יודעת, יש להם בערך",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 26230,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 26240,
+      "dDurationMs": 5039,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "16 תווים. אם אני מנגנת אותם כל כך",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 28230,
+      "dDurationMs": 3049,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 28240,
+      "dDurationMs": 4640,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "מהר, הם נגמרים תוך זמן קצר.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 31269,
+      "dDurationMs": 1611,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 31279,
+      "dDurationMs": 3120,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אני מניחה שזה היה כל כך מהר שלא",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 32870,
+      "dDurationMs": 1529,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 32880,
+      "dDurationMs": 3440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ממש שמעתי שהוא משתמש",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 34389,
+      "dDurationMs": 1931,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 34399,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "בטכניקה הזאת שנקראת רצף מלודי. אבל",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 36310,
+      "dDurationMs": 2089,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 36320,
+      "dDurationMs": 3520,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אני זוכרת שכששאלתי את המורה שלי על זה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 38389,
+      "dDurationMs": 1451,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 38399,
+      "dDurationMs": 3521,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ואמרתי לו איך הוא עושה את זה, הוא אמר לי \"",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 39830,
+      "dDurationMs": 2090,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 39840,
+      "dDurationMs": 4399,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אה, זה פשוט דפוסי מספרים",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 41910,
+      "dDurationMs": 2329,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 41920,
+      "dDurationMs": 3600,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שמיושמים על סולמות\", וחשבתי \"רגע, הנה אנחנו מתחילים.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 44229,
+      "dDurationMs": 1291,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 44239,
+      "dDurationMs": 2881,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "תמיד הייתי די",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 45510,
+      "dDurationMs": 1610,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 45520,
+      "dDurationMs": 3760,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "סביר במתמטיקה, אז מצאתי את הדברים האלה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 47110,
+      "dDurationMs": 2170,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 47120,
+      "dDurationMs": 4640,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "די כיפיים. זה ממש ממש שימושי וגם",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 49270,
+      "dDurationMs": 2490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 49280,
+      "dDurationMs": 4880,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "מאוד מוזיקלי. זה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 51750,
+      "dDurationMs": 2410,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 51760,
+      "dDurationMs": 5520,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "לא. למרות שזה... זה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 54150,
+      "dDurationMs": 3130,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 54160,
+      "dDurationMs": 5680,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "לוקח רצף מתמטי ומיישום אותו",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 57270,
+      "dDurationMs": 2570,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 57280,
+      "dDurationMs": 5439,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "על סולם, וזה פשוט לא נשמע",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 59830,
+      "dDurationMs": 2889,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 59840,
+      "dDurationMs": 4480,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "מגניב או אופנתי.  אבל כולם משתמשים בזה,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 62709,
+      "dDurationMs": 1611,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 62719,
+      "dDurationMs": 5121,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "זה משמש בבלוז, זה משמש ברוק,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 64310,
+      "dDurationMs": 3530,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 64320,
+      "dDurationMs": 5440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "זה משמש בכל מקום. זה הקונספט הזה,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 67830,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 67840,
+      "dDurationMs": 4880,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "זה פשוט נשמע טוב. אני חושב שכבני",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 69750,
+      "dDurationMs": 2970,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 69760,
+      "dDurationMs": 4240,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אדם באופן טבעי, אנחנו אוהבים את הסדר",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 72710,
+      "dDurationMs": 1290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 72720,
+      "dDurationMs": 3680,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "של",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 73990,
+      "dDurationMs": 2410,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 74000,
+      "dDurationMs": 4159,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "רצף מוזיקלי. זה היה בשימוש כמו שבאך",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 76390,
+      "dDurationMs": 1769,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 76400,
+      "dDurationMs": 3759,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "השתמש בו ותמיד.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 78149,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 78159,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "תתחילו לזהות את זה. אז",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 80149,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 80159,
+      "dDurationMs": 3600,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "הדרך להתחיל עם זה היא",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 82149,
+      "dDurationMs": 1610,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 82159,
+      "dDurationMs": 3600,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "למספר את התווים בסולם. אנחנו",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 83749,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 83759,
+      "dDurationMs": 3601,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "נתחיל בתבנית אחת, כך שתוו",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 85749,
+      "dDurationMs": 1611,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 85759,
+      "dDurationMs": 8641,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "הבסיס יהיה התו מספר אחת.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 87350,
+      "dDurationMs": 7050,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 87360,
+      "dDurationMs": 13840,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אז יש לנו פשוט 1 2 3 4 5 6 7 8 9 10 11 12 13",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 94390,
+      "dDurationMs": 6810,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 94400,
+      "dDurationMs": 9200,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "14 15 16.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 101190,
+      "dDurationMs": 2410,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 101200,
+      "dDurationMs": 5680,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ואז אנחנו נשתמש",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 103590,
+      "dDurationMs": 3290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 103600,
+      "dDurationMs": 4879,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ברצף מספרים וניישם אותו על הסולם. אז רצף",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 106870,
+      "dDurationMs": 1609,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 106880,
+      "dDurationMs": 5040,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ממש טוב להתחיל איתו הוא אחד",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 108469,
+      "dDurationMs": 3451,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 108479,
+      "dDurationMs": 7841,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שאני קורא לו ארבע בשורה, ובעצם אנחנו מנגנים",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 111910,
+      "dDurationMs": 4410,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 111920,
+      "dDurationMs": 6720,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ארבעה תווים מכל",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 116310,
+      "dDurationMs": 2330,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 116320,
+      "dDurationMs": 5680,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "דרגה בסולם. עכשיו, רצף מספרים יהיה אחד שתיים שלוש ארבע, ואז אנחנו מתחילים על שתיים שתיים שלוש ארבע חמש, ואז",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 118630,
+      "dDurationMs": 3370,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 118640,
+      "dDurationMs": 6159,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אנחנו מתחילים על שלוש שלוש ארבע חמש שש, ואז",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 121990,
+      "dDurationMs": 2809,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 124789,
+      "dDurationMs": 3371,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 124799,
+      "dDurationMs": 6721,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אנחנו מתחילים",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 128150,
+      "dDurationMs": 3370,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 128160,
+      "dDurationMs": 6799,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "על ארבע ארבע חמש שש שבע, אז סופרים",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 131510,
+      "dDurationMs": 3449,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 131520,
+      "dDurationMs": 4719,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ארבעה מספרים למעלה, מתחילים מכל מספר,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 134949,
+      "dDurationMs": 1290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 134959,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אז  זה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 136229,
+      "dDurationMs": 2730,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 136239,
+      "dDurationMs": 5041,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "רצף של ארבעה תווים. אני חושב שזה רעיון טוב שתמיד תהיה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 138949,
+      "dDurationMs": 2331,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 141270,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 141280,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "גרסה מעשית פשוטה של ​​רצף מספרים במקום",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 143030,
+      "dDurationMs": 1610,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 143040,
+      "dDurationMs": 3760,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "לחשוב רק על אחד שתיים שלוש ארבע שתיים שלוש ארבע חמש שלוש ארבע חמש",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 144630,
+      "dDurationMs": 2170,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 146790,
+      "dDurationMs": 2089,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 146800,
+      "dDurationMs": 4480,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שש. אני פשוט חושב על זה כעל",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 148869,
+      "dDurationMs": 2411,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 148879,
+      "dDurationMs": 3761,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ארבעה צעדים בסולם שמתחילים כל",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 151270,
+      "dDurationMs": 1370,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 151280,
+      "dDurationMs": 3280,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "תו בסולם. אני חושב שזה יותר קל",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 152630,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 152640,
+      "dDurationMs": 4720,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "לי לזכור. בואו ננסה ליישם את זה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 154550,
+      "dDurationMs": 2810,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 154560,
+      "dDurationMs": 4720,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "עכשיו. הרצף היה אחד שתיים שלוש",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 157350,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 157360,
+      "dDurationMs": 4239,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ארבע. אז אנחנו הולכים לנגן את התו הראשון, התו",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 159270,
+      "dDurationMs": 2329,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 159280,
+      "dDurationMs": 4800,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "השני, התו השלישי,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 161589,
+      "dDurationMs": 2491,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 161599,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "התו הרביעי, ואז אנחנו מתחילים בסולם",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 164070,
+      "dDurationMs": 1529,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 164080,
+      "dDurationMs": 4560,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "דרגה שתיים וננגן",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 165589,
+      "dDurationMs": 3051,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 165599,
+      "dDurationMs": 4961,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ארבעה תווים.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 168630,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 168640,
+      "dDurationMs": 3679,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שתיים שלוש ארבע חמש. זה יהיה... ואז",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 170550,
+      "dDurationMs": 1769,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 170560,
+      "dDurationMs": 3440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "מתחילים במעלה השלישית",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 172309,
+      "dDurationMs": 1691,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 172319,
+      "dDurationMs": 4640,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שלוש ארבע חמש שש, ואז מתחילים את",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 173990,
+      "dDurationMs": 2969,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 176949,
+      "dDurationMs": 3210,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 176959,
+      "dDurationMs": 5761,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "הדרגה הרביעית ארבע חמש שש",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 180149,
+      "dDurationMs": 2571,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 180159,
+      "dDurationMs": 5041,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שבע ומתחילים את הדרגה החמישית חמש שש שבע שמונה.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 182710,
+      "dDurationMs": 2490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 185190,
+      "dDurationMs": 969,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 185200,
+      "dDurationMs": 2640,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 186149,
+      "dDurationMs": 1691,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 186159,
+      "dDurationMs": 3201,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "עכשיו הדבר המרכזי כאן הוא לזכור על",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 187830,
+      "dDurationMs": 1530,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 187840,
+      "dDurationMs": 4399,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "איזה תו התחלתם. אז הנה אני",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 189350,
+      "dDurationMs": 2889,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 189360,
+      "dDurationMs": 4720,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "חושב להתחיל מהתו הזה,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 192229,
+      "dDurationMs": 1851,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 192239,
+      "dDurationMs": 4640,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אבל אני כבר חושב שזה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 194070,
+      "dDurationMs": 2809,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 194080,
+      "dDurationMs": 5760,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "הבא שאני אתחיל",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 196869,
+      "dDurationMs": 2971,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 196879,
+      "dDurationMs": 2961,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ואז את זה, ואז את זה וזה.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 200149,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 202550,
+      "dDurationMs": 2650,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 207290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 207300,
+      "dDurationMs": 4060,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[מוזיקה]"
+        }
+      ]
+    },
+    {
+      "tStartMs": 209830,
+      "dDurationMs": 1530,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 209840,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "עכשיו ניגנתי קצת",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 211350,
+      "dDurationMs": 1850,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 211360,
+      "dDurationMs": 4720,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "מפורק כדי שתוכלו לשמוע את",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 213190,
+      "dDurationMs": 2890,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 213200,
+      "dDurationMs": 6319,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "התבנית בבירור. את זה שתיים שלוש ארבע שתיים שלוש ארבע חמש שלוש ארבע חמש שש,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 216070,
+      "dDurationMs": 3449,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 219509,
+      "dDurationMs": 2730,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 219519,
+      "dDurationMs": 4881,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אבל ברגע שיש לכם...  הקונספט",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 222229,
+      "dDurationMs": 2171,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 222239,
+      "dDurationMs": 4401,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "באוזניים ובאצבעות שלכם אתם רוצים",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 224390,
+      "dDurationMs": 2250,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 224400,
+      "dDurationMs": 5250,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "להסיר את התזמון הגבשושי הזה ולנגן אותו",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 226630,
+      "dDurationMs": 3020,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 226640,
+      "dDurationMs": 6119,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "באופן עקבי, כך שתעשו את זה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 229640,
+      "dDurationMs": 3119,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 229650,
+      "dDurationMs": 3109,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[מוזיקה]"
+        }
+      ]
+    },
+    {
+      "tStartMs": 243830,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 243840,
+      "dDurationMs": 3000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אז",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 252540,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 252550,
+      "dDurationMs": 9369,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[מוזיקה]"
+        }
+      ]
+    },
+    {
+      "tStartMs": 259430,
+      "dDurationMs": 2489,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 259440,
+      "dDurationMs": 4800,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "הייתי מתחיל רק עם עולה ואני",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 261909,
+      "dDurationMs": 2331,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 261919,
+      "dDurationMs": 3601,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "רק אציין בעיה טכנית קטנה שתיתקלו בה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 264230,
+      "dDurationMs": 1290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 265510,
+      "dDurationMs": 1689,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 265520,
+      "dDurationMs": 5520,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שם, שהיא גלגול עם הזרת,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 267189,
+      "dDurationMs": 3851,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 267199,
+      "dDurationMs": 3841,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אז כשאתם מגיעים לחלק הזה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 271189,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 271199,
+      "dDurationMs": 2241,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "כאן תצטרכו",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 273510,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 273520,
+      "dDurationMs": 2880,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "להניח את",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 274870,
+      "dDurationMs": 1530,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 274880,
+      "dDurationMs": 3039,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "הזרת קצת יותר שטוחה על",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 276390,
+      "dDurationMs": 1529,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 276400,
+      "dDurationMs": 5480,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "המיתר השני",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 277909,
+      "dDurationMs": 3971,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 277919,
+      "dDurationMs": 3961,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ולגלגל אותה לקצה.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 284950,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 284960,
+      "dDurationMs": 3760,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "יש כמה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 285990,
+      "dDurationMs": 2730,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 286000,
+      "dDurationMs": 4720,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "גישות שונות כשאתם הופכים",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 288710,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 288720,
+      "dDurationMs": 2800,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "רצף מלודי. הדרך הקלה ביותר לחשוב על זה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 290710,
+      "dDurationMs": 810,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 290720,
+      "dDurationMs": 2800,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "היא",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 291510,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 291520,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "למספר מחדש את הסולם החל",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 293510,
+      "dDurationMs": 1370,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 293520,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "מהמיתר הדק ביותר, כך שזה יהיה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 294870,
+      "dDurationMs": 2650,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 294880,
+      "dDurationMs": 4160,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אחד שתיים שלוש ארבע חמש שש שבע שמונה תשע עשר אחת עשרה שתים עשרה שלוש עשרה ארבע עשרה חמש עשרה שש עשרה שבע עשרה ככה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 297510,
+      "dDurationMs": 1530,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 299030,
+      "dDurationMs": 1690,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 300710,
+      "dDurationMs": 3929,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 300720,
+      "dDurationMs": 7840,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ואז ללכת אחד שתיים שלוש ארבע שתיים שלוש ארבע חמש שלוש ארבע חמש",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 304629,
+      "dDurationMs": 3931,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 304639,
+      "dDurationMs": 5840,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שש",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 308550,
+      "dDurationMs": 1929,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 308560,
+      "dDurationMs": 4320,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אבל בשבילי, במיוחד בתבנית הזו, אני פשוט",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 310469,
+      "dDurationMs": 2411,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 310479,
+      "dDurationMs": 5521,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "חושב שאנחנו יורדים בסולם, יורדים",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 312870,
+      "dDurationMs": 3130,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 312880,
+      "dDurationMs": 4970,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ארבעה תווים מכל דרגת סולם,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 315990,
+      "dDurationMs": 1860,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 316000,
+      "dDurationMs": 3520,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אז מתחילים מהתו העליון",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 317840,
+      "dDurationMs": 1680,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 317850,
+      "dDurationMs": 3830,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[מוזיקה] והתו"
+        }
+      ]
+    },
+    {
+      "tStartMs": 319510,
+      "dDurationMs": 2170,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 319520,
+      "dDurationMs": 5720,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "הבא למטה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 321670,
+      "dDurationMs": 3570,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 321680,
+      "dDurationMs": 3560,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "התו הבא למטה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 334070,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 334080,
+      "dDurationMs": 4080,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ושוב זה בסדר גמור לעשות את",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 336230,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 336240,
+      "dDurationMs": 3600,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "זה בתנועה קופצנית כזו כדי",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 338150,
+      "dDurationMs": 1690,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 338160,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "להתרגל לתבניות, אבל כמו  ברגע",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 339830,
+      "dDurationMs": 1690,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 339840,
+      "dDurationMs": 5160,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שתהיו בטוחים בזה, אתם רוצים לנסות",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 341510,
+      "dDurationMs": 3490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 341520,
+      "dDurationMs": 3480,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ולהסיר את",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 349300,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 349310,
+      "dDurationMs": 3389,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[המוזיקה] הזו."
+        }
+      ]
+    },
+    {
+      "tStartMs": 371670,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 371680,
+      "dDurationMs": 3680,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "כשאתם מתחילים ליישם את הרצפים המלודיים האלה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 373350,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 373360,
+      "dDurationMs": 3679,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "על תבניות סולמות אחרות,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 375350,
+      "dDurationMs": 1689,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 375360,
+      "dDurationMs": 3200,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "תגלו שיש כמה אתגרים בכל",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 377029,
+      "dDurationMs": 1531,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 377039,
+      "dDurationMs": 3521,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "הנוגע לאצבעות. יש",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 378550,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 378560,
+      "dDurationMs": 4079,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "כמה החלטות שצריך לקבל.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 380550,
+      "dDurationMs": 2089,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 380560,
+      "dDurationMs": 4160,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אני אנסה לתת לכם כמה טיפים,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 382629,
+      "dDurationMs": 2091,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 382639,
+      "dDurationMs": 4081,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אבל חלק מהמסע הוא שאתם עכשיו צריכים",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 384710,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 384720,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "להבין את האצבעות שהכי עובדות",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 386710,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 386720,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "בשבילכם. בואו ניקח את הרצף הזה של ארבע",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 388710,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 388720,
+      "dDurationMs": 5000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "בשורה. אם התחלנו בתבנית",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 390710,
+      "dDurationMs": 3010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 390720,
+      "dDurationMs": 3000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "השנייה,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 393990,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 394000,
+      "dDurationMs": 2960,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "זכרו שזה היה זה. עד כה הכל",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 397430,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 397440,
+      "dDurationMs": 4879,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "טוב,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 400150,
+      "dDurationMs": 2169,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 400160,
+      "dDurationMs": 4080,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "עכשיו יש לנו את התו הזה. אם נעשה את זה,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 402309,
+      "dDurationMs": 1931,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 402319,
+      "dDurationMs": 3841,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אז אנחנו צריכים לנסות לקפוץ עם",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 404230,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 404240,
+      "dDurationMs": 5320,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "האצבע השנייה, אז נצטרך להניח אותה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 406150,
+      "dDurationMs": 3410,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 406160,
+      "dDurationMs": 3400,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שטוחה יותר.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 410469,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 410479,
+      "dDurationMs": 3521,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אה, עכשיו נצטרך",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 412309,
+      "dDurationMs": 1691,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 412319,
+      "dDurationMs": 4401,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "לעשות שינוי עם",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 413990,
+      "dDurationMs": 2730,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 414000,
+      "dDurationMs": 6080,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "הזרת, זה לא רעיון טוב. רעיון",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 416710,
+      "dDurationMs": 3370,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 416720,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "טוב יותר עבור זה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 420710,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 420720,
+      "dDurationMs": 4560,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "הוא לדלג לאצבע הראשונה בהקדם",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 422790,
+      "dDurationMs": 2490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 422800,
+      "dDurationMs": 2480,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "האפשרי.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 426469,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 426479,
+      "dDurationMs": 3201,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "כשאנחנו יורדים בתבנית",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 428309,
+      "dDurationMs": 1371,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 428319,
+      "dDurationMs": 4361,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "השנייה, יש לנו עוד כמה בעיות לחשוב.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 429670,
+      "dDurationMs": 3010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 429680,
+      "dDurationMs": 3000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 437270,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 437280,
+      "dDurationMs": 3039,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "עכשיו מה יקרה,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 442230,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 442240,
+      "dDurationMs": 3679,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אנחנו צריכים לעבור לאצבע הראשונה.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 449749,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 449759,
+      "dDurationMs": 3601,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "כל תבנית תציג איזשהו",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 451749,
+      "dDurationMs": 1611,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 451759,
+      "dDurationMs": 3201,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אתגר באצבעות שתצטרכו",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 453350,
+      "dDurationMs": 1610,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 453360,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "להבין וזה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 454950,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 454960,
+      "dDurationMs": 3840,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "חלק מה...  הכיף של כל העניין, אני",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 456710,
+      "dDurationMs": 2090,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 456720,
+      "dDurationMs": 3919,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "צריך גם להזכיר את התו העליון של",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 458790,
+      "dDurationMs": 1849,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 458800,
+      "dDurationMs": 3600,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "הסולם. באופן כללי, כשאתה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 460629,
+      "dDurationMs": 1771,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 460639,
+      "dDurationMs": 4321,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "מנגן סולמות למעלה ולמטה, אני ממליץ",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 462390,
+      "dDurationMs": 2570,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 462400,
+      "dDurationMs": 5220,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "לנגן את התו העליון רק פעם אחת, כך",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 464950,
+      "dDurationMs": 2670,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 464960,
+      "dDurationMs": 4239,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שכאשר אתה מסתובב.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 467610,
+      "dDurationMs": 1589,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 467620,
+      "dDurationMs": 3180,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[מוזיקה]"
+        }
+      ]
+    },
+    {
+      "tStartMs": 469189,
+      "dDurationMs": 1611,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 469199,
+      "dDurationMs": 3601,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אתה פוגע בתו העליון והוא מנוגן",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 470790,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 470800,
+      "dDurationMs": 3839,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "פעם אחת ויורד מיד. כשאתה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 472790,
+      "dDurationMs": 1849,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 472800,
+      "dDurationMs": 3600,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "עושה רצפים מלודיים לעתים",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 474629,
+      "dDurationMs": 1771,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 474639,
+      "dDurationMs": 4641,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "קרובות, תרצה לפגוע בתו העליון",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 476390,
+      "dDurationMs": 2890,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 476400,
+      "dDurationMs": 2880,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "פעמיים. בסדר.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 482260,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 482270,
+      "dDurationMs": 4790,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[מוזיקה]"
+        }
+      ]
+    },
+    {
+      "tStartMs": 487350,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 487360,
+      "dDurationMs": 3839,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אז באופן כללי, פגיעה כפולה בתו העליון",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 489510,
+      "dDurationMs": 1689,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 489520,
+      "dDurationMs": 3359,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "תשמור אותך מסונכרן",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 491189,
+      "dDurationMs": 1690,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 491199,
+      "dDurationMs": 3840,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "עם המטרונום, במיוחד תבנית",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 492869,
+      "dDurationMs": 2170,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 492879,
+      "dDurationMs": 3440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "כמו זו, שאורכת ארבעה תווים.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 495029,
+      "dDurationMs": 1290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 495039,
+      "dDurationMs": 3201,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אתה כנראה הולך לתרגל את זה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 496309,
+      "dDurationMs": 1931,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 496319,
+      "dDurationMs": 3921,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "כ-שמינית או שש עשרה.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 498230,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 498240,
+      "dDurationMs": 3920,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "תווים שישה עשרה הם ארבעה תווים לכל קליק של",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 500230,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 500240,
+      "dDurationMs": 3440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "מטרונום. אז אם אתה מנגן את",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 502150,
+      "dDurationMs": 1530,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 502160,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "התו העליון רק פעם אחת ומיד",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 503670,
+      "dDurationMs": 2490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 503680,
+      "dDurationMs": 4959,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "יורד, הקליק לא יישמע",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 506150,
+      "dDurationMs": 2489,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 506160,
+      "dDurationMs": 4560,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "בתחילת הרצף בכל פעם, מה שיכול",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 508629,
+      "dDurationMs": 2091,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 508639,
+      "dDurationMs": 3441,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "להרגיש קצת מוזר.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 510710,
+      "dDurationMs": 1370,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 510720,
+      "dDurationMs": 3999,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "תבנית נוספת ממש נהדרת שאני רוצה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 512070,
+      "dDurationMs": 2649,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 512080,
+      "dDurationMs": 4959,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שתנסה היא שלושה בשורה. בסדר,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 514709,
+      "dDurationMs": 2330,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 514719,
+      "dDurationMs": 4721,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "כמו ארבעה בשורה. שלושה בשורה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 517029,
+      "dDurationMs": 2411,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 517039,
+      "dDurationMs": 4641,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "מכילים שלושה תווים עולים או יורדים מכל",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 519430,
+      "dDurationMs": 2250,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 519440,
+      "dDurationMs": 4560,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "דרגת סולם, אז בואו",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 521670,
+      "dDurationMs": 2330,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 521680,
+      "dDurationMs": 4159,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "נסתכל על זה שוב.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 523990,
+      "dDurationMs": 1849,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 524000,
+      "dDurationMs": 3680,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "יש תבנית סולם אחת,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 525829,
+      "dDurationMs": 1851,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 525839,
+      "dDurationMs": 3281,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אם נמספר אותה אחת שתיים שלוש ארבע חמש",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 527670,
+      "dDurationMs": 1450,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 527680,
+      "dDurationMs": 5360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שש.  שבע שמונה תשע עשר אחת עשרה שתים עשרה וכו'",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 529110,
+      "dDurationMs": 3930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 529120,
+      "dDurationMs": 6640,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ואז יש לנו אחד שתיים שלוש",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 533030,
+      "dDurationMs": 2730,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 533040,
+      "dDurationMs": 4560,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שמתחילות במעלה השנייה במעלה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 535750,
+      "dDurationMs": 1850,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 535760,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "השלישית במעלה הרביעית",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 537590,
+      "dDurationMs": 2170,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 539750,
+      "dDurationMs": 1450,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 539760,
+      "dDurationMs": 3199,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "עכשיו דרך קלה לחשוב על זה היא",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 541190,
+      "dDurationMs": 1769,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 541200,
+      "dDurationMs": 3680,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שאתה עולה שלוש",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 542949,
+      "dDurationMs": 1931,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 542959,
+      "dDurationMs": 3681,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "למטה אחת ולמעלה שלוש אחורה אחת אחורה אחת",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 544870,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 546630,
+      "dDurationMs": 1330,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 547950,
+      "dDurationMs": 3240,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 547960,
+      "dDurationMs": 3230,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[מוזיקה]"
+        }
+      ]
+    },
+    {
+      "tStartMs": 555700,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 555710,
+      "dDurationMs": 8129,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[מוזיקה] ולמטה"
+        }
+      ]
+    },
+    {
+      "tStartMs": 560949,
+      "dDurationMs": 2890,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 564140,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 564150,
+      "dDurationMs": 3120,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[מוזיקה]"
+        }
+      ]
+    },
+    {
+      "tStartMs": 578830,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 578840,
+      "dDurationMs": 3400,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[מוזיקה]"
+        }
+      ]
+    },
+    {
+      "tStartMs": 580550,
+      "dDurationMs": 1690,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 580560,
+      "dDurationMs": 3520,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "כרגיל אני ממליץ שתתחיל להכיר את זה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 582230,
+      "dDurationMs": 1850,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 582240,
+      "dDurationMs": 3599,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "בתבנית",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 584070,
+      "dDurationMs": 1769,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 584080,
+      "dDurationMs": 3120,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אחת לפני שאתה מתחיל ליישם את זה על",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 585829,
+      "dDurationMs": 1371,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 585839,
+      "dDurationMs": 3201,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שאר התבניות כי אתה תיתקל",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 587190,
+      "dDurationMs": 1850,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 587200,
+      "dDurationMs": 3600,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "בחידות אצבעות שאתה צריך להבין",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 589030,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 589040,
+      "dDurationMs": 3520,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אני חושב שיש הרבה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 590790,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 590800,
+      "dDurationMs": 3599,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ערך להכיר את זה באמת",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 592550,
+      "dDurationMs": 1849,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 592560,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "בתבנית אחת לפני שאתה מזיז אותה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 594389,
+      "dDurationMs": 1531,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 594399,
+      "dDurationMs": 3440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "יש משהו",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 595910,
+      "dDurationMs": 1929,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 595920,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "במכניקה שלה שמקל על הבנה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 597829,
+      "dDurationMs": 2091,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 597839,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "בתבנית אחת לפני",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 599910,
+      "dDurationMs": 1929,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 599920,
+      "dDurationMs": 3520,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שאתה מתחיל להזיז אותה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 601829,
+      "dDurationMs": 1611,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 601839,
+      "dDurationMs": 3440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אחד הדברים המגניבים",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 603430,
+      "dDurationMs": 1849,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 603440,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ברצפים מלודיים הוא שזה ממש מגדל תגלה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 605269,
+      "dDurationMs": 1531,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 605279,
+      "dDurationMs": 3201,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שאתה כנראה עובד",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 606790,
+      "dDurationMs": 1690,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 606800,
+      "dDurationMs": 3680,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "על רצפים מלודיים שונים כל עוד",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 608470,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 608480,
+      "dDurationMs": 3760,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אתה מנגן בגיטרה זו דרך ממש מהנה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 610470,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 610480,
+      "dDurationMs": 3039,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "לחקור סולמות לאמן את",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 612230,
+      "dDurationMs": 1289,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 612240,
+      "dDurationMs": 3200,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "האצבעות שלך לעשות דברים שונים יש",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 613509,
+      "dDurationMs": 1931,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 613519,
+      "dDurationMs": 3201,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "המון דברים טובים בזה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 615430,
+      "dDurationMs": 1290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 615440,
+      "dDurationMs": 2880,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "יש עוד תבנית אחת שאני רוצה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 616710,
+      "dDurationMs": 1610,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 616720,
+      "dDurationMs": 2960,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "לתת לך רק בתור  זה רעיון שכדאי",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 618310,
+      "dDurationMs": 1370,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 618320,
+      "dDurationMs": 3199,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "לכם לחקור",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 619670,
+      "dDurationMs": 1849,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 619680,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אם אתם רוצים להתחיל לעשות",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 621509,
+      "dDurationMs": 1531,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 621519,
+      "dDurationMs": 4481,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "תבניות מלודיות בעצמכם, ולזה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 623030,
+      "dDurationMs": 2970,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 623040,
+      "dDurationMs": 5600,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אני קורא \"ארבע הפוך בשורה\", אז",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 625990,
+      "dDurationMs": 2650,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 626000,
+      "dDurationMs": 4560,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "זה כאילו לקחנו כל בלוק מתבנית ארבע בשורה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 628630,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 628640,
+      "dDurationMs": 4480,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "הרגילה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 630550,
+      "dDurationMs": 2570,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 630560,
+      "dDurationMs": 4399,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "והפכנו אותו, אז במקום אחד שתיים שלוש ארבע נלך ארבע שלוש שתיים אחת.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 633110,
+      "dDurationMs": 1849,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 634949,
+      "dDurationMs": 2251,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 634959,
+      "dDurationMs": 4721,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "הבלוק השני היה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 637190,
+      "dDurationMs": 2490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 637200,
+      "dDurationMs": 5759,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "במקור שתיים שלוש ארבע חמש, עכשיו זה הולך להיות",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 639670,
+      "dDurationMs": 3289,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 639680,
+      "dDurationMs": 4800,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "חמש ארבע שלוש שתיים, אז",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 642949,
+      "dDurationMs": 1531,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 642959,
+      "dDurationMs": 4961,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "בעצם כל",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 644470,
+      "dDurationMs": 3450,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 644480,
+      "dDurationMs": 5359,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "קטע התהפך. ארבע הפוך בשורה.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 647910,
+      "dDurationMs": 1929,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 647920,
+      "dDurationMs": 4159,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "נשמע ככה. אני חושב שזה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 649829,
+      "dDurationMs": 2250,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 649839,
+      "dDurationMs": 6161,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אחד מהמועדפים עליי, אז עכשיו נתחיל בסולם הרביעי",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 652069,
+      "dDurationMs": 3931,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 656550,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 656560,
+      "dDurationMs": 4240,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ויורדים ארבע, ואז נתחיל בסולם",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 658150,
+      "dDurationMs": 2650,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 658160,
+      "dDurationMs": 6160,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "החמישי,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 660790,
+      "dDurationMs": 3530,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 660800,
+      "dDurationMs": 5920,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "יורדים בסולם השישי, שבע שמונה חמש עשר וכו'.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 664310,
+      "dDurationMs": 2410,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 664320,
+      "dDurationMs": 4639,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 666710,
+      "dDurationMs": 2249,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 666720,
+      "dDurationMs": 2239,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 669030,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 669040,
+      "dDurationMs": 5479,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 671030,
+      "dDurationMs": 3489,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 680260,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 680270,
+      "dDurationMs": 11290,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[מוזיקה]"
+        }
+      ]
+    },
+    {
+      "tStartMs": 685270,
+      "dDurationMs": 6290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 685280,
+      "dDurationMs": 6280,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[צחוק]"
+        }
+      ]
+    },
+    {
+      "tStartMs": 695190,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 695200,
+      "dDurationMs": 5120,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ברור שכשאנחנו יורדים בסולם",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 697269,
+      "dDurationMs": 3051,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 697279,
+      "dDurationMs": 6560,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אנחנו עולים ארבע דרגות בסולם כשאנחנו",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 700310,
+      "dDurationMs": 3529,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 700320,
+      "dDurationMs": 3519,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "יורדים,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 719350,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 719360,
+      "dDurationMs": 3000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אז אתם",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 731509,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 731519,
+      "dDurationMs": 4241,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "מוזמנים לנסות את הרצפים שלכם,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 733670,
+      "dDurationMs": 2090,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 733680,
+      "dDurationMs": 4080,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אבל אני ממליץ להתחיל עם",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 735750,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 735760,
+      "dDurationMs": 4800,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "הרצפים האלה קודם. זכרו",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 737750,
+      "dDurationMs": 2810,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 737760,
+      "dDurationMs": 4319,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שבדקנו גם לנגן בטרצות,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 740550,
+      "dDurationMs": 1529,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 740560,
+      "dDurationMs": 3519,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אז זו תהיה שגרת חימום נהדרת,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 742069,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 742079,
+      "dDurationMs": 4081,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "תהיה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 744069,
+      "dDurationMs": 2091,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 744079,
+      "dDurationMs": 5200,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "לנגן סולם למעלה ולמטה ואז...  לנגן את",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 746150,
+      "dDurationMs": 3129,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 746160,
+      "dDurationMs": 5520,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "זה בשלישיות ואז לנגן ארבע בשורה,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 749269,
+      "dDurationMs": 2411,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 749279,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שלוש בשורה והפוך ארבע",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 751670,
+      "dDurationMs": 1609,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 751680,
+      "dDurationMs": 4320,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "בשורה. אם אתם רוצים קצת",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 753269,
+      "dDurationMs": 2731,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 753279,
+      "dDurationMs": 5201,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אתגר, אל תלכו על מהירות, לכו על",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 755990,
+      "dDurationMs": 2490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 756000,
+      "dDurationMs": 4720,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "דיוק וזה אימון האצבעות שלכם",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 758470,
+      "dDurationMs": 2250,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 758480,
+      "dDurationMs": 4240,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "לעשות דברים חדשים. מה שכנראה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 760710,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 760720,
+      "dDurationMs": 3760,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "תגלו כשאתם הולכים לאלתר הוא שהאצבעות",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 762710,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 762720,
+      "dDurationMs": 4080,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שלכם יתחילו באופן טבעי לעשות את",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 764470,
+      "dDurationMs": 2330,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 764480,
+      "dDurationMs": 4080,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "התבניות האלה, עכשיו זה לא צריך",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 766790,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 766800,
+      "dDurationMs": 4159,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "להיות ריצה גדולה שלמה, כי",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 768550,
+      "dDurationMs": 2409,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 768560,
+      "dDurationMs": 4240,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אז זה נשמע כמו תרגיל סולם.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 770949,
+      "dDurationMs": 1851,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 770959,
+      "dDurationMs": 3680,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "מה שאתם מחפשים זה היכולת",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 772790,
+      "dDurationMs": 1849,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 772800,
+      "dDurationMs": 3440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "לאמן את האצבעות שלכם להשתמש",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 774629,
+      "dDurationMs": 1611,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 774639,
+      "dDurationMs": 3361,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "בקטעים קטנים שעשויים לצאת באלתור",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 776230,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 776240,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שלכם וללמד את",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 777990,
+      "dDurationMs": 2250,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 778000,
+      "dDurationMs": 4160,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "האצבעות שלכם לפרוץ את נגינת",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 780230,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 780240,
+      "dDurationMs": 3920,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "הסולם ישר למעלה ולמטה. כשאתם עושים",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 782150,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 782160,
+      "dDurationMs": 3679,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "דברים כאלה, אתם פשוט פותחים את",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 784150,
+      "dDurationMs": 1689,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 784160,
+      "dDurationMs": 4320,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "האצבעות שלכם לרעיונות חדשים ומלמדים את",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 785829,
+      "dDurationMs": 2651,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 785839,
+      "dDurationMs": 4800,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "הדמיון המוזיקלי שלכם",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 788470,
+      "dDurationMs": 2169,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 788480,
+      "dDurationMs": 4400,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "רעיונות חדשים או צלילים חדשים שאתם עשויים להתחיל",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 790629,
+      "dDurationMs": 2251,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 790639,
+      "dDurationMs": 4721,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "לשמוע. כשאתם מאלתרים דברים כאלה, בדרך כלל",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 792870,
+      "dDurationMs": 2490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 792880,
+      "dDurationMs": 4160,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "קל יותר שיהיה לכם את",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 795350,
+      "dDurationMs": 1690,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 795360,
+      "dDurationMs": 3279,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "התווים מולכם, אז אל",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 797030,
+      "dDurationMs": 1609,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 797040,
+      "dDurationMs": 3599,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "תשכחו להוריד את קובץ ה-PDF",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 798629,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 798639,
+      "dDurationMs": 3760,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "מהאתר, פשוט לחצו על סמל ההורדה. כל",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 800629,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 800639,
+      "dDurationMs": 3601,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "הדברים האלה בחינם למשתמשים רשומים.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 802389,
+      "dDurationMs": 1851,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 802399,
+      "dDurationMs": 3041,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אני באמת מקווה שאתם משתמשים בזה,",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 804230,
+      "dDurationMs": 1210,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 804240,
+      "dDurationMs": 2800,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "בהחלט מסוג הדברים שבהם, אם",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 805430,
+      "dDurationMs": 1610,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 805440,
+      "dDurationMs": 3440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "אתם עוקבים אחרי זה עם העיניים שלכם, אני...  אני",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 807030,
+      "dDurationMs": 1850,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 807040,
+      "dDurationMs": 4080,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "חושב שזה יכול להיות ממש מועיל. מקווה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 808870,
+      "dDurationMs": 2250,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 808880,
+      "dDurationMs": 3600,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שנתראה בחלק השני של יחידה",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 811110,
+      "dDurationMs": 1370,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 811120,
+      "dDurationMs": 3519,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "7, שם נבחן",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 812470,
+      "dDurationMs": 2169,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 812480,
+      "dDurationMs": 4159,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "שימוש בכיפופי מיתרים בסולם מז'ורי.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 814629,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 814639,
+      "dDurationMs": 5281,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "זה לא רק עניין של בלוז. תשמרו",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 816629,
+      "dDurationMs": 3291,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 816639,
+      "dDurationMs": 3281,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "על עצמכם, להתראות.",
+          "acAsrConf": 255
+        }
+      ]
+    }
+  ]
+}

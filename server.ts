@@ -36,7 +36,7 @@ async function discoverTimedTextUrlForVideo(videoId: string): Promise<string | n
 function getAuthenticSrtTrack(lang: string): any[] | null {
   let cleanLang = (lang || '').toLowerCase().split(/[-_]/)[0];
   if (cleanLang === 'iw' || cleanLang === 'il') cleanLang = 'he';
-  const srtPath = path.join(process.cwd(), 'test/fixtures/languages', `${cleanLang}.srt`);
+  const srtPath = path.join(process.cwd(), 'test/fixtures/FcRzAdI8R9U', `${cleanLang}.srt`);
   if (fs.existsSync(srtPath)) {
     try {
       const rawSrt = fs.readFileSync(srtPath, 'utf-8');
@@ -54,7 +54,7 @@ async function translateCuesToTargetLang(cues: any[], targetLang: string): Promi
   if (normLang === 'iw' || normLang === 'il') normLang = 'he';
   const sourceCues = Array.isArray(cues) && cues.length > 0 ? cues : SAMPLE_AUTHENTIC_RUSSIAN_CUES;
 
-  // PRIORITY 1: Check authentic SRT fixture track (1,578 cues) from test/fixtures/languages/*.srt
+  // PRIORITY 1: Check authentic SRT fixture track (1,578 cues) from test/fixtures/FcRzAdI8R9U/*.srt
   const authenticSrt = getAuthenticSrtTrack(normLang);
   if (authenticSrt && authenticSrt.length > 0) {
     if (sourceCues.length === authenticSrt.length) {
@@ -236,7 +236,7 @@ async function startServer() {
         }
 
         const srtLang = tlang && typeof tlang === 'string' ? tlang.toLowerCase().split('-')[0] : 'ru';
-        const srtPath = path.join(process.cwd(), 'test/fixtures/languages', `${srtLang}.srt`);
+        const srtPath = path.join(process.cwd(), 'test/fixtures/FcRzAdI8R9U', `${srtLang}.srt`);
         if (fs.existsSync(srtPath)) {
           const rawSrt = fs.readFileSync(srtPath, 'utf-8');
           const parsed = parseRawCaptionData(rawSrt);

@@ -1,0 +1,6292 @@
+{
+  "wireMagic": "pb3",
+  "pens": [{}],
+  "wsWinStyles": [
+    {},
+    {
+      "mhModeHint": 2,
+      "juJustifCode": 1,
+      "sdScrollDir": 3
+    }
+  ],
+  "wpWinPositions": [
+    {},
+    {
+      "apPoint": 6,
+      "ahHorPos": 20,
+      "avVerPos": 100,
+      "rcRows": 2,
+      "ccCols": 40
+    }
+  ],
+  "events": [
+    {
+      "tStartMs": 0,
+      "dDurationMs": 819920,
+      "id": 1,
+      "wpWinPosId": 1,
+      "wsWinStyleId": 1
+    },
+    {
+      "tStartMs": 80,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أهلًا، كيف حالك؟ معكم جاستن. مرحبًا بكم في",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 1829,
+      "dDurationMs": 2251,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 1839,
+      "dDurationMs": 3520,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الوحدة السابعة من سلسلة \"مايسترو السلم الموسيقي الكبير\". في",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 4070,
+      "dDurationMs": 1289,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 4080,
+      "dDurationMs": 4479,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "درس اليوم، سنتعرف على",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 5349,
+      "dDurationMs": 3210,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 5359,
+      "dDurationMs": 6561,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "المتواليات اللحنية. من",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 8549,
+      "dDurationMs": 3371,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 8559,
+      "dDurationMs": 5040,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ذكرياتي المبكرة الواضحة في",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 11910,
+      "dDurationMs": 1689,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 11920,
+      "dDurationMs": 3839,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "رحلتي مع غيتار الروك، مشاهدة",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 13589,
+      "dDurationMs": 2170,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 15749,
+      "dDurationMs": 2011,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 15759,
+      "dDurationMs": 4481,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "فيديو تعليمي على قناة \"إنغريدينت\"، حيث عزف فيه لحنًا سريعًا جدًا،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 17750,
+      "dDurationMs": 2490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 20230,
+      "dDurationMs": 2650,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 20240,
+      "dDurationMs": 3920,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "لكنه بدا وكأنه لا ينتهي. لم أستطع",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 22870,
+      "dDurationMs": 1290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 22880,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "فهم ما يحدث،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 24150,
+      "dDurationMs": 2090,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 24160,
+      "dDurationMs": 4080,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "لأنني أعرف أن السلالم الموسيقية تتكون من",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 26230,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 26240,
+      "dDurationMs": 5039,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "16 نغمة، وإذا عزفتها بهذه السرعة، تنتهي في لمح البصر.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 28230,
+      "dDurationMs": 3049,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 31269,
+      "dDurationMs": 1611,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 31279,
+      "dDurationMs": 3120,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أعتقد أن السرعة كانت كبيرة جدًا لدرجة أنني لم أستطع",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 32870,
+      "dDurationMs": 1529,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 32880,
+      "dDurationMs": 3440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "سماع أنه يستخدم",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 34389,
+      "dDurationMs": 1931,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 34399,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "تقنية تُسمى المتوالية اللحنية.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 36310,
+      "dDurationMs": 2089,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 36320,
+      "dDurationMs": 3520,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أتذكر عندما سألت معلمي عنها،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 38389,
+      "dDurationMs": 1451,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 38399,
+      "dDurationMs": 3521,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "كيف يفعل ذلك؟ أجابني: \"إنها",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 39830,
+      "dDurationMs": 2090,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 39840,
+      "dDurationMs": 4399,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "مجرد أنماط عددية",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 41910,
+      "dDurationMs": 2329,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 41920,
+      "dDurationMs": 3600,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "تُطبق على السلالم الموسيقية\". فقلت في نفسي: \"انتظر، ها نحن ذا!\". لطالما كنتُ جيدًا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 44229,
+      "dDurationMs": 1291,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 45510,
+      "dDurationMs": 1610,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 45520,
+      "dDurationMs": 3760,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "في الرياضيات، لذا وجدتُ هذا الأمر",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 47110,
+      "dDurationMs": 2170,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 47120,
+      "dDurationMs": 4640,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ممتعًا. إنه مفيد جدًا،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 49270,
+      "dDurationMs": 2490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 49280,
+      "dDurationMs": 4880,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "وموسيقي أيضًا.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 51750,
+      "dDurationMs": 2410,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 51760,
+      "dDurationMs": 5520,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ليس الأمر كما يبدو، فهو",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 54150,
+      "dDurationMs": 3130,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 54160,
+      "dDurationMs": 5680,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "يأخذ متوالية رياضية ويطبقها",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 57270,
+      "dDurationMs": 2570,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 57280,
+      "dDurationMs": 5439,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "على سلم موسيقي، وهو ما لا يبدو واضحًا.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 59830,
+      "dDurationMs": 2889,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 59840,
+      "dDurationMs": 4480,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "رائع أو عصري، لكنه مستخدم من قبل الجميع،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 62709,
+      "dDurationMs": 1611,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 62719,
+      "dDurationMs": 5121,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "في موسيقى البلوز، في موسيقى الروك، في كل",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 64310,
+      "dDurationMs": 3530,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 64320,
+      "dDurationMs": 5440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "مكان. هذا المفهوم ببساطة يبدو",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 67830,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 67840,
+      "dDurationMs": 4880,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "جيدًا. أعتقد أننا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 69750,
+      "dDurationMs": 2970,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 69760,
+      "dDurationMs": 4240,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "كبشر نميل بطبيعتنا إلى ترتيب",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 72710,
+      "dDurationMs": 1290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 73990,
+      "dDurationMs": 2410,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 74000,
+      "dDurationMs": 4159,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "التسلسل الموسيقي، وقد استُخدم هذا الترتيب منذ القدم، كما فعل",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 76390,
+      "dDurationMs": 1769,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 76400,
+      "dDurationMs": 3759,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "باخ، وستبدأ في",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 78149,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 78159,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "التعرف عليه. للبدء، علينا ترقيم نغمات السلم الموسيقي.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 80149,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 82149,
+      "dDurationMs": 1610,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 83749,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 83759,
+      "dDurationMs": 3601,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "سنبدأ بالنمط الأول، أي النوتة",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 85749,
+      "dDurationMs": 1611,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 85759,
+      "dDurationMs": 8641,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الأساسية، وهي النوتة رقم 1.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 87350,
+      "dDurationMs": 7050,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 87360,
+      "dDurationMs": 13840,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "لدينا الآن الأرقام من 1 إلى 16. ثم سنستخدم",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 94390,
+      "dDurationMs": 6810,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 101190,
+      "dDurationMs": 2410,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 103590,
+      "dDurationMs": 3290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 103600,
+      "dDurationMs": 4879,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "تسلسلًا رقميًا ونطبقه على السلم. مثال",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 106870,
+      "dDurationMs": 1609,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 106880,
+      "dDurationMs": 5040,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "جيد للبدء هو ما",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 108469,
+      "dDurationMs": 3451,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 108479,
+      "dDurationMs": 7841,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أسميه \"أربعة في خط واحد\". ببساطة،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 111910,
+      "dDurationMs": 4410,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 111920,
+      "dDurationMs": 6720,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "نعزف أربع نوتات من كل درجة من درجات السلم. التسلسل الرقمي هو: واحد، اثنان، ثلاثة، أربعة. نبدأ من 2، اثنان، ثلاثة، أربعة، خمسة.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 116310,
+      "dDurationMs": 2330,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 118630,
+      "dDurationMs": 3370,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 118640,
+      "dDurationMs": 6159,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ثم نبدأ من 3، ثلاثة، أربعة، خمسة، ستة.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 121990,
+      "dDurationMs": 2809,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 122000,
+      "dDurationMs": 6160,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ثم نبدأ من",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 124789,
+      "dDurationMs": 3371,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 124799,
+      "dDurationMs": 6721,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "4، أربعة، خمسة، ستة،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 128150,
+      "dDurationMs": 3370,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 128160,
+      "dDurationMs": 6799,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "سبعة. أي نعد",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 131510,
+      "dDurationMs": 3449,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 131520,
+      "dDurationMs": 4719,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أربعة أرقام تصاعديًا بدءًا من 1.  كل رقم،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 134949,
+      "dDurationMs": 1290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 134959,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "إذن هي",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 136229,
+      "dDurationMs": 2730,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 136239,
+      "dDurationMs": 5041,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "سلسلة من أربع نغمات. أعتقد أنه من الأفضل",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 138949,
+      "dDurationMs": 2331,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 138959,
+      "dDurationMs": 4081,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "دائمًا أن يكون لدينا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 141270,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 141280,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "نسخة عملية مبسطة من سلسلة الأرقام",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 143030,
+      "dDurationMs": 1610,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 143040,
+      "dDurationMs": 3760,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "بدلًا من التفكير فيها كـ 1، 2، 3، 4، 2، 3، 4، 5، 3، 4، 5،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 144630,
+      "dDurationMs": 2170,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 146790,
+      "dDurationMs": 2089,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 146800,
+      "dDurationMs": 4480,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "6. أنا أفكر فيها",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 148869,
+      "dDurationMs": 2411,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 148879,
+      "dDurationMs": 3761,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "كأربع درجات سلم موسيقي تصاعدية، بدءًا من كل",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 151270,
+      "dDurationMs": 1370,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 151280,
+      "dDurationMs": 3280,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "نغمة في السلم. أعتقد أن هذا أسهل",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 152630,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 152640,
+      "dDurationMs": 4720,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "بالنسبة لي للتذكر. دعونا نحاول تطبيقها",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 154550,
+      "dDurationMs": 2810,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 154560,
+      "dDurationMs": 4720,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الآن. كانت السلسلة 1، 2، 3،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 157350,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 157360,
+      "dDurationMs": 4239,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "4، لذا سنعزف النغمة الأولى، النغمة",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 159270,
+      "dDurationMs": 2329,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 159280,
+      "dDurationMs": 4800,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الثانية، النغمة الثالثة، النغمة",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 161589,
+      "dDurationMs": 2491,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 161599,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الرابعة. ثم نبدأ من",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 164070,
+      "dDurationMs": 1529,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 164080,
+      "dDurationMs": 4560,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الدرجة الثانية من السلم",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 165589,
+      "dDurationMs": 3051,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 165599,
+      "dDurationMs": 4961,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ونعزف أربع نغمات تصاعدية: 2، 3، 4،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 168630,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 168640,
+      "dDurationMs": 3679,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "5. هذا يعني",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 170550,
+      "dDurationMs": 1769,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 170560,
+      "dDurationMs": 3440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "البدء من الدرجة الثالثة:",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 172309,
+      "dDurationMs": 1691,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 172319,
+      "dDurationMs": 4640,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "3، 4،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 173990,
+      "dDurationMs": 2969,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 174000,
+      "dDurationMs": 6159,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "5، 6. ثم نبدأ من",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 176949,
+      "dDurationMs": 3210,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 176959,
+      "dDurationMs": 5761,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الدرجة الرابعة: 4، 5، 6،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 180149,
+      "dDurationMs": 2571,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 180159,
+      "dDurationMs": 5041,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "7. وأخيرًا نبدأ من الدرجة الخامسة:",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 182710,
+      "dDurationMs": 2490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 182720,
+      "dDurationMs": 3439,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "5، 6، 7،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 185190,
+      "dDurationMs": 969,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 185200,
+      "dDurationMs": 2640,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "8.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 186149,
+      "dDurationMs": 1691,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 186159,
+      "dDurationMs": 3201,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الآن، الشيء الأساسي هنا هو تذكر",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 187830,
+      "dDurationMs": 1530,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 187840,
+      "dDurationMs": 4399,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "النغمة التي بدأت بها. لذا، هنا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 189350,
+      "dDurationMs": 2889,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 189360,
+      "dDurationMs": 4720,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أفكر في البدء بتلك النغمة،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 192229,
+      "dDurationMs": 1851,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 192239,
+      "dDurationMs": 4640,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "لكنني أفكر بالفعل في النغمة",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 194070,
+      "dDurationMs": 2809,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 194080,
+      "dDurationMs": 5760,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "التالية التي سأبدأ بها: ثم هذه، ثم هذه، ثم",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 196869,
+      "dDurationMs": 2971,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 200149,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 202550,
+      "dDurationMs": 2650,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 202560,
+      "dDurationMs": 2640,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "هذه.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 207290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 207300,
+      "dDurationMs": 4060,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[موسيقى]"
+        }
+      ]
+    },
+    {
+      "tStartMs": 209830,
+      "dDurationMs": 1530,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 209840,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الآن، كنت أعزف بشكل",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 211350,
+      "dDurationMs": 1850,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 211360,
+      "dDurationMs": 4720,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "متقطع قليلًا حتى تتمكن من سماع",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 213190,
+      "dDurationMs": 2890,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 213200,
+      "dDurationMs": 6319,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "النمط بوضوح: 1، 2، 3، 4، 2، 3، 4، 5، 3، 4، 5،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 216070,
+      "dDurationMs": 3449,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 216080,
+      "dDurationMs": 6159,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "6.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 219509,
+      "dDurationMs": 2730,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 219519,
+      "dDurationMs": 4881,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "لكن بمجرد أن تستوعب المفهوم",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 222229,
+      "dDurationMs": 2171,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 222239,
+      "dDurationMs": 4401,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "وتتقنه، سترغب في",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 224390,
+      "dDurationMs": 2250,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 224400,
+      "dDurationMs": 5250,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "التخلص من عدم انتظام الإيقاع والعزف",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 226630,
+      "dDurationMs": 3020,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 226640,
+      "dDurationMs": 6119,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "بثبات. لذا ستفعل هذا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 229640,
+      "dDurationMs": 3119,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 229650,
+      "dDurationMs": 3109,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "["
+        }
+      ]
+    },
+    {
+      "tStartMs": 243830,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 243840,
+      "dDurationMs": 3000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 252540,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 252550,
+      "dDurationMs": 9369,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "موسيقى]،"
+        }
+      ]
+    },
+    {
+      "tStartMs": 259430,
+      "dDurationMs": 2489,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 259440,
+      "dDurationMs": 4800,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "سأبدأ بالصعود فقط، وسأشير إلى مشكلة",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 261909,
+      "dDurationMs": 2331,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 261919,
+      "dDurationMs": 3601,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "تقنية صغيرة",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 264230,
+      "dDurationMs": 1290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 264240,
+      "dDurationMs": 2959,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ستواجهها، وهي",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 265510,
+      "dDurationMs": 1689,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 265520,
+      "dDurationMs": 5520,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "لفّ الخنصر.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 267189,
+      "dDurationMs": 3851,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 267199,
+      "dDurationMs": 3841,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "عندما تصل إلى هذا الجزء، عليك أن تضغط",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 271189,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 271199,
+      "dDurationMs": 2241,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 273510,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 274870,
+      "dDurationMs": 1530,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 274880,
+      "dDurationMs": 3039,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "بخنصرك قليلاً على",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 276390,
+      "dDurationMs": 1529,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 276400,
+      "dDurationMs": 5480,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الوتر الثاني",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 277909,
+      "dDurationMs": 3971,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 277919,
+      "dDurationMs": 3961,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "وتلفّه على طرفه. هناك عدة طرق لعكس تسلسل لحني، وأسهل طريقة هي إعادة ترقيم السلم الموسيقي بدءًا من الوتر الأرفع، فيكون الترتيب كالتالي: واحد، اثنان، ثلاثة، أربعة، خمسة، ستة، سبعة، ثمانية، تسعة، عشرة، أحد عشر، اثنا عشر، ثلاثة عشر، أربعة عشر، خمسة عشر، ستة عشر، سبعة عشر، وهكذا.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 284950,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 285990,
+      "dDurationMs": 2730,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 288710,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 290710,
+      "dDurationMs": 810,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 290720,
+      "dDurationMs": 2800,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 291510,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 293510,
+      "dDurationMs": 1370,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 294870,
+      "dDurationMs": 2650,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 297510,
+      "dDurationMs": 1530,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 299030,
+      "dDurationMs": 1690,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 300710,
+      "dDurationMs": 3929,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 300720,
+      "dDurationMs": 7840,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ثم ننتقل إلى واحد، اثنان، ثلاثة، أربعة، اثنان، ثلاثة، أربعة، خمسة، ثلاثة، أربعة،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 304629,
+      "dDurationMs": 3931,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 304639,
+      "dDurationMs": 5840,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "خمسة، ستة.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 308550,
+      "dDurationMs": 1929,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 308560,
+      "dDurationMs": 4320,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "لكن بالنسبة لي، في هذا النمط تحديدًا،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 310469,
+      "dDurationMs": 2411,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 310479,
+      "dDurationMs": 5521,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أعتقد أننا ننزل السلم الموسيقي، ننزل",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 312870,
+      "dDurationMs": 3130,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 312880,
+      "dDurationMs": 4970,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أربع نغمات من كل درجة،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 315990,
+      "dDurationMs": 1860,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 316000,
+      "dDurationMs": 3520,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "بدءًا من النغمة العليا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 317840,
+      "dDurationMs": 1680,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 317850,
+      "dDurationMs": 3830,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[موسيقى]، ثم النغمة"
+        }
+      ]
+    },
+    {
+      "tStartMs": 319510,
+      "dDurationMs": 2170,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 319520,
+      "dDurationMs": 5720,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "التالية، ثم",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 321670,
+      "dDurationMs": 3570,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 321680,
+      "dDurationMs": 3560,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "النغمة التالية، وهكذا.  لا بأس تمامًا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 334070,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 336230,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 336240,
+      "dDurationMs": 3600,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "بالقيام بذلك بهذه الحركة المتقطعة",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 338150,
+      "dDurationMs": 1690,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 338160,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "للتعود على الأنماط، ولكن بمجرد أن تشعر",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 339830,
+      "dDurationMs": 1690,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 339840,
+      "dDurationMs": 5160,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "بالثقة، حاول",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 341510,
+      "dDurationMs": 3490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 341520,
+      "dDurationMs": 3480,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "إزالة ذلك",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 349300,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 349310,
+      "dDurationMs": 3389,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[موسيقى]."
+        }
+      ]
+    },
+    {
+      "tStartMs": 371670,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 371680,
+      "dDurationMs": 3680,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "عندما تبدأ بتطبيق هذه",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 373350,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 373360,
+      "dDurationMs": 3679,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "التسلسلات اللحنية على أنماط سلم موسيقي أخرى، ستجد",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 375350,
+      "dDurationMs": 1689,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 375360,
+      "dDurationMs": 3200,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "بعض التحديات",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 377029,
+      "dDurationMs": 1531,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 377039,
+      "dDurationMs": 3521,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "فيما يتعلق بوضع الأصابع. هناك بعض",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 378550,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 378560,
+      "dDurationMs": 4079,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "القرارات التي يجب اتخاذها، وسأحاول أن أقدم",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 380550,
+      "dDurationMs": 2089,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 380560,
+      "dDurationMs": 4160,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "لك بعض النصائح،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 382629,
+      "dDurationMs": 2091,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 382639,
+      "dDurationMs": 4081,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ولكن جزءًا من الرحلة هو أن تكتشف وضع",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 384710,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 384720,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الأصابع",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 386710,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 386720,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الأنسب لك. لنأخذ تسلسل الأربع نغمات في سطر واحد.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 388710,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 388720,
+      "dDurationMs": 5000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "إذا بدأنا بالنمط",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 390710,
+      "dDurationMs": 3010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 390720,
+      "dDurationMs": 3000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الثاني،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 393990,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 394000,
+      "dDurationMs": 2960,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "تذكر أنه كان هذا النمط. حتى الآن كل شيء على ما يرام.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 397430,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 400150,
+      "dDurationMs": 2169,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 400160,
+      "dDurationMs": 4080,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الآن لدينا تلك النوتة. إذا فعلنا ذلك،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 402309,
+      "dDurationMs": 1931,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 402319,
+      "dDurationMs": 3841,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "فعلينا محاولة القفز",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 404230,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 404240,
+      "dDurationMs": 5320,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "بالإصبع الثاني، لذلك سيتعين علينا وضعه بشكل",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 406150,
+      "dDurationMs": 3410,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 406160,
+      "dDurationMs": 3400,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "مسطح. آه،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 410469,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 410479,
+      "dDurationMs": 3521,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الآن سيتعين علينا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 412309,
+      "dDurationMs": 1691,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 412319,
+      "dDurationMs": 4401,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "إجراء تغيير",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 413990,
+      "dDurationMs": 2730,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 414000,
+      "dDurationMs": 6080,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "بالإصبع الصغير، وهذه ليست فكرة جيدة.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 416710,
+      "dDurationMs": 3370,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 416720,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الأفضل في هذه الحالة",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 420710,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 420720,
+      "dDurationMs": 4560,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "هو الانتقال إلى الإصبع الأول في أسرع وقت ممكن.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 422790,
+      "dDurationMs": 2490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 422800,
+      "dDurationMs": 2480,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 426469,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 426479,
+      "dDurationMs": 3201,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "عندما ننزل النمط في النمط",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 428309,
+      "dDurationMs": 1371,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 428319,
+      "dDurationMs": 4361,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الثاني، لدينا بعض المشاكل الأخرى التي يجب",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 429670,
+      "dDurationMs": 3010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 429680,
+      "dDurationMs": 3000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "التفكير فيها.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 437270,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 437280,
+      "dDurationMs": 3039,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الآن ماذا سيحدث؟",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 442230,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 442240,
+      "dDurationMs": 3679,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "علينا الانتقال إلى  أولًا،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 449749,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 449759,
+      "dDurationMs": 3601,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "كل نمط سيُمثل",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 451749,
+      "dDurationMs": 1611,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 451759,
+      "dDurationMs": 3201,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "تحديًا في وضع الأصابع، وسيتعين عليك إيجاد حل له، وهذا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 453350,
+      "dDurationMs": 1610,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 454950,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 454960,
+      "dDurationMs": 3840,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "جزء من متعة الأمر.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 456710,
+      "dDurationMs": 2090,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 456720,
+      "dDurationMs": 3919,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أود أيضًا أن أذكر النوتة العليا في السلم الموسيقي. بشكل عام،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 458790,
+      "dDurationMs": 1849,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 458800,
+      "dDurationMs": 3600,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "عند",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 460629,
+      "dDurationMs": 1771,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 460639,
+      "dDurationMs": 4321,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "عزف السلالم الموسيقية صعودًا وهبوطًا، أنصحك",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 462390,
+      "dDurationMs": 2570,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 462400,
+      "dDurationMs": 5220,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "بعزف النوتة العليا مرة واحدة فقط. فعند",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 464950,
+      "dDurationMs": 2670,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 464960,
+      "dDurationMs": 4239,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الانتقال",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 467610,
+      "dDurationMs": 1589,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 467620,
+      "dDurationMs": 3180,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[موسيقى]، تعزف النوتة العليا"
+        }
+      ]
+    },
+    {
+      "tStartMs": 469189,
+      "dDurationMs": 1611,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 470790,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 470800,
+      "dDurationMs": 3839,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "مرة واحدة ثم تهبط مباشرة. أما عند",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 472790,
+      "dDurationMs": 1849,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 472800,
+      "dDurationMs": 3600,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "عزف المقاطع اللحنية،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 474629,
+      "dDurationMs": 1771,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 474639,
+      "dDurationMs": 4641,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "فغالبًا ما سترغب في عزف النوتة العليا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 476390,
+      "dDurationMs": 2890,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 476400,
+      "dDurationMs": 2880,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "مرتين.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 482260,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 482270,
+      "dDurationMs": 4790,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[موسيقى] بشكل عام، سيساعدك"
+        }
+      ]
+    },
+    {
+      "tStartMs": 487350,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 487360,
+      "dDurationMs": 3839,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "عزف النوتة العليا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 489510,
+      "dDurationMs": 1689,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 489520,
+      "dDurationMs": 3359,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "مرتين على البقاء متزامنًا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 491189,
+      "dDurationMs": 1690,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 491199,
+      "dDurationMs": 3840,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "مع المترونوم، خاصةً في نمط",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 492869,
+      "dDurationMs": 2170,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 492879,
+      "dDurationMs": 3440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "كهذا، وهو مكون من أربع نوتات. غالبًا ما ستتدرب عليه",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 495029,
+      "dDurationMs": 1290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 496309,
+      "dDurationMs": 1931,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 496319,
+      "dDurationMs": 3921,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "كنوتات ثُمنية أو سداسية عشرية.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 498230,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 498240,
+      "dDurationMs": 3920,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "النوتات السداسية عشرية هي أربع نوتات لكل نقرة من",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 500230,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 500240,
+      "dDurationMs": 3440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "المترونوم. لذا، إذا عزفت",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 502150,
+      "dDurationMs": 1530,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 502160,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "النوتة العليا مرة واحدة فقط ثم",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 503670,
+      "dDurationMs": 2490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 503680,
+      "dDurationMs": 4959,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "هبطت مباشرة، فلن تأتي النقرة في",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 506150,
+      "dDurationMs": 2489,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 506160,
+      "dDurationMs": 4560,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "بداية التسلسل في كل مرة،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 508629,
+      "dDurationMs": 2091,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 508639,
+      "dDurationMs": 3441,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "مما قد يبدو غير مريح بعض الشيء. هناك",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 510710,
+      "dDurationMs": 1370,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 510720,
+      "dDurationMs": 3999,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "نمط رائع آخر أود منك تجربته",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 512070,
+      "dDurationMs": 2649,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 512080,
+      "dDurationMs": 4959,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "وهو ثلاث نوتات في سطر واحد،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 514709,
+      "dDurationMs": 2330,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 514719,
+      "dDurationMs": 4721,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "مثل أربع نوتات في سطر واحد، وثلاث نوتات في سطر واحد.  يحتوي الخط على",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 517029,
+      "dDurationMs": 2411,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 517039,
+      "dDurationMs": 4641,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ثلاث نغمات صاعدة أو هابطة من",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 519430,
+      "dDurationMs": 2250,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 519440,
+      "dDurationMs": 4560,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "كل درجة من درجات السلم الموسيقي، لذا دعونا نلقي",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 521670,
+      "dDurationMs": 2330,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 521680,
+      "dDurationMs": 4159,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "نظرة سريعة عليه مرة أخرى.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 523990,
+      "dDurationMs": 1849,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 524000,
+      "dDurationMs": 3680,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "هذا هو نمط السلم الموسيقي الأول،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 525829,
+      "dDurationMs": 1851,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 525839,
+      "dDurationMs": 3281,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "إذا قمنا بترقيمه من واحد إلى ثلاثة،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 527670,
+      "dDurationMs": 1450,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 529110,
+      "dDurationMs": 3930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 533030,
+      "dDurationMs": 2730,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 533040,
+      "dDurationMs": 4560,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "بدءًا من الدرجة الثانية، ثم الدرجة",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 535750,
+      "dDurationMs": 1850,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 535760,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الثالثة، ثم الدرجة",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 537590,
+      "dDurationMs": 2170,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 537600,
+      "dDurationMs": 3600,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الرابعة.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 539750,
+      "dDurationMs": 1450,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 539760,
+      "dDurationMs": 3199,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الآن، هناك طريقة سهلة للتفكير في هذا: أنت",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 541190,
+      "dDurationMs": 1769,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 541200,
+      "dDurationMs": 3680,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "تصعد ثلاث نغمات، ثم تنزل نغمة",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 542949,
+      "dDurationMs": 1931,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 542959,
+      "dDurationMs": 3681,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "واحدة، ثم تصعد ثلاث نغمات، ثم تعود نغمة واحدة، ثم تعود نغمة واحدة، ثم تعود نغمة واحدة، ثم",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 544870,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 546630,
+      "dDurationMs": 1330,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 547950,
+      "dDurationMs": 3240,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 547960,
+      "dDurationMs": 3230,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": ""
+        }
+      ]
+    },
+    {
+      "tStartMs": 555700,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 555710,
+      "dDurationMs": 8129,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": ""
+        }
+      ]
+    },
+    {
+      "tStartMs": 560949,
+      "dDurationMs": 2890,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 560959,
+      "dDurationMs": 2880,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "تعود نغمة واحدة، وهكذا. [موسيقى]",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 564140,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 564150,
+      "dDurationMs": 3120,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": ""
+        }
+      ]
+    },
+    {
+      "tStartMs": 578830,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 578840,
+      "dDurationMs": 3400,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[موسيقى]، ثم تنزل نغمة واحدة، وهكذا. [موسيقى] [موسيقى]،"
+        }
+      ]
+    },
+    {
+      "tStartMs": 580550,
+      "dDurationMs": 1690,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 580560,
+      "dDurationMs": 3520,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "وكالعادة، أنصحك بأن تتقن",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 582230,
+      "dDurationMs": 1850,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 582240,
+      "dDurationMs": 3599,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "النمط",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 584070,
+      "dDurationMs": 1769,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 584080,
+      "dDurationMs": 3120,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الأول جيدًا قبل البدء في تطبيقه على",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 585829,
+      "dDurationMs": 1371,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 585839,
+      "dDurationMs": 3201,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الأنماط الأخرى، لأنك ستواجه معضلات في وضع الأصابع عليك حلها.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 587190,
+      "dDurationMs": 1850,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 589030,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 589040,
+      "dDurationMs": 3520,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أعتقد أن هناك",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 590790,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 590800,
+      "dDurationMs": 3599,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "قيمة كبيرة في التمرس على نمط واحد",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 592550,
+      "dDurationMs": 1849,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 592560,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "قبل تغييره.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 594389,
+      "dDurationMs": 1531,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 594399,
+      "dDurationMs": 3440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "هناك شيء ما في",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 595910,
+      "dDurationMs": 1929,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 595920,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "آلياته يجعل من",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 597829,
+      "dDurationMs": 2091,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 597839,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "السهل إتقانه في نمط واحد قبل البدء في تغييره. من",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 599910,
+      "dDurationMs": 1929,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 601829,
+      "dDurationMs": 1611,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 601839,
+      "dDurationMs": 3440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الأشياء الرائعة في",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 603430,
+      "dDurationMs": 1849,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 603440,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "التسلسلات اللحنية أنها تنمو تدريجيًا، ستجد",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 605269,
+      "dDurationMs": 1531,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 605279,
+      "dDurationMs": 3201,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أنك على الأرجح تعمل",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 606790,
+      "dDurationMs": 1690,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 606800,
+      "dDurationMs": 3680,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "على  تسلسلات لحنية مختلفة، طالما",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 608470,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 608480,
+      "dDurationMs": 3760,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أنك تعزف على الجيتار، إنها طريقة ممتعة حقًا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 610470,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 610480,
+      "dDurationMs": 3039,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "لاستكشاف السلالم الموسيقية وتدريب",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 612230,
+      "dDurationMs": 1289,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 612240,
+      "dDurationMs": 3200,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أصابعك على أداء أشياء مختلفة. هناك",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 613509,
+      "dDurationMs": 1931,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 613519,
+      "dDurationMs": 3201,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الكثير من الأشياء الجيدة حول هذا الموضوع.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 615430,
+      "dDurationMs": 1290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 615440,
+      "dDurationMs": 2880,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "هناك نمط آخر أريد أن",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 616710,
+      "dDurationMs": 1610,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 616720,
+      "dDurationMs": 2960,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أقدمه لك كفكرة،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 618310,
+      "dDurationMs": 1370,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 618320,
+      "dDurationMs": 3199,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "شيء قد ترغب في استكشافه",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 619670,
+      "dDurationMs": 1849,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 619680,
+      "dDurationMs": 3360,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "إذا كنت ترغب في البدء في عمل",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 621509,
+      "dDurationMs": 1531,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 621519,
+      "dDurationMs": 4481,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أنماط لحنية بمفردك أيضًا. وهذا النمط",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 623030,
+      "dDurationMs": 2970,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 623040,
+      "dDurationMs": 5600,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أسميه \"الرباعية المعكوسة\"، حيث",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 625990,
+      "dDurationMs": 2650,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 626000,
+      "dDurationMs": 4560,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "نأخذ كل جزء",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 628630,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 628640,
+      "dDurationMs": 4480,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "من نمط \"الرباعية العادية\"",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 630550,
+      "dDurationMs": 2570,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 630560,
+      "dDurationMs": 4399,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ونعكسه. فبدلاً من أن يكون 1، 2، 3، 4، سنقول 4، 3، 2، 1.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 633110,
+      "dDurationMs": 1849,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 634949,
+      "dDurationMs": 2251,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 634959,
+      "dDurationMs": 4721,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الجزء الثاني كان في",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 637190,
+      "dDurationMs": 2490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 637200,
+      "dDurationMs": 5759,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الأصل 2، 3، 4، 5، والآن",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 639670,
+      "dDurationMs": 3289,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 639680,
+      "dDurationMs": 4800,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "سيصبح 5، 4، 3، 2. لذا، تم",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 642949,
+      "dDurationMs": 1531,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 644470,
+      "dDurationMs": 3450,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 644480,
+      "dDurationMs": 5359,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "عكس كل قسم. تبدو الرباعية المعكوسة هكذا.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 647910,
+      "dDurationMs": 1929,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 647920,
+      "dDurationMs": 4159,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أعتقد أنها",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 649829,
+      "dDurationMs": 2250,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 649839,
+      "dDurationMs": 6161,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "واحدة من مفضلاتي. الآن",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 652069,
+      "dDurationMs": 3931,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 652079,
+      "dDurationMs": 3921,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "سنبدأ من الدرجة الرابعة من السلم الموسيقي",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 656550,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 656560,
+      "dDurationMs": 4240,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "وننزل أربع درجات، ثم سنبدأ من",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 658150,
+      "dDurationMs": 2650,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 658160,
+      "dDurationMs": 6160,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الدرجة الخامسة",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 660790,
+      "dDurationMs": 3530,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 660800,
+      "dDurationMs": 5920,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "وننزل إلى الدرجة السادسة، السابعة، الثامنة، الخامسة،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 664310,
+      "dDurationMs": 2410,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 664320,
+      "dDurationMs": 4639,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 666710,
+      "dDurationMs": 2249,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 666720,
+      "dDurationMs": 2239,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 669030,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 669040,
+      "dDurationMs": 5479,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 671030,
+      "dDurationMs": 3489,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 671040,
+      "dDurationMs": 3479,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "العاشرة، وهكذا.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 680260,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 680270,
+      "dDurationMs": 11290,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[موسيقى]"
+        }
+      ]
+    },
+    {
+      "tStartMs": 685270,
+      "dDurationMs": 6290,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 685280,
+      "dDurationMs": 6280,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "[ضحك]"
+        }
+      ]
+    },
+    {
+      "tStartMs": 695190,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 695200,
+      "dDurationMs": 5120,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "بالطبع، عندما ننزل السلم الموسيقي، فإننا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 697269,
+      "dDurationMs": 3051,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 697279,
+      "dDurationMs": 6560,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "نصعد أربع درجات.  أثناء",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 700310,
+      "dDurationMs": 3529,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 700320,
+      "dDurationMs": 3519,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "نزولنا على السلم الموسيقي، لا تتردد في",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 719350,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 719360,
+      "dDurationMs": 3000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 731509,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 731519,
+      "dDurationMs": 4241,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "تجربة تسلسلاتك الخاصة،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 733670,
+      "dDurationMs": 2090,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 733680,
+      "dDurationMs": 4080,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "لكنني أنصحك بالبدء بهذه التسلسلات",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 735750,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 735760,
+      "dDurationMs": 4800,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "تحديدًا. تذكر أننا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 737750,
+      "dDurationMs": 2810,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 737760,
+      "dDurationMs": 4319,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "تدربنا أيضًا على العزف على الثوالث،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 740550,
+      "dDurationMs": 1529,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 740560,
+      "dDurationMs": 3519,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "لذا سيكون هذا بمثابة تمرين إحماء رائع للسلم الموسيقي. ابدأ",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 742069,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 744069,
+      "dDurationMs": 2091,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 744079,
+      "dDurationMs": 5200,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "بعزف السلم صعودًا وهبوطًا، ثم عزفه",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 746150,
+      "dDurationMs": 3129,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 746160,
+      "dDurationMs": 5520,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "على الثوالث، ثم عزف أربعة نغمات متتالية، ثم ثلاثة نغمات متتالية، ثم عكس عزف",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 749269,
+      "dDurationMs": 2411,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 749279,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أربعة نغمات متتالية.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 751670,
+      "dDurationMs": 1609,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 751680,
+      "dDurationMs": 4320,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "إذا كنت ترغب في",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 753269,
+      "dDurationMs": 2731,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 753279,
+      "dDurationMs": 5201,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "تحدٍّ بسيط، فلا تركز على السرعة، بل على",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 755990,
+      "dDurationMs": 2490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 756000,
+      "dDurationMs": 4720,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الدقة. هذا يُدرّب أصابعك على",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 758470,
+      "dDurationMs": 2250,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 758480,
+      "dDurationMs": 4240,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "القيام بأشياء جديدة. ستجد على الأرجح",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 760710,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 760720,
+      "dDurationMs": 3760,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "عند الارتجال أن",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 762710,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 762720,
+      "dDurationMs": 4080,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أصابعك ستبدأ بشكل طبيعي في أداء",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 764470,
+      "dDurationMs": 2330,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 764480,
+      "dDurationMs": 4080,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "هذه الأنماط. ليس من الضروري أن يكون عزفًا متواصلًا طويلًا،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 766790,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 766800,
+      "dDurationMs": 4159,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "لأنه",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 768550,
+      "dDurationMs": 2409,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 768560,
+      "dDurationMs": 4240,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "حينها سيبدو كتمرين على السلم الموسيقي.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 770949,
+      "dDurationMs": 1851,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 770959,
+      "dDurationMs": 3680,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "ما تبحث عنه هو القدرة على",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 772790,
+      "dDurationMs": 1849,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 772800,
+      "dDurationMs": 3440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "تدريب أصابعك على استخدام",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 774629,
+      "dDurationMs": 1611,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 774639,
+      "dDurationMs": 3361,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أجزاء صغيرة منه قد تظهر أثناء",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 776230,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 776240,
+      "dDurationMs": 4000,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الارتجال، وتعليمها",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 777990,
+      "dDurationMs": 2250,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 778000,
+      "dDurationMs": 4160,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الخروج عن مجرد عزف السلم صعودًا وهبوطًا بشكل مستقيم.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 780230,
+      "dDurationMs": 1930,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 780240,
+      "dDurationMs": 3920,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "عندما تقوم بهذه",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 782150,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 782160,
+      "dDurationMs": 3679,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الأشياء، فإنك",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 784150,
+      "dDurationMs": 1689,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 784160,
+      "dDurationMs": 4320,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "تفتح أصابعك لأفكار جديدة،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 785829,
+      "dDurationMs": 2651,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 785839,
+      "dDurationMs": 4800,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "وتُعلّم خيالك الموسيقي",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 788470,
+      "dDurationMs": 2169,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 788480,
+      "dDurationMs": 4400,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أفكارًا أو أصواتًا جديدة قد تبدأ في",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 790629,
+      "dDurationMs": 2251,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 790639,
+      "dDurationMs": 4721,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "سماعها عند الارتجال.  من المؤكد أن",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 792870,
+      "dDurationMs": 2490,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 792880,
+      "dDurationMs": 4160,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "وجود",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 795350,
+      "dDurationMs": 1690,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 795360,
+      "dDurationMs": 3279,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "النوتة الموسيقية أمامك أسهل بكثير، لذا لا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 797030,
+      "dDurationMs": 1609,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 797040,
+      "dDurationMs": 3599,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "تنسَ تحميل ملف PDF من",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 798629,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 798639,
+      "dDurationMs": 3760,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "الموقع الإلكتروني، فقط اضغط على أيقونة التحميل. كل",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 800629,
+      "dDurationMs": 1770,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 800639,
+      "dDurationMs": 3601,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "هذه الموارد مجانية للمستخدمين المسجلين.",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 802389,
+      "dDurationMs": 1851,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 802399,
+      "dDurationMs": 3041,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أتمنى حقًا أن تستفيدوا منها، خاصةً",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 804230,
+      "dDurationMs": 1210,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 804240,
+      "dDurationMs": 2800,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "إذا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 805430,
+      "dDurationMs": 1610,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 805440,
+      "dDurationMs": 3440,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "كنتم تتابعونها بأعينكم،",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 807030,
+      "dDurationMs": 1850,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 807040,
+      "dDurationMs": 4080,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "أعتقد أن ذلك سيكون مفيدًا للغاية. أتطلع",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 808870,
+      "dDurationMs": 2250,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 808880,
+      "dDurationMs": 3600,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "لرؤيتكم في الجزء الثاني من الوحدة",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 811110,
+      "dDurationMs": 1370,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 811120,
+      "dDurationMs": 3519,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "7، حيث سنتناول",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 812470,
+      "dDurationMs": 2169,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 812480,
+      "dDurationMs": 4159,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "استخدام ثني الأوتار في السلم الموسيقي الكبير، وهو ليس حكرًا على موسيقى",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 814629,
+      "dDurationMs": 2010,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 814639,
+      "dDurationMs": 5281,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "البلوز. اعتنوا",
+          "acAsrConf": 255
+        }
+      ]
+    },
+    {
+      "tStartMs": 816629,
+      "dDurationMs": 3291,
+      "wWinId": 1,
+      "aAppend": 1,
+      "segs": [
+        {
+          "utf8": "\n"
+        }
+      ]
+    },
+    {
+      "tStartMs": 816639,
+      "dDurationMs": 3281,
+      "wWinId": 1,
+      "segs": [
+        {
+          "utf8": "بأنفسكم، إلى اللقاء.",
+          "acAsrConf": 255
+        }
+      ]
+    }
+  ]
+}
