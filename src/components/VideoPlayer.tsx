@@ -379,6 +379,18 @@ export const VideoPlayer = forwardRef<YouTubePlayerHandle, VideoPlayerProps>(
         isAutoTTSSpeakingRef.current = false;
         setActiveTTSTarget(null);
         setActiveTTSCharIndex(null);
+
+        // If video was auto-paused for TTS narration, seamlessly resume video playback
+        if (isAutoTTSPausingRef.current) {
+          isAutoTTSPausingRef.current = false;
+          isPlayingRef.current = true;
+          setIsPlaying(true);
+          playStartTimeRef.current = Date.now() - currentTimeRef.current * 1000;
+          try {
+            ytPlayerRef.current?.playVideo?.();
+          } catch {}
+          postIframeCommand('playVideo');
+        }
       }
     };
 
@@ -399,6 +411,13 @@ export const VideoPlayer = forwardRef<YouTubePlayerHandle, VideoPlayerProps>(
           setIsTTSSpeakingState(false);
           setActiveTTSTarget(null);
           setActiveTTSCharIndex(null);
+        }
+      } else {
+        // Immediate audible feedback when turning ON
+        const cueToPlay = activeCue || cachedCues[0];
+        if (cueToPlay?.text) {
+          lastAutoSpokenCueIdRef.current = cueToPlay.id;
+          playCurrentCueTTS(cueToPlay);
         }
       }
     };
@@ -611,10 +630,12 @@ export const VideoPlayer = forwardRef<YouTubePlayerHandle, VideoPlayerProps>(
 
     const isAutoTTSSpeakingRef = useRef<boolean>(false);
     const isAutoTTSPausingRef = useRef<boolean>(false);
+    const lastAutoSpokenCueIdRef = useRef<string | null>(null);
 
     useEffect(() => {
       isAutoTTSPausingRef.current = false;
       isAutoTTSSpeakingRef.current = false;
+      lastAutoSpokenCueIdRef.current = null;
     }, [videoId]);
 
     // Spoken cue state reset on activeCue change when not speaking
@@ -624,6 +645,25 @@ export const VideoPlayer = forwardRef<YouTubePlayerHandle, VideoPlayerProps>(
         isAutoTTSPausingRef.current = false;
       }
     }, [activeCue?.id, isTTSSpeakingState, isSyncSpeaking]);
+
+    // Auto-TTS Narration Effect: When activeCue changes and autoTTSEnabled is ON during video playback
+    useEffect(() => {
+      if (!autoTTSEnabled) return;
+      if (!activeCue?.id || !activeCue?.text) return;
+      if (isSyncActive) return; // Dedicated Sync Engine handles its own playback loop
+      if (isAutoTTSSpeakingRef.current || isTTSSpeakingState) return;
+
+      // Prevent re-narrating the same cue repeatedly
+      if (lastAutoSpokenCueIdRef.current === activeCue.id) return;
+
+      // Only auto-narrate if video is currently playing
+      if (!isPlayingRef.current && !isPlaying) return;
+
+      lastAutoSpokenCueIdRef.current = activeCue.id;
+      isAutoTTSPausingRef.current = true;
+
+      playCurrentCueTTS(activeCue);
+    }, [activeCue?.id, autoTTSEnabled, isPlaying, isSyncActive]);
 
     const resetHideControlsTimer = useCallback(() => {
       if (hideControlsTimerRef.current) clearTimeout(hideControlsTimerRef.current);
@@ -730,6 +770,7 @@ export const VideoPlayer = forwardRef<YouTubePlayerHandle, VideoPlayerProps>(
       const clickX = e.clientX - rect.left;
       const fraction = Math.max(0, Math.min(1, clickX / rect.width));
       const targetTime = fraction * (duration || 100);
+      lastAutoSpokenCueIdRef.current = null;
       currentTimeRef.current = targetTime;
       setCurrentTime(targetTime);
       onTimeUpdate?.(targetTime);
@@ -741,6 +782,7 @@ export const VideoPlayer = forwardRef<YouTubePlayerHandle, VideoPlayerProps>(
     };
 
     const seekTo = useCallback((seconds: number) => {
+      lastAutoSpokenCueIdRef.current = null;
       currentTimeRef.current = seconds;
       setCurrentTime(seconds);
       onTimeUpdate?.(seconds);

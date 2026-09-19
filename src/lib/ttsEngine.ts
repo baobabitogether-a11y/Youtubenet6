@@ -234,6 +234,17 @@ export function unlockTTSAudio(): void {
   } catch {}
 }
 
+if (typeof window !== 'undefined' && !(window as any).__ttsAudioAutoUnlockAttached) {
+  (window as any).__ttsAudioAutoUnlockAttached = true;
+  const autoUnlock = () => {
+    unlockTTSAudio();
+  };
+  window.addEventListener('pointerdown', autoUnlock, { capture: true, passive: true });
+  window.addEventListener('touchstart', autoUnlock, { capture: true, passive: true });
+  window.addEventListener('keydown', autoUnlock, { capture: true, passive: true });
+  window.addEventListener('click', autoUnlock, { capture: true, passive: true });
+}
+
 function reportTTSError(message: string, details?: any) {
   logError('TTS', message, details);
   try {
@@ -471,6 +482,13 @@ class WebSpeechEngineAdapter implements ITtsEngineAdapter {
           else if (prefix) utterance.voice = prefix;
         }
 
+        // If voices are available but none match the requested language, Web Speech cannot synthesize it
+        if (!utterance.voice && voices.length > 0) {
+          logWarn('TTS', `[Web Speech] No voice for "${request.lang}" in system (${voices.length} voices) - falling back to Neural Audio Stream`);
+          resolve({ completed: false, error: `No voice for ${request.lang}` });
+          return;
+        }
+
         let hasRealBoundary = false;
         let clearSimulated: (() => void) | null = null;
 
@@ -526,8 +544,8 @@ class WebSpeechEngineAdapter implements ITtsEngineAdapter {
 
         utterance.onend = () => {
           const elapsed = Date.now() - startTime;
-          // In Chromium, if speech engine cannot synthesize the language, onend fires immediately (<100ms)
-          if (elapsed < 100 && request.text.trim().length > 3) {
+          // In Chromium, if speech engine cannot synthesize the language, onend fires immediately (<250ms)
+          if (elapsed < 250 && request.text.trim().length > 2) {
             logWarn('TTS', `[Web Speech] Ended suspiciously fast (${elapsed}ms) for "${request.lang}" - treating as silent drop`);
             finish({ completed: false, error: 'Silent drop by Web Speech' });
             return;
@@ -541,6 +559,7 @@ class WebSpeechEngineAdapter implements ITtsEngineAdapter {
           if (errType === 'canceled' || errType === 'interrupted' || request.signal?.aborted) {
             finish({ completed: false, cancelled: true });
           } else {
+            logWarn('TTS', `[Web Speech] Error "${errType}" for "${request.lang}"`);
             finish({ completed: false, error: errType });
           }
         };
@@ -550,7 +569,7 @@ class WebSpeechEngineAdapter implements ITtsEngineAdapter {
         const maxDurationMs = Math.min(18000, Math.max(1200, (wordCount / (2.0 * Math.max(0.4, request.rate))) * 1000 + 1500));
         setTimeout(() => {
           if (!isSettled) {
-            finish({ completed: true });
+            finish({ completed: false, error: 'Web Speech timeout' });
           }
         }, maxDurationMs);
 
@@ -668,14 +687,17 @@ class AudioStreamFallbackEngineAdapter implements ITtsEngineAdapter {
 
       audio.play().catch((playErr) => {
         unlockTTSAudio();
-        if (request.onBoundary) {
-          clearBoundary = startSimulatedBoundaryProgression(request.text, request.rate, request.onBoundary);
-        }
-        const wordCount = request.text.split(/\s+/).filter(Boolean).length;
-        const estDurationMs = Math.min(8000, Math.max(1000, (wordCount / (2.2 * Math.max(0.5, request.rate))) * 1000));
-        setTimeout(() => {
-          finish({ completed: true });
-        }, estDurationMs);
+        audio.play().catch((retryErr) => {
+          logWarn('TTS', `[Audio Stream] Playback failed or blocked (${String(retryErr || playErr)})`);
+          if (request.onBoundary) {
+            clearBoundary = startSimulatedBoundaryProgression(request.text, request.rate, request.onBoundary);
+          }
+          const wordCount = request.text.split(/\s+/).filter(Boolean).length;
+          const estDurationMs = Math.min(8000, Math.max(1000, (wordCount / (2.2 * Math.max(0.5, request.rate))) * 1000));
+          setTimeout(() => {
+            finish({ completed: true });
+          }, estDurationMs);
+        });
       });
     });
   }
@@ -885,9 +907,8 @@ export async function speakText(
       logWarn('TTS', `Web Speech returned error (${res.error}), testing Audio Stream`);
     }
 
-    // 3. Audio Stream Fallback (if allowed by settings or fallback)
-    const appSettings = loadAppSettings();
-    const allowNonNative = appSettings.allowNonNativeTTSFallback === true || !nativeAdapter.isSupported();
+    // 3. Neural Audio Stream Fallback (resilient neural fallback for all languages)
+    const allowNonNative = true;
     if (allowNonNative && audioStreamAdapter.isSupported()) {
       const res = await audioStreamAdapter.speak(request);
       if (thisRequestId !== currentRequestId) return;

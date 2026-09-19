@@ -1,6 +1,7 @@
 import { CaptionCue } from '../../src/types';
 import { parseRawCaptionData } from '../../src/utils/captionParser';
 import { ruSrtRaw, enSrtRaw, heSrtRaw, itSrtRaw, arSrtRaw } from './FcRzAdI8R9U/srtStrings';
+import { L2RYRR6TXWA_LANGUAGE_JSON3_TRACKS } from './L2Ryrr6txwA/jsonStrings';
 import { EILFKSGNKDA_LANGUAGE_TRACKS } from './eilfksgnkda';
 
 /**
@@ -62,12 +63,18 @@ const LEGACY_VIDEO_CUES: Record<string, CaptionCue[]> = {
 export const DEFAULT_MOCKED_SUBTITLES: Record<string, CaptionCue[]> = {
   ...LEGACY_VIDEO_CUES,
   FcRzAdI8R9U: parsedRu,
+  L2Ryrr6txwA: L2RYRR6TXWA_LANGUAGE_JSON3_TRACKS.en,
   EILFkSGNkdA: EILFKSGNKDA_LANGUAGE_TRACKS.en,
 };
+
+export { L2RYRR6TXWA_LANGUAGE_JSON3_TRACKS };
 
 export function getMockedSubtitlesForVideo(videoId: string): CaptionCue[] {
   if (videoId === 'FcRzAdI8R9U') {
     return parsedRu;
+  }
+  if (videoId === 'L2Ryrr6txwA') {
+    return L2RYRR6TXWA_LANGUAGE_JSON3_TRACKS.en;
   }
   if (videoId === 'EILFkSGNkdA') {
     return EILFKSGNKDA_LANGUAGE_TRACKS.en;
@@ -84,6 +91,11 @@ export function getCachedSrtForVideoAndLanguage(videoId: string, langCode: strin
     if (clean === 'iw' || clean === 'il') clean = 'he';
     return FCRZADI8R9U_LANGUAGE_SRT_TRACKS[clean] || null;
   }
+  if (videoId === 'L2Ryrr6txwA') {
+    let clean = (langCode || '').toLowerCase().split(/[-_]/)[0];
+    if (clean === 'iw' || clean === 'il') clean = 'he';
+    return L2RYRR6TXWA_LANGUAGE_JSON3_TRACKS[clean] || null;
+  }
   if (videoId === 'EILFkSGNkdA') {
     let clean = (langCode || '').toLowerCase().split(/[-_]/)[0];
     if (clean === 'iw' || clean === 'il') clean = 'he';
@@ -98,6 +110,11 @@ export function hasCachedSrtForVideoAndLanguage(videoId: string, langCode: strin
     if (clean === 'iw' || clean === 'il') clean = 'he';
     return !!FCRZADI8R9U_LANGUAGE_SRT_TRACKS[clean];
   }
+  if (videoId === 'L2Ryrr6txwA') {
+    let clean = (langCode || '').toLowerCase().split(/[-_]/)[0];
+    if (clean === 'iw' || clean === 'il') clean = 'he';
+    return !!L2RYRR6TXWA_LANGUAGE_JSON3_TRACKS[clean];
+  }
   if (videoId === 'EILFkSGNkdA') {
     let clean = (langCode || '').toLowerCase().split(/[-_]/)[0];
     if (clean === 'iw' || clean === 'il') clean = 'he';
@@ -109,6 +126,9 @@ export function hasCachedSrtForVideoAndLanguage(videoId: string, langCode: strin
 export function getAllCachedLanguageCodesForVideo(videoId: string): string[] {
   if (videoId === 'FcRzAdI8R9U' || !videoId) {
     return ['ar', 'il', 'ru', 'it', 'he', 'en'];
+  }
+  if (videoId === 'L2Ryrr6txwA') {
+    return ['en', 'ru', 'he', 'it', 'ar'];
   }
   if (videoId === 'EILFkSGNkdA') {
     return ['en', 'he', 'iw'];

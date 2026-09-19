@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   X,
   FileText,
@@ -11,15 +11,15 @@ import {
   Code,
   Layers,
   Globe,
-  Clock,
   Sparkles,
-  ExternalLink,
 } from 'lucide-react';
 import {
   FCRZADI8R9U_LANGUAGE_SRT_TRACKS,
+  L2RYRR6TXWA_LANGUAGE_JSON3_TRACKS,
   getCachedSrtForVideoAndLanguage,
 } from '../../test/fixtures/defaultSubtitles';
 import { getRawSrtForLanguage, normalizeLanguageCode } from '../../test/fixtures/FcRzAdI8R9U/srtStrings';
+import { getRawJson3ForLanguage } from '../../test/fixtures/L2Ryrr6txwA/jsonStrings';
 import { CaptionCue } from '../types';
 import { speakText } from '../lib/ttsEngine';
 
@@ -29,6 +29,7 @@ interface SubtitleArtifactsModalProps {
   videoId: string;
   activeTargetLang?: string;
   onSelectLanguage?: (langCode: string) => void;
+  onSelectVideo?: (videoId: string, rawUrl: string) => void;
   onSeek?: (seconds: number) => void;
 }
 
@@ -41,10 +42,18 @@ interface TrackDef {
   color: string;
 }
 
-const AVAILABLE_TRACKS: TrackDef[] = [
+const SRT_TRACKS: TrackDef[] = [
   { code: 'ru', name: 'Russian', nativeName: 'Русский', role: 'source', color: '#3b82f6' },
   { code: 'he', name: 'Hebrew', nativeName: 'עברית', role: 'target', rtl: true, color: '#10b981' },
   { code: 'en', name: 'English', nativeName: 'English', role: 'target', color: '#6366f1' },
+  { code: 'it', name: 'Italian', nativeName: 'Italiano', role: 'target', color: '#f59e0b' },
+  { code: 'ar', name: 'Arabic', nativeName: 'العربية', role: 'target', rtl: true, color: '#ec4899' },
+];
+
+const JSON3_TRACKS: TrackDef[] = [
+  { code: 'en', name: 'English', nativeName: 'English', role: 'source', color: '#6366f1' },
+  { code: 'he', name: 'Hebrew', nativeName: 'עברית', role: 'target', rtl: true, color: '#10b981' },
+  { code: 'ru', name: 'Russian', nativeName: 'Русский', role: 'target', color: '#3b82f6' },
   { code: 'it', name: 'Italian', nativeName: 'Italiano', role: 'target', color: '#f59e0b' },
   { code: 'ar', name: 'Arabic', nativeName: 'العربية', role: 'target', rtl: true, color: '#ec4899' },
 ];
@@ -64,48 +73,78 @@ export const SubtitleArtifactsModal: React.FC<SubtitleArtifactsModalProps> = ({
   videoId,
   activeTargetLang = 'he',
   onSelectLanguage,
+  onSelectVideo,
   onSeek,
 }) => {
+  const [activeModalVideoId, setActiveModalVideoId] = useState<string>(
+    videoId === 'L2Ryrr6txwA' ? 'L2Ryrr6txwA' : 'FcRzAdI8R9U'
+  );
   const [selectedTrackCode, setSelectedTrackCode] = useState<string>(activeTargetLang || 'he');
-  const [activeTab, setActiveTab] = useState<'matrix' | 'raw_srt' | 'json'>('matrix');
+  const [activeTab, setActiveTab] = useState<'matrix' | 'raw_file' | 'json'>('matrix');
   const [searchQuery, setSearchQuery] = useState('');
   const [copiedStatus, setCopiedStatus] = useState<string | null>(null);
 
-  // Synchronize when modal opens
-  React.useEffect(() => {
-    if (activeTargetLang) {
-      setSelectedTrackCode(activeTargetLang);
+  const isJson3Mode = activeModalVideoId === 'L2Ryrr6txwA';
+  const availableTracks = isJson3Mode ? JSON3_TRACKS : SRT_TRACKS;
+
+  // Synchronize when modal opens or video changes
+  useEffect(() => {
+    if (isOpen) {
+      setActiveModalVideoId(videoId === 'L2Ryrr6txwA' ? 'L2Ryrr6txwA' : 'FcRzAdI8R9U');
+      if (activeTargetLang) {
+        setSelectedTrackCode(activeTargetLang);
+      }
     }
-  }, [activeTargetLang, isOpen]);
+  }, [isOpen, videoId, activeTargetLang]);
 
   const currentTrackDef =
-    AVAILABLE_TRACKS.find((t) => t.code === selectedTrackCode) ||
-    AVAILABLE_TRACKS.find((t) => t.code === normalizeLanguageCode(selectedTrackCode)) ||
-    AVAILABLE_TRACKS[1]; // fallback to Hebrew
+    availableTracks.find((t) => t.code === selectedTrackCode) ||
+    availableTracks.find((t) => t.code === normalizeLanguageCode(selectedTrackCode)) ||
+    availableTracks[1]; // fallback to Hebrew
 
   // Get cues for selected language
-  const targetCues: CaptionCue[] =
-    FCRZADI8R9U_LANGUAGE_SRT_TRACKS[normalizeLanguageCode(selectedTrackCode)] ||
-    getCachedSrtForVideoAndLanguage(videoId, selectedTrackCode) ||
-    [];
+  const targetCues: CaptionCue[] = useMemo(() => {
+    const clean = normalizeLanguageCode(selectedTrackCode);
+    if (isJson3Mode) {
+      return L2RYRR6TXWA_LANGUAGE_JSON3_TRACKS[clean] || [];
+    }
+    return (
+      FCRZADI8R9U_LANGUAGE_SRT_TRACKS[clean] ||
+      getCachedSrtForVideoAndLanguage(activeModalVideoId, selectedTrackCode) ||
+      []
+    );
+  }, [isJson3Mode, selectedTrackCode, activeModalVideoId]);
 
-  // Get source cues (Russian)
-  const sourceCues: CaptionCue[] =
-    FCRZADI8R9U_LANGUAGE_SRT_TRACKS.ru ||
-    getCachedSrtForVideoAndLanguage(videoId, 'ru') ||
-    [];
+  // Get source cues (English for JSON3, Russian for SRT)
+  const sourceCues: CaptionCue[] = useMemo(() => {
+    if (isJson3Mode) {
+      return L2RYRR6TXWA_LANGUAGE_JSON3_TRACKS.en || [];
+    }
+    return (
+      FCRZADI8R9U_LANGUAGE_SRT_TRACKS.ru ||
+      getCachedSrtForVideoAndLanguage(activeModalVideoId, 'ru') ||
+      []
+    );
+  }, [isJson3Mode, activeModalVideoId]);
 
-  // Get raw SRT text
-  const rawSrtContent =
-    getRawSrtForLanguage(selectedTrackCode) ||
-    (targetCues.length > 0
+  // Get raw file content (.srt or .json)
+  const rawFileContent = useMemo(() => {
+    if (isJson3Mode) {
+      const rawJson = getRawJson3ForLanguage(selectedTrackCode);
+      if (rawJson) return rawJson;
+      return JSON.stringify(targetCues, null, 2);
+    }
+    const rawSrt = getRawSrtForLanguage(selectedTrackCode);
+    if (rawSrt) return rawSrt;
+    return targetCues.length > 0
       ? targetCues
           .map(
             (c, i) =>
               `${i + 1}\n${formatTimestamp(c.start)} --> ${formatTimestamp(c.start + (c.duration || 3))}\n${c.text}\n`
           )
           .join('\n')
-      : 'No raw SRT data available for this language.');
+      : 'No raw data available for this language.';
+  }, [isJson3Mode, selectedTrackCode, targetCues]);
 
   const filteredCues = useMemo(() => {
     if (!searchQuery.trim()) return targetCues;
@@ -128,18 +167,20 @@ export const SubtitleArtifactsModal: React.FC<SubtitleArtifactsModalProps> = ({
     }
   };
 
-  const handleDownloadSrt = () => {
+  const handleDownloadFile = () => {
     try {
-      const blob = new Blob([rawSrtContent], { type: 'text/plain;charset=utf-8' });
+      const ext = isJson3Mode ? 'json' : 'srt';
+      const mime = isJson3Mode ? 'application/json;charset=utf-8' : 'text/plain;charset=utf-8';
+      const blob = new Blob([rawFileContent], { type: mime });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `FcRzAdI8R9U_${selectedTrackCode}.srt`;
+      a.download = `${activeModalVideoId}_${selectedTrackCode}.${ext}`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
-      setCopiedStatus(`.SRT file downloaded!`);
+      setCopiedStatus(`.${ext.toUpperCase()} file downloaded!`);
       setTimeout(() => setCopiedStatus(null), 3000);
     } catch (e: any) {
       setCopiedStatus(`Download failed: ${e?.message}`);
@@ -160,7 +201,7 @@ export const SubtitleArtifactsModal: React.FC<SubtitleArtifactsModalProps> = ({
     >
       <div className="bg-neutral-900 border border-neutral-800 rounded-2xl w-full max-w-4xl max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
         {/* Header */}
-        <div className="p-4 sm:px-6 border-b border-neutral-800 flex items-center justify-between gap-4 bg-neutral-900/90">
+        <div className="p-4 sm:px-6 border-b border-neutral-800 flex flex-wrap items-center justify-between gap-3 bg-neutral-900/90">
           <div className="flex items-center gap-3">
             <div className="p-2 rounded-xl bg-indigo-500/10 text-indigo-400">
               <FileText className="w-5 h-5" />
@@ -170,33 +211,79 @@ export const SubtitleArtifactsModal: React.FC<SubtitleArtifactsModalProps> = ({
                 <h2 className="text-base sm:text-lg font-bold text-neutral-100">
                   Subtitle Artifacts Browser
                 </h2>
-                <span className="px-2 py-0.5 rounded-full bg-indigo-950 text-indigo-300 border border-indigo-500/30 text-[11px] font-mono font-medium">
-                  {videoId || 'FcRzAdI8R9U'}
+                <span
+                  className={`px-2 py-0.5 rounded-full text-[11px] font-mono font-medium border ${
+                    isJson3Mode
+                      ? 'bg-amber-950 text-amber-300 border-amber-500/40'
+                      : 'bg-red-950 text-red-300 border-red-500/40'
+                  }`}
+                >
+                  {isJson3Mode ? 'JSON3' : 'SRT'} · {activeModalVideoId}
                 </span>
               </div>
               <p className="text-xs text-neutral-400 mt-0.5">
-                Authentic 1,578-segment SubRip (.SRT) fixtures for source &amp; target languages
+                {isJson3Mode
+                  ? 'Authentic 199-segment YouTube JSON3 timed-text fixtures (English source + 4 translations)'
+                  : 'Authentic 1,578-segment SubRip (.SRT) fixtures (Russian source + 4 translations)'}
               </p>
             </div>
           </div>
 
-          <button
-            id="close-artifacts-modal-btn"
-            data-testid="close-artifacts-modal-btn close-subtitle-artifacts-modal"
-            onClick={onClose}
-            className="p-2 rounded-xl text-neutral-400 hover:text-neutral-200 hover:bg-neutral-800 transition"
-          >
-            <span id="close-subtitle-artifacts-modal" className="contents">
-              <X className="w-5 h-5" />
-            </span>
-          </button>
+          {/* Quick Format/Video Switcher inside Artifacts Modal */}
+          <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1 bg-neutral-950 p-1 rounded-xl border border-neutral-800">
+              <button
+                type="button"
+                id="artifacts-select-srt-btn"
+                data-testid="artifacts-select-srt-btn"
+                onClick={() => {
+                  setActiveModalVideoId('FcRzAdI8R9U');
+                  setSelectedTrackCode('he');
+                }}
+                className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition ${
+                  !isJson3Mode
+                    ? 'bg-red-950/90 text-red-200 border border-red-500/60 shadow-sm'
+                    : 'text-neutral-400 hover:text-neutral-200'
+                }`}
+              >
+                SRT (FcRzAdI8R9U)
+              </button>
+              <button
+                type="button"
+                id="artifacts-select-json3-btn"
+                data-testid="artifacts-select-json3-btn"
+                onClick={() => {
+                  setActiveModalVideoId('L2Ryrr6txwA');
+                  setSelectedTrackCode('he');
+                }}
+                className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition ${
+                  isJson3Mode
+                    ? 'bg-amber-950/90 text-amber-200 border border-amber-500/60 shadow-sm'
+                    : 'text-neutral-400 hover:text-neutral-200'
+                }`}
+              >
+                JSON3 (L2Ryrr6txwA)
+              </button>
+            </div>
+
+            <button
+              id="close-artifacts-modal-btn"
+              data-testid="close-artifacts-modal-btn close-subtitle-artifacts-modal"
+              onClick={onClose}
+              className="p-2 rounded-xl text-neutral-400 hover:text-neutral-200 hover:bg-neutral-800 transition"
+            >
+              <span id="close-subtitle-artifacts-modal" className="contents">
+                <X className="w-5 h-5" />
+              </span>
+            </button>
+          </div>
         </div>
 
         {/* Track Selector Bar */}
         <div className="px-4 sm:px-6 py-3 bg-neutral-950/80 border-b border-neutral-800 flex flex-wrap items-center justify-between gap-3">
           <div className="flex flex-wrap items-center gap-1.5">
             <span className="text-xs font-semibold text-neutral-400 mr-1">Language Track:</span>
-            {AVAILABLE_TRACKS.map((track) => {
+            {availableTracks.map((track) => {
               const isSelected = selectedTrackCode === track.code;
               return (
                 <button
@@ -229,12 +316,15 @@ export const SubtitleArtifactsModal: React.FC<SubtitleArtifactsModalProps> = ({
           </div>
 
           {/* Quick apply language to player */}
-          {onSelectLanguage && selectedTrackCode !== 'ru' && (
+          {onSelectLanguage && (
             <button
               id="apply-artifacts-lang-to-player-btn"
               onClick={() => {
+                if (onSelectVideo && activeModalVideoId !== videoId) {
+                  onSelectVideo(activeModalVideoId, `https://www.youtube.com/watch?v=${activeModalVideoId}`);
+                }
                 onSelectLanguage(selectedTrackCode);
-                setCopiedStatus(`Applied ${currentTrackDef.name} to active video!`);
+                setCopiedStatus(`Applied ${currentTrackDef.name} to player!`);
                 setTimeout(() => setCopiedStatus(null), 2500);
               }}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600/90 hover:bg-emerald-500 text-white text-xs font-medium transition shadow-sm"
@@ -267,16 +357,16 @@ export const SubtitleArtifactsModal: React.FC<SubtitleArtifactsModalProps> = ({
             <button
               id="view-raw-srt-btn"
               data-testid="view-raw-srt-btn artifacts-tab-raw-srt-btn"
-              onClick={() => setActiveTab('raw_srt')}
+              onClick={() => setActiveTab('raw_file')}
               className={`px-3 py-1 rounded-md text-xs font-medium flex items-center gap-1.5 transition ${
-                activeTab === 'raw_srt'
+                activeTab === 'raw_file'
                   ? 'bg-neutral-800 text-neutral-100 shadow-sm'
                   : 'text-neutral-400 hover:text-neutral-200'
               }`}
             >
               <span id="artifacts-tab-raw-srt-btn" className="contents">
                 <FileText className="w-3.5 h-3.5" />
-                <span>Raw .SRT File</span>
+                <span>{isJson3Mode ? 'Raw .JSON File' : 'Raw .SRT File'}</span>
               </span>
             </button>
             <button
@@ -289,7 +379,7 @@ export const SubtitleArtifactsModal: React.FC<SubtitleArtifactsModalProps> = ({
               }`}
             >
               <Code className="w-3.5 h-3.5" />
-              <span>JSON Cues</span>
+              <span>Parsed Cues Object</span>
             </button>
           </div>
 
@@ -304,22 +394,24 @@ export const SubtitleArtifactsModal: React.FC<SubtitleArtifactsModalProps> = ({
 
             <button
               id="copy-srt-artifact-btn"
-              onClick={() => handleCopy(rawSrtContent, '.SRT Content')}
+              onClick={() =>
+                handleCopy(rawFileContent, isJson3Mode ? '.JSON Content' : '.SRT Content')
+              }
               className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-300 border border-neutral-700 text-xs font-medium transition"
-              title="Copy raw SRT to clipboard"
+              title="Copy raw file content to clipboard"
             >
               <Copy className="w-3.5 h-3.5" />
-              <span>Copy .SRT</span>
+              <span>Copy {isJson3Mode ? '.JSON' : '.SRT'}</span>
             </button>
 
             <button
               id="download-srt-artifact-btn"
-              onClick={handleDownloadSrt}
+              onClick={handleDownloadFile}
               className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-indigo-600/90 hover:bg-indigo-500 text-white text-xs font-medium transition shadow-sm"
-              title="Download authentic .srt file"
+              title={`Download authentic ${isJson3Mode ? '.json' : '.srt'} file`}
             >
               <Download className="w-3.5 h-3.5" />
-              <span>Download .SRT</span>
+              <span>Download {isJson3Mode ? '.JSON' : '.SRT'}</span>
             </button>
           </div>
         </div>
@@ -337,7 +429,7 @@ export const SubtitleArtifactsModal: React.FC<SubtitleArtifactsModalProps> = ({
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder={`Search ${targetCues.length} segments in ${currentTrackDef.name} or Russian source...`}
+                  placeholder={`Search ${targetCues.length} segments in ${currentTrackDef.name} or ${isJson3Mode ? 'English' : 'Russian'} source...`}
                   className="w-full bg-neutral-950 border border-neutral-800 rounded-xl pl-9 pr-4 py-2 text-xs text-neutral-200 placeholder-neutral-500 focus:outline-none focus:border-indigo-500 transition"
                 />
               </div>
@@ -365,10 +457,12 @@ export const SubtitleArtifactsModal: React.FC<SubtitleArtifactsModalProps> = ({
                               </span>
                             </div>
 
-                            {/* Russian Source */}
-                            {srcCue && selectedTrackCode !== 'ru' && (
+                            {/* Source Language Reference */}
+                            {srcCue && selectedTrackCode !== (isJson3Mode ? 'en' : 'ru') && (
                               <div className="text-neutral-400 text-[11px]">
-                                <span className="font-semibold text-neutral-500 mr-1.5">RU:</span>
+                                <span className="font-semibold text-neutral-500 mr-1.5 uppercase">
+                                  {isJson3Mode ? 'EN' : 'RU'}:
+                                </span>
                                 <span>{srcCue.text}</span>
                               </div>
                             )}
@@ -420,17 +514,21 @@ export const SubtitleArtifactsModal: React.FC<SubtitleArtifactsModalProps> = ({
             </div>
           )}
 
-          {activeTab === 'raw_srt' && (
+          {activeTab === 'raw_file' && (
             <div className="space-y-2">
               <div className="flex items-center justify-between text-xs text-neutral-400">
-                <span>SubRip Subtitle Format (.SRT)</span>
+                <span>
+                  {isJson3Mode
+                    ? 'YouTube JSON3 Timed-Text Format (.json)'
+                    : 'SubRip Subtitle Format (.SRT)'}
+                </span>
                 <span className="font-mono">{targetCues.length} cues</span>
               </div>
               <textarea
                 id="raw-srt-textarea"
                 data-testid="raw-srt-textarea"
                 readOnly
-                value={rawSrtContent}
+                value={rawFileContent}
                 rows={16}
                 className="w-full p-4 rounded-xl bg-neutral-950 border border-neutral-800 text-xs font-mono text-neutral-300 overflow-x-auto max-h-[50vh] leading-relaxed resize-none focus:outline-none"
               />
@@ -440,7 +538,7 @@ export const SubtitleArtifactsModal: React.FC<SubtitleArtifactsModalProps> = ({
           {activeTab === 'json' && (
             <div className="space-y-2">
               <div className="flex items-center justify-between text-xs text-neutral-400">
-                <span>JSON CaptionCue[] Representation</span>
+                <span>Normalized CaptionCue[] Representation</span>
                 <button
                   onClick={() => handleCopy(JSON.stringify(targetCues, null, 2), 'JSON')}
                   className="text-indigo-400 hover:underline flex items-center gap-1"
