@@ -1,26 +1,27 @@
-# Subtitle Views Design Contract
+# Subtitle Views — Replaceable Rendering Contract
 
-This document defines the boundary for a replaceable subtitle renderer. It is
-intentionally independent of YouTube, Android, translation services, browser
-storage, and the way subtitle data was obtained.
+This document is the storyboard contract for any view that presents subtitle
+data. It is deliberately independent of the browser, Android, YouTube, the
+fixture location, the parser, and the provider that produced the data.
 
-## Responsibility split
+## Responsibility
 
-The subtitle view receives already-normalized cues and renders them. A parent
-or provider is responsible for:
+A subtitle view only renders normalized data and reports user intent. It does
+not:
 
-- fetching or loading subtitle files;
-- parsing SRT or JSON3 into `CaptionCue` objects;
-- translating or matching tracks;
-- deciding which cue is active;
-- saving and restoring subtitle data.
+- fetch or discover subtitles;
+- read SRT or JSON3 files;
+- parse raw payloads;
+- translate, align, cache, or persist tracks;
+- calculate the active cue from video time;
+- access browser or Android APIs.
 
-The view must not make network requests, read fixture files, parse raw
-payloads, access localStorage, or choose a provider.
+An external provider or coordinator performs those jobs and injects the
+result. SRT and JSON3 are provider concerns; the renderer sees one cue shape.
 
-## Injected data
+## Interface
 
-The minimum input is:
+The smallest useful contract is:
 
 ```ts
 interface SubtitleCue {
@@ -41,34 +42,46 @@ interface SubtitleViewProps {
 }
 ```
 
-`cues` is the only required content input. Empty, loading, and error states
-should be supplied explicitly by the parent rather than inferred by fetching.
-The renderer may use `activeCueId` to highlight a cue, but it must not derive
-active state from video time on its own.
+The application may use a richer equivalent, but the replaceable view must
+still have an explicit input for the cue list and an explicit callback for
+interaction. Loading, empty, and error states should be supplied as view
+state by the coordinator; they must not be inferred by attempting a fetch.
 
-## View behavior
+## Rendering rules
 
-- Render the supplied cue text without changing timing values.
-- Preserve cue order as received.
-- Mark the active cue with a stable attribute such as
-  `data-cue-id="<id>"` and an accessible active state.
-- Call `onSelectCue` only for user interaction; the parent decides whether that
-  seeks a player or changes selection.
-- Support the same data in several placements: video overlay, teacher panel,
-  compact transcript, searchable list, or a mobile sheet.
-- Keep visual choices disposable: styling, pagination, typography, and layout
-  belong to the view implementation, not to the data provider.
+- Render cue text and preserve the supplied cue order.
+- Do not change timing values or mutate injected cues.
+- Identify the active cue with an accessible state and a stable cue id.
+- Invoke `onSelectCue` only after a user action. The caller decides whether
+  that action seeks playback, changes selection, or does nothing.
+- Treat translations as optional injected display data. Do not call a
+  translation service from the view.
+- Keep layout, typography, pagination, highlighting style, and placement
+  replaceable.
 
-## Multiple renderers
+The same contract should support several appearances, including a video
+overlay, a transcript, a compact card, a searchable list, or a mobile sheet.
+Several views may consume the same data simultaneously without keeping
+separate copies.
 
-Several subtitle views may consume the same `cues`, `activeCueId`, and
-`translatedCues` at once. For example, the video overlay can show one active
-cue while the teacher panel shows the full transcript. They must not maintain
-separate copies of subtitle data or mutate the injected arrays.
+## Provider boundary
+
+The provider is responsible for converting a source into `SubtitleCue[]`.
+The two current source families are:
+
+| Source | Provider responsibility |
+| --- | --- |
+| `test/fixtures/FcRzAdI8R9U/*.srt` | Parse SRT timings and text |
+| `test/fixtures/L2Ryrr6txwA/*.json` | Parse YouTube JSON3 events and segments |
+| Android observed timed-text request | Request or receive JSON3, then normalize it |
+
+The renderer must not depend on any of these source paths. A new provider
+should be usable without changing a subtitle view.
 
 ## Test boundary
 
-Pure renderer tests should pass in a small cue list and assert rendered text,
-active-state attributes, translation visibility, RTL direction, empty state,
-and `onSelectCue` behavior. Parser and provider tests belong outside this
-component.
+Pure view tests inject a small cue list and verify rendered text, order,
+active state, optional translation, direction, empty/error states, and the
+interaction callback. Parser tests separately verify SRT and JSON3 conversion.
+Provider tests separately verify fixture loading, Android request handling, and
+network or storage behavior.

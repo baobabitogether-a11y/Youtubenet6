@@ -1,16 +1,25 @@
-# Language Selection Views Design Contract
+# Language Selection Views — Replaceable Rendering Contract
 
-Language selection is a view over injected language data, not a language
-catalog or subtitle-fetching service. The same data contract should work for a
-toolbar, teacher-panel selector, mobile menu, settings form, or floating demo
-dock.
+This document defines the interface for any view that lets a user choose one
+or more languages. It is a pure data view, not a language catalog, subtitle
+provider, translator, or settings store.
 
-## Injected data
+## Responsibility
+
+The view receives a prepared list and renders it. An external provider or
+coordinator is responsible for obtaining the list, deciding which codes are
+available, resolving aliases, fetching tracks, translating labels, and
+persisting the selection.
+
+The view must not fetch data, rewrite codes, infer availability, persist
+settings, or choose a different provider based on where it is displayed.
+
+## Interface
 
 ```ts
 interface LanguageOption {
-  code: string;          // provider/API code, for example "he" or "json"
-  name: string;          // human-readable name
+  code: string;          // stable provider/API code, such as "he" or "it"
+  name: string;          // display label
   nativeName?: string;   // optional label in the language itself
   enabled?: boolean;
   direction?: 'ltr' | 'rtl';
@@ -26,34 +35,38 @@ interface LanguageViewProps {
 }
 ```
 
-The parent injects the list, selected value, and callback. The view does not
-fetch a language list, translate labels, persist settings, or decide whether a
-code maps to Hebrew aliases such as `he`, `iw`, or `il`.
+The interface may be extended when a design needs more information, but the
+view should not require provider-specific objects. If multi-select is
+supported, document the selection-change contract explicitly, for example:
 
-## View behavior
+```ts
+onChange?: (selectedCodes: string[]) => void;
+```
 
-- Display the supplied `name` and optional `nativeName`.
-- Use `code` as the stable value and key.
-- Clearly show the selected option and expose it through an accessible
-  selected/checked state.
-- Call `onSelect` with the injected code only after a user action.
-- Respect `disabled` and the supplied `enabled` value.
-- In multiple mode, expose each selected code through the same callback or a
-  documented `onChange(selectedCodes)` variant; do not silently change the
-  parent data.
-- Support RTL labels and layouts without changing the language data.
+## Rendering rules
 
-## Replaceable locations
+- Display the injected `name` and optional `nativeName`.
+- Use `code` as the stable value and callback value.
+- Expose selected and disabled states accessibly.
+- Respect both the view-level `disabled` flag and each option's `enabled`
+  value.
+- Call a callback only after user interaction.
+- Support RTL labels and layout without changing the data.
+- Do not mutate the injected language list.
 
-The same language list can drive a compact row of buttons, a native-looking
-select, a searchable dialog, or a full settings page. These views may differ
-in layout and interaction details, but they must share the injected data
-contract so one can be replaced without changing subtitle providers or
-renderers.
+One list may drive a toolbar, button row, select, searchable dialog, settings
+form, or mobile sheet. Those views can be replaced independently when they
+share this contract.
+
+## Data examples
+
+The provider may inject entries such as Hebrew, Italian, English, and Arabic.
+The view does not decide whether `he`, `iw`, or another alias refers to the
+same language; that normalization belongs to the provider boundary.
 
 ## Test boundary
 
-View tests should inject Hebrew, Italian, English, and Arabic options and
-verify selected state, disabled options, RTL presentation, and callback codes.
-Language catalog, target-track fetching, translation, and persistence tests
-belong to the parent/provider layer.
+Pure view tests inject several language options and verify labels, stable
+codes, selected state, disabled options, RTL presentation, and callback values.
+Catalog loading, code normalization, subtitle fetching, translation, and
+persistence are tested outside the view.
